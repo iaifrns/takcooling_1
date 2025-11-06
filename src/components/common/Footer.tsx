@@ -20,7 +20,7 @@ const Footer = () => {
                         <div className='w-3/4 md:w-1/3 '>
                             <p className='text-primary text-2xl'> Contact</p>
                             <p className='text-2xl font-bold text-white md:text-4xl'>Have a project in mind? <br /> Contact with us</p>
-                            <p className='text-gray-400 text-xl '>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour.</p>
+                            <p className='text-gray-300 text-xl '>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour.</p>
                             <div className='grid grid-cols-1  md:grid-cols-2 gap-9 mt-9'>
                                 <div className='flex gap-10'>
                                     <Card className='flex justify-center items-center w-15 h-20 bg-primary'><MapPinned className='invert-100 ' size={35} /></Card>

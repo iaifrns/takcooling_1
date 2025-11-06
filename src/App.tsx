@@ -11,7 +11,7 @@ import PageTransition from './components/common/PagesTransition'
 import Home from './pages/Home'
 import About from './pages/About'
 import Blog from './pages/Blog'
-import Service from './pages/service'
+import Service from './pages/Servise'
 import Contact from './pages/contact'
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/blog" element={<Blog />} />
-              <Route path="/gallery" element={<Service />} />
+              <Route path="/service" element={<Service />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </motion.main>
