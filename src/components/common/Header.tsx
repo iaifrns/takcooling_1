@@ -5,13 +5,13 @@ import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 
 
-import { Menu, X, Instagram, Twitter, Facebook ,Search} from 'lucide-react'
+import { Menu, X, Instagram, Twitter, Facebook, Search } from 'lucide-react'
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const location = useLocation()
     const [ActiveSlide, setActiveSlide] = useState(false)
-    const [ActiveSearch, setActiveSearch] =useState(false)
+    const [ActiveSearch, setActiveSearch] = useState(false)
 
     const navItems = [
         { name: 'Home', path: '/' },
@@ -41,19 +41,7 @@ const Header = () => {
                     Takcooling
                 </Link>
 
-                {/* Réseaux sociaux Desktop */}
-                <div className="hidden md:flex w-1/10 h-full items-center justify-around space-x-4  border-gray-200">
-                    {socialLinks.map((social, index) => (
-                        <a
-                            key={index}
-                            href={social.href}
-                            className=" hover:text-white transition-colors"
-                            aria-label={social.label}
-                        >
-                            <social.icon className='invert-25' size={16} />
-                        </a>
-                    ))}
-                </div>
+                
 
                 {/* Navigation Desktop */}
                 <nav className="hidden md:flex w-3/6 ml-8 items-center h-full gap-8 space-x-8 text-gray-500">
@@ -74,11 +62,21 @@ const Header = () => {
                         </Link>
                     ))}
                 </nav>
-                {/* slide destop */}
-                <div className='hidden md:flex w-1/6 justify-end items-center mr-10 gap-8 border-gray-300'>
-                    <div className={`${ActiveSearch && 'w-50 rounded-4xl shadow-xl backdrop-blur-xl bg-primary ease-in  px-4 duration-200 transition-colors flex justify-between'}`}><button onClick={()=>setActiveSearch(!ActiveSearch) }><Search size={20} className='invert-25'/></button>{ActiveSearch && (<input className='w-25 border-0' ></input>)} </div>
-                    <button className='border-0' onClick={()=>setActiveSlide(!ActiveSlide) }>{ActiveSlide ? <X size={20} /> : <Menu size={20} />}</button>
+
+                {/* Réseaux sociaux Desktop */}
+                <div className="hidden md:flex w-1/10 h-full items-center justify-around space-x-4  border-gray-200">
+                    {socialLinks.map((social, index) => (
+                        <a
+                            key={index}
+                            href={social.href}
+                            className=" hover:text-white transition-colors"
+                            aria-label={social.label}
+                        >
+                            <social.icon className='invert-25' size={16} />
+                        </a>
+                    ))}
                 </div>
+
 
                 {/* Menu Mobile */}
                 <button

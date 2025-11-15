@@ -14,34 +14,48 @@ import { Card } from '@/components/ui/card'
 import Carousel from '@/components/common/CarouselHome'
 import ScrollAnimation from '@/components/common/ScrollAnimation'
 import Employer from '@/components/common/Employes'
+import villeImg from '@/assets/image/villeHome.jpg'
+import villeImg2 from '@/assets/image/villeHome2.jpg'
+import serviceImg from '@/assets/image/service.jpeg'
+import Blog from './Blog'
+
 
 const Home = () => {
     const [fondH, setFondH] = useState(0)
-    const [tab, setTab] = useState(1)
+    const [tab, setTab] = useState(0)
     const [curr, setCurr] = useState(0)
     const autoSlide = false
-    const autoSlideIntervale = 1000
+    const autoSlideIntervale = 10000
 
     const backgroundHome = [
         {
-            title: 'The leader of climatisation Service around the world',
-            content: 'we face each projet as new challenge and with our ability to build and innovante we overcome all barriers to using content.',
+            id: 1,
+            title: 'Your Trusted Cooling Experts in London',
+            content: 'Based in the heart of London, Takcooling provides fast, reliable, and engineered cooling solutions for homes, offices, and businesses across the city.',
             image: fond
         },
         {
-            title: 'Moving Your Industrial Manufactury Foward',
-            content: 'we face each projet as new challenge and with our ability  build and innovante we overcome all barriers to using content.',
+            id: 2,
+            title: 'Experience the Comfort of Perfect Cooling',
+            content: 'We install high-efficiency air conditioners that keep your spaces cool, quiet, and energy-efficient — designed for your comfort all year round.',
+            image: villeImg
+        },
+        {
+            id: 3,
+            title: 'Engineered Installations, Built to Last',
+            content: 'Our certified engineers deliver precise and durable installations — because at Takcooling, every detail matters for performance and reliability.',
             image: fond2
         }
+
     ]
 
     const tabs = [
-        { id: 1, label: 'Industrial Construction', image: "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/s_tab_img_01.jpg", title: 'We solve worldwide industrial every problem', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 2, label: 'High regulation Industrial', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/02/s_tab_img_02.jpg', title: 'A high regulation industry refers', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 3, label: 'Bridge Construction', image: "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/s_tab_img_03.jpg", title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 4, label: 'Oil gaz & energy', image: "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/s_tab_img_04.jpg", title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 5, label: 'Mechanical Engineery', image: "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/s_tab_img_05.jpg", title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 6, label: 'Automation industrial', image: "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/s_tab_img_05.jpg", title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
+        { id: 1, label: 'Air conditioning installation', image: fond2, title: 'Professional Air Conditioning Installation for Perfect Home Comfort', content: 'Upgrade your home or business with a modern, energy-efficient AC system installed by certified experts. We deliver fast, clean, and reliable installation services tailored to your space, ensuring powerful cooling and maximum comfort all year round. Stay cool the smart way!' },
+        { id: 2, label: 'Air conditioning Repair', image: blog2, title: 'Fast & Reliable Air Conditioning Repair — Stay Cool Again in No Time', content: 'Is your AC making noise, blowing warm air, or not starting at all? Our skilled technicians diagnose and repair all AC issues with precision and speed. We restore your cooling system quickly so you can enjoy fresh, comfortable air without interruption' },
+        { id: 3, label: 'Air conditioning Maintenance', image: blog3, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
+        { id: 4, label: 'Refrigeration install', image: blog4, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
+        { id: 5, label: 'refrigeraition Repair', image: blog5, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
+        { id: 6, label: 'Refrigeration Maintenance', image: blog6, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
     ];
 
     const carouselHome = [
@@ -64,34 +78,45 @@ const Home = () => {
         { Name: 'Braley Raws', poste: 'Sr. ingineer', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/01/team_img_5-414x500.jpg' }
     ]
     const parteneer = [
-        { Name: 'Peter Hase', poste: 'Sr. ingineer', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/02/tem_6-414x500.jpg' },
-        { Name: 'Lawrence Pater', poste: 'Four Man', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/01/team_img_4-414x500.jpg' },
-        { Name: 'Braley Raws', poste: 'Sr. ingineer', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/01/team_img_5-414x500.jpg' }
-
+        { Name: 'Peter Hase', poste: 'Sr. ingineer', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/02/t_h_1.jpg', avis:'Excellent service! Quick installation and very professional team. My AC works perfectly.' },
+        { Name: 'Lawrence Pater', poste: 'Four Man', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/02/t_h_2.jpg',avis:'Fast repair and great customer support. They saved my day! Highly recommended.' },
+        { Name: 'Braley Raws', poste: 'Sr. ingineer', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/01/team_img_5-414x500.jpg',avis:'Reliable, efficient, and affordable. My refrigeration system has never worked better.' }
     ]
+
+
 
     const prev = () => setCurr((curr == 0 ? 1 : 0))
     const next = () => setCurr((curr == 1 ? 0 : 1))
 
     const handlenext = () => {
-        { fondH === 1 ? setFondH(0) : setFondH(1) }
-
+        setFondH(fondH === backgroundHome.length - 1 ? 0 : fondH + 1);
     }
+
     const handleprev = () => {
-        { fondH === 0 ? setFondH(1) : setFondH(0) }
-
+        setFondH(fondH === 0 ? backgroundHome.length - 1 : fondH - 1);
     }
-    useEffect(() => {
-        if (!autoSlide) return
-        const SlideIntervale = setInterval(()=>handlenext(), autoSlideIntervale)
-        return () => clearInterval(SlideIntervale)
-    }, [])
 
     useEffect(() => {
-        if (!autoSlide) return
-        const SlideIntervale = setInterval(()=>handlenext(), autoSlideIntervale)
-        return () => clearInterval(SlideIntervale)
-    }, [])
+        const SlideIntervale = setInterval(() => {
+            setFondH(prev =>
+                prev === backgroundHome.length - 1 ? 0 : prev + 1
+            );
+        }, 10000);
+
+        return () => clearInterval(SlideIntervale);
+    }, []);
+
+     useEffect(() => {
+        const SlideIntervale = setInterval(() => {
+            setCurr(prev =>
+                prev ===  1 ? 0 : prev + 1
+            );
+        }, 10000);
+
+        return () => clearInterval(SlideIntervale);
+    }, []);
+
+
 
     return (
         <PageTransition>
@@ -103,15 +128,20 @@ const Home = () => {
                         <p className='text-sm font-semibold'>Email. takcooling@gmail.com   |   Call. + 00447877020977 </p>
                     </div>
                     <div className='w-full h-[800px] absolute z-4 left-0 top-0 bg-[rgba(0,0,0,0.6)] '></div>
-                    <AnimatePresence>
-                        <motion.div className='w-full absolute z-1 left-0 top-0 ' >
+                    <AnimatePresence >
+                        <motion.div
+                            key={fondH}
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -50 }}
+                            transition={{ duration: 0.6 }} className='w-full absolute z-1 left-0 top-0 ' >
                             <motion.img src={backgroundHome[fondH].image} className='relative object-cover z-2 h-[800px] w-full ' alt="" />
                         </motion.div>
                     </AnimatePresence>
-                    <motion.div className='absolute z-5 w-full top-0 h-[800px] flex justify-evenly items-end '>
+                    <motion.div key={fondH} className='absolute z-5 w-full top-0 h-[800px] flex justify-evenly items-end '>
                         <div className='w-4/5 md:w-2/5 h-4/5 flex flex-col justify-center gap-15'>
-                            <motion.p initial={{opacity:[0,0.5,0],translateX:20}} animate={{opacity:1,translateX:-20}} transition={{duration:1.5,ease:'linear'}} className='font-serif text-2xl md:text-3xl lg:text-7xl text-white '>{backgroundHome[fondH].title}</motion.p>
-                            <motion.p initial={{opacity:[0,0.5,0],translateY:20}} animate={{opacity:1,translateY:-20}} transition={{duration:1.5,ease:'linear'}}  className='text-gray-300 lg:text-xl'>{backgroundHome[fondH].content}</motion.p>
+                            <motion.p initial={{ opacity: [0, 0.5, 0], translateX: 20 }} animate={{ opacity: 1, translateX: -20 }} transition={{ duration: 1.5, ease: 'linear' }} className='font-serif text-2xl md:text-3xl lg:text-7xl text-white '>{backgroundHome[fondH].title}</motion.p>
+                            <motion.p initial={{ opacity: [0, 0.5, 0], translateY: 20 }} animate={{ opacity: 1, translateY: -20 }} transition={{ duration: 1.5, ease: 'linear' }} className='text-gray-300 lg:text-xl'>{backgroundHome[fondH].content}</motion.p>
                             <div className='flex items-center gap-10'>
                                 <button className='w-40 bg-primary h-12 text-white flex justify-evenly items-center font-semibold'>Explore More <ArrowRight className='invert-0' /></button>
                                 <button className=' bg-primary h-12 w-12 flex justify-center items-center rounded-full'><ArrowRight className='invert-100' /></button>
@@ -129,7 +159,7 @@ const Home = () => {
                 <div className='bg-white relative z-10 -top-20 w-full flex flex-col items-center'>
                     {/* Atout de l'entreprise------------------------------------------------ */}
                     <ScrollAnimation>
-                        <div className='w-full p-8 lg:w-2/3 grid grid-cols-1 md:grid-cols-2 lg:flex flex-wrap justify-between  py-25 gap-4'>
+                        <div className='w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:flex flex-wrap justify-between  py-25 gap-4'>
                             <Card className='group relative w-full md:w-70 h-70 hover:bg-[rgba(255,119,0,0.7)] flex-wrap  bg-gray-50 gap-4 p-10'>
                                 <div className='relative z-20 flex flex-col gap-4'>
                                     <svg className='group-hover:invert-75 group-hover:rotate-y-180 duration-100' xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none"><path d="M55.1859 4.3288H47.5171C47.0317 4.3288 46.6382 4.72231 46.6382 5.2077C46.6382 5.69309 47.0317 6.08661 47.5171 6.08661H55.1859C55.6713 6.08661 56.0648 5.69309 56.0648 5.2077C56.0648 4.72231 55.6714 4.3288 55.1859 4.3288Z" fill="#EA5501"></path><path d="M43.1621 6.08661H44.0969C44.5823 6.08661 44.9758 5.69309 44.9758 5.2077C44.9758 4.72231 44.5823 4.3288 44.0969 4.3288H43.1621C42.6767 4.3288 42.2832 4.72231 42.2832 5.2077C42.2832 5.69309 42.6767 6.08661 43.1621 6.08661Z" fill="#EA5501"></path><path d="M43.1621 10.2153H55.186C55.6714 10.2153 56.0649 9.82181 56.0649 9.33642C56.0649 8.85103 55.6714 8.45752 55.186 8.45752H43.1621C42.6767 8.45752 42.2832 8.85103 42.2832 9.33642C42.2832 9.82181 42.6767 10.2153 43.1621 10.2153Z" fill="#EA5501"></path><path d="M46.3409 52.0062C46.3409 48.4954 45.1688 45.0511 43.0339 42.2683L43.1968 39.2677C43.3076 37.2251 41.6867 35.4971 39.6251 35.4971H30.0043C29.5617 35.1843 29.2932 34.6763 29.2932 34.1277V31.6736C30.7849 30.7089 31.8322 29.6088 32.6015 28.2996H34.3024C36.27 28.2996 37.8708 26.6988 37.8708 24.7311V18.1672C37.8708 17.0601 37.2304 16.0815 36.2726 15.6185V11.0119C36.2726 8.91469 34.5665 7.20845 32.4693 7.20845H32.3708C32.3108 7.20845 32.262 7.15958 32.262 7.09969C32.262 5.00251 30.5558 3.29626 28.4586 3.29626H19.1505C14.5302 3.29626 10.7712 7.05528 10.7712 11.6756V15.6184C9.8135 16.0814 9.17295 17.06 9.17295 18.1671V21.5053C9.17295 23.0672 10.4436 24.3378 12.0055 24.3378H13.1401C13.4338 26.8217 14.599 29.0902 16.424 30.6673C16.8522 31.0374 17.2951 31.368 17.7506 31.6633V34.1275C17.7506 34.6746 17.4811 35.1827 17.0365 35.497H7.41901C5.37339 35.497 3.7357 37.2091 3.84749 39.2676L4.01038 42.2682C1.87535 45.0511 0.703241 48.4954 0.703241 52.0062V55.3166C0.266249 55.8064 0 56.4515 0 57.1579C0 58.6846 1.24207 59.9265 2.76878 59.9265H44.2753C45.8021 59.9265 47.0441 58.6845 47.0441 57.1579C47.0441 56.4515 46.7779 55.8064 46.3409 55.3167V52.0062ZM44.5831 52.0062V54.4066C44.4819 54.3953 44.3794 54.3891 44.2753 54.3891H42.376L42.872 45.2497C43.9845 47.3158 44.5831 49.6435 44.5831 52.0062ZM36.0229 17.7381C36.0807 17.8703 36.1133 18.0153 36.1133 18.1673V21.5055C36.1133 22.0981 35.6311 22.5803 35.0385 22.5803H33.9933V19.267L34.535 19.0783C35.2051 18.8449 35.732 18.3527 36.0229 17.7381ZM30.155 27.9214H27.9493C27.5937 27.9214 27.3044 27.6322 27.3044 27.2766C27.3044 26.9211 27.5937 26.6319 27.9493 26.6319H30.155C30.5105 26.6319 30.7997 26.9211 30.7997 27.2766C30.7997 27.6322 30.5105 27.9214 30.155 27.9214ZM34.3026 26.5419H33.4142C33.6617 25.8362 33.8326 25.097 33.9227 24.3381H35.0385C35.4188 24.3381 35.7816 24.2622 36.1133 24.1257V24.7313C36.1133 25.7297 35.3009 26.5419 34.3026 26.5419ZM12.5292 11.6759C12.5292 8.02477 15.4997 5.05431 19.1507 5.05431H28.4588C29.5867 5.05431 30.5044 5.972 30.5044 7.09993C30.5044 8.12919 31.3419 8.96649 32.371 8.96649H32.4695C33.5975 8.96649 34.515 9.88418 34.515 11.0121V16.6328C34.515 16.9864 34.2906 17.3021 33.9567 17.4185L32.1097 18.0617C32.0353 18.0875 31.9585 18.0339 31.9585 17.9538L31.9619 14.4612C31.9726 11.9122 29.5858 9.68918 26.2417 10.7633C24.5599 11.3038 22.4785 11.3019 20.8023 10.7633C17.4929 9.69973 15.0715 11.8833 15.0821 14.4585L15.0862 17.954C15.0862 18.0347 15.0077 18.0878 14.9351 18.0617L13.0875 17.4184C12.7535 17.3021 12.5291 16.9863 12.5291 16.6326L12.5292 11.6759ZM10.931 21.5055V18.1672C10.931 18.0153 10.9636 17.8701 11.0213 17.738C11.3123 18.3527 11.8393 18.8449 12.5096 19.0783L13.0511 19.2669V22.5801H12.0058C11.4131 22.5803 10.931 22.098 10.931 21.5055ZM14.825 23.3229C14.7958 22.1674 14.8138 20.9409 14.8088 19.818C14.863 19.8227 14.9172 19.8254 14.9715 19.8254C16.0165 19.8254 16.8458 18.976 16.844 17.9515L16.8399 14.4537C16.834 13.0266 18.1141 11.7456 20.2645 12.4368C22.3026 13.0916 24.7481 13.0896 26.7795 12.4368C28.8283 11.7785 30.2104 12.9374 30.2041 14.4566L30.2007 17.9517C30.1993 19.0411 31.1304 19.9139 32.2353 19.818V23.394C32.2097 24.1536 32.0847 24.8949 31.8726 25.5999C31.4361 25.1527 30.8278 24.874 30.155 24.874H27.9493C26.6245 24.874 25.5466 25.9517 25.5466 27.2765C25.5466 28.6013 26.6245 29.6791 27.9493 29.6791H29.066C27.4426 30.9463 25.5965 31.607 23.5681 31.6406C19.1309 31.6051 14.9519 28.327 14.825 23.3229ZM19.5088 34.1278V32.5899C20.7792 33.116 22.1345 33.3885 23.5658 33.3986H23.572C23.5766 33.3986 23.5811 33.3986 23.5857 33.3985C24.9792 33.3768 26.2985 33.1068 27.5357 32.5971V34.1277C27.5357 34.6075 27.6362 35.0721 27.8211 35.4971H19.2223C19.4079 35.0719 19.5088 34.6073 19.5088 34.1278ZM4.1721 45.2497L4.31085 47.8068C4.33722 48.2916 4.75241 48.6644 5.23604 48.6368C5.72073 48.6106 6.09233 48.1963 6.06608 47.7116L5.60261 39.1726C5.54624 38.1338 6.37053 37.255 7.41901 37.255H39.6252C40.666 37.255 41.4984 38.126 41.4416 39.1726L40.6157 54.3892H26.8335C27.0015 53.3853 27.4536 52.441 28.15 51.6673L28.1752 51.6392C30.8356 48.6629 30.0393 44.0086 26.6006 42.0547C25.7182 41.5533 24.5975 42.1785 24.5975 43.2179V47.2057C24.5975 47.3886 24.4488 47.5372 24.266 47.5372H22.7782C22.5953 47.5372 22.4466 47.3884 22.4466 47.2057V43.2179C22.4466 42.1805 21.3277 41.5523 20.4436 42.0547C16.995 44.014 16.2149 48.67 18.8716 51.6421L18.8941 51.6673C19.5905 52.4409 20.0427 53.3852 20.2106 54.3891H6.42854L6.28757 51.7907C6.26132 51.306 5.84706 50.9339 5.36237 50.9607C4.87769 50.9869 4.50608 51.4012 4.53233 51.8859L4.66816 54.3891H2.76878C2.66472 54.3891 2.56218 54.3954 2.46105 54.4066V52.0062C2.46105 49.6436 3.05976 47.3158 4.1721 45.2497ZM21.9866 54.3891C21.8067 52.949 21.1893 51.5895 20.2007 50.4913L20.1795 50.4675C18.4814 48.5679 18.7088 45.6304 20.6889 44.0103V47.2056C20.6889 48.3577 21.6262 49.2948 22.7783 49.2948H24.2661C25.4182 49.2948 26.3554 48.3576 26.3554 47.2056V44.0103C28.3224 45.6196 28.5744 48.555 26.8626 50.47L26.8436 50.4912C25.8549 51.5895 25.2376 52.949 25.0577 54.3891H21.9866ZM44.2753 58.1689H2.76878C2.21132 58.1689 1.75781 57.7153 1.75781 57.158C1.75781 56.6007 2.21132 56.147 2.76878 56.147H44.2753C44.8328 56.147 45.2863 56.6005 45.2863 57.158C45.2863 57.7155 44.8328 58.1689 44.2753 58.1689Z" fill="#EA5501"></path><path d="M59.1209 6.01487C59.6063 6.01487 59.9998 5.62136 59.9998 5.13597V3.43488C59.9998 1.5409 58.4589 0 56.5648 0H41.7827C39.8886 0 38.3477 1.5409 38.3477 3.43488V10.828C38.3477 12.7221 39.8886 14.263 41.7827 14.263C42.1211 14.263 42.3965 14.5384 42.3965 14.8768V19.4489C42.3965 20.1092 42.824 20.6712 43.4604 20.8474C44.1006 21.0246 44.7545 20.7581 45.0921 20.1951L48.4706 14.5611C48.5809 14.3772 48.7827 14.263 48.9972 14.263H56.5649C58.459 14.263 59.9999 12.7221 59.9999 10.828V9.24502C59.9999 8.75963 59.6064 8.36612 59.121 8.36612C58.6356 8.36612 58.2421 8.75963 58.2421 9.24502V10.828C58.2421 11.7528 57.4897 12.5052 56.5649 12.5052H48.9971C48.1685 12.5052 47.3891 12.9466 46.963 13.6571L44.1542 18.3411V14.8768C44.1542 13.5691 43.0902 12.5052 41.7825 12.5052C40.8577 12.5052 40.1054 11.7528 40.1054 10.828V3.43488C40.1054 2.51015 40.8577 1.75781 41.7825 1.75781H56.5648C57.4896 1.75781 58.242 2.51015 58.242 3.43488V5.13597C58.242 5.62136 58.6355 6.01487 59.1209 6.01487Z" fill="#EA5501"></path></svg>
@@ -175,27 +205,27 @@ const Home = () => {
 
                     {/* Historique de l'entreprise------------------------------------------ */}
                     <ScrollAnimation>
-                        <div className='w-full p-8 lg:w-2/3 flex flex-col md:flex-row justify-between py-5 gap-4'>
+                        <div className='w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 flex flex-col md:flex-row justify-between py-5 gap-4'>
                             <div className='w-full md:w-3/5 '>
-                                <button className='text-primary text-xl flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg> About Us</button>
-                                <p className='text-black text-2xl md:text-5xl font-semibold'>We work for you <span className='text-primary'>since 1989.</span>  Industrial around the world</p>
+                                <button className='text-primary text-xl flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clipRule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg> About Us</button>
+                                <p className='text-black text-2xl md:text-5xl font-semibold'>Air Conditioning & Refrigeration Experts  <span className='text-primary'>Since 2004.</span>  </p>
                             </div>
                             <div className='w-full md:w-2/5 font-semibold flex flex-col gap-3'>
                                 <p className='text-black'>Welcome to Industrie, a leading industry innovator with a rich history of excellence.</p>
-                                <p className='text-gray-500'>At the heart of the global landscape, the industry stands as a multidimensional force of progress, driving economies.</p>
+                                <p className='text-gray-500'>Founded in 2004 by the Elm Family, Be Cool Refrigeration & Air-conditioning is a true family-run specialist in commercial cooling solutions across the London area.</p>
                             </div>
                         </div>
                     </ScrollAnimation>
                     <ScrollAnimation>
-                        <div className='relative w-full p-8 lg:w-2/3 h-100 py-5 '>
-                            <img src={About} className='w-full h-full' alt="" />
+                        <Card className='relative w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 h-100 py-5 '>
+                            <img src={serviceImg} className='w-full h-150 object-cover' alt="" />
                             <div className='absolute z-10 bottom-85 left-[70%] bg-primary w-1/6 h-15 flex items-center justify-center text-white'>Discover More  <ArrowRight className='invert-0' /></div>
-                        </div>
+                        </Card>
                     </ScrollAnimation>
 
                     {/* chiffre sur l'entreprise---------------------------------------------- */}
                     <ScrollAnimation>
-                        <div className='w-full p-8 lg:w-2/3 flex justify-between md:py-40 gap-4'>
+                        <div className='w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 flex justify-between md:py-40 gap-4'>
                             <div>
                                 <p className="text-[20px] md:text-[50px] lg:text-[80px] font-bold text-gray-400 font-[Poppins] border-b-2 border-b-gray-500">50+</p>
                                 <p className='pt-4 text-gray-400 md:font-semibold'>Drilling Fields</p>
@@ -218,42 +248,42 @@ const Home = () => {
                     {/* Div Service de l'entreprise----------------------------------------- */}
                     <ScrollAnimation>
                         <div className='w-full bg-gray-50 flex flex-col items-center'>
-                            <div className='w-full p-8 lg:w-2/3 flex flex-col pt-20'>
-                                <div> <button className='text-primary text-xl flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg>Service</button></div>
+                            <div className='w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 flex flex-col pt-20'>
+                                <div> <button className='text-primary text-xl flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clipRule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg>Our Services</button></div>
                                 <div className='flex flex-col md:flex-row  justify-between'>
-                                    <div className='w-full md:w-1/2 text-2xl md:text-5xl font-semibold text-black'>Creative features from production industry</div>
+                                    <div className='w-full md:w-1/2 text-2xl md:text-5xl font-semibold text-black'>Creative features from climatisation</div>
                                     <button className='border-2 border-gray-500 h-12 m-8 md:mx-4 flex justify-center items-center gap-2 '>Views All Solutions <ArrowRight /></button>
                                 </div>
                                 <div className='flex flex-col md:flex-row justify-between py-10'>
                                     <div className='w-full md:w-1/3 flex flex-wrap md:flex-col justify-evenly items-center h-100'>
                                         {tabs.map((taber, index) => {
                                             return (
-                                                <button onClick={() => setTab(taber.id)} className={`w-2/3 border-2 border-gray-500 ${tab === taber.id && 'bg-primary border-0'} h-12 hover:bg-primary`}>{taber.label}</button>
+                                                <button key={index} onClick={() => setTab(taber.id)} className={`w-2/3 border-2 border-gray-500 font-bold ${tab === taber.id && 'bg-primary border-0'} h-12 hover:bg-primary`}>{taber.label}</button>
                                             )
                                         })}
                                     </div>
                                     <div className='w-full md:w-2/3 flex flex-col md:flex-row py-4 '>
-                                        <Card className='w-full md:w-1/2 h-full'><img className=' h-full object-cover' src={tabs[tab].image} alt="" /></Card>
-                                        <div className='w-full md:w-1/2 pl-8 flex flex-col justify-around '>
+                                        <Card  className='w-full md:w-1/2 h-full'><motion.img className=' h-full object-cover' key={tab} initial={{ opacity: [0, 0.5, 0], translateY: 20 }} animate={{ opacity: 1, translateY: -20 }} transition={{ duration: 0.4, ease: 'linear' }} src={tabs[tab].image} alt="" /></Card>
+                                        <motion.div key={tab} initial={{ opacity: [0, 0.5, 0], translateX: 20 }} animate={{ opacity: 1, translateX: -20 }} transition={{ duration: 0.4, ease: 'linear' }} className='w-full md:w-1/2 pl-8 flex flex-col justify-around '>
                                             <p className='text-3xl font-semibold'>{tabs[tab].title} </p>
-                                            <p className='font-semibold text-gray-400 text-xl'>{tabs[tab].content}</p>
+                                            <p className='font-semibold text-gray-400 text-sm'>{tabs[tab].content}</p>
                                             <div className='flex flex-col gap-2'>
                                                 <p><i className="ri-check-line ">Manufacturing Solutions</i></p>
                                                 <p><i className="ri-check-line ">Research and Development</i></p>
                                                 <p><i className="ri-check-line ">Vehicle manufacturing</i></p>
                                             </div>
                                             <button className='font-semibold w-1/3 '>Read More</button>
-                                        </div>
+                                        </motion.div>
                                     </div>
                                 </div>
                             </div>
                             <ScrollAnimation>
-                                <div className='w-full p-8 lg:w-2/3 grid md:grid-cols-2 lg:flex flex-wrap justify-between gap-4 py-5 '>
-                                    <Card className='group relative w-full md:w-80 flex flex-col h-80 p-10 gap-4 hover:border-b-2 hover:mt-3 border-primary '>
+                                <div className='w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 grid md:grid-cols-2 lg:flex flex-wrap justify-between gap-4 py-5 '>
+                                    <Card className='group relative w-full md:w-80 flex flex-col h-80 p-10 pt-12  gap-4 hover:border-b-2 hover:mt-3 border-primary '>
                                         <div className='relative z-20 flex flex-col gap-4'>
-                                            <p className='text-xl font-semibold'>Analysis of the client's objectives & needs</p>
-                                            <svg className='w-10 h-10 group-hover:invert-75 group-hover:rotate-y-180' xmlns="http://www.w3.org/2000/svg" height="512" viewBox="0 0 512 512" width="512"><path d="m246.222 279.354v-210.019c0-4.418-3.582-8-8-8-59.12 0-114.701 23.022-156.505 64.827s-64.827 97.386-64.827 156.506 23.023 114.701 64.827 156.505 97.385 64.827 156.505 64.827 114.702-23.023 156.505-64.827c3.124-3.124 3.124-8.189 0-11.313zm-8 208.646c-113.221 0-205.333-92.112-205.333-205.333 0-110.54 87.808-200.958 197.333-205.179v205.179c0 2.122.843 4.157 2.343 5.657l145.084 145.084c-38.055 35.266-87.255 54.592-139.427 54.592zm248.889-231.111h-213.333c-3.236 0-6.153 1.949-7.391 4.938s-.554 6.43 1.734 8.718l150.849 150.85c1.562 1.562 3.609 2.343 5.657 2.343s4.095-.781 5.657-2.343c41.804-41.804 64.827-97.385 64.827-156.505 0-4.419-3.582-8.001-8-8.001zm-62.591 147.428-131.428-131.428h185.867c-1.872 49.188-20.982 95.324-54.439 131.428zm-150.742-166.984h213.333c4.418 0 8-3.582 8-8 0-59.12-23.022-114.702-64.827-156.506s-97.386-64.827-156.506-64.827c-4.418 0-8 3.582-8 8v213.333c0 4.418 3.582 8 8 8zm8-213.179c106.868 4.118 193.061 90.311 197.179 197.179h-197.179z"></path></svg>
-                                            <p className='font-semibold text-gray-500'>We collaborate closely on with you and examine the strategy and install and integrate the mechanical.</p>
+                                            <p className='text-xl font-semibold'>Planning & Execution</p>
+                                            <svg className='text-primary w-10 h-10 group-hover:invert-75 group-hover:rotate-y-180' xmlns="http://www.w3.org/2000/svg" height="512" viewBox="0 0 512 512" width="512"><path d="m246.222 279.354v-210.019c0-4.418-3.582-8-8-8-59.12 0-114.701 23.022-156.505 64.827s-64.827 97.386-64.827 156.506 23.023 114.701 64.827 156.505 97.385 64.827 156.505 64.827 114.702-23.023 156.505-64.827c3.124-3.124 3.124-8.189 0-11.313zm-8 208.646c-113.221 0-205.333-92.112-205.333-205.333 0-110.54 87.808-200.958 197.333-205.179v205.179c0 2.122.843 4.157 2.343 5.657l145.084 145.084c-38.055 35.266-87.255 54.592-139.427 54.592zm248.889-231.111h-213.333c-3.236 0-6.153 1.949-7.391 4.938s-.554 6.43 1.734 8.718l150.849 150.85c1.562 1.562 3.609 2.343 5.657 2.343s4.095-.781 5.657-2.343c41.804-41.804 64.827-97.385 64.827-156.505 0-4.419-3.582-8.001-8-8.001zm-62.591 147.428-131.428-131.428h185.867c-1.872 49.188-20.982 95.324-54.439 131.428zm-150.742-166.984h213.333c4.418 0 8-3.582 8-8 0-59.12-23.022-114.702-64.827-156.506s-97.386-64.827-156.506-64.827c-4.418 0-8 3.582-8 8v213.333c0 4.418 3.582 8 8 8zm8-213.179c106.868 4.118 193.061 90.311 197.179 197.179h-197.179z"></path></svg>
+                                            <p className='font-semibold text-gray-500'>This is the starting point for achieving optimal cooling. Our professional installation ensures your air conditioning and refrigeration systems are set up efficiently</p>
                                         </div>
                                         <div className='absolute top-18 right-8 z-15 '>
                                             <span className='text-[70px]  text-gray-200 font-extrabold'>01</span>
@@ -261,19 +291,19 @@ const Home = () => {
                                     </Card>
                                     <Card className='relative group w-full md:w-80 flex flex-col h-80 p-10 gap-4 hover:border-b-2 hover:mt-3 border-primary'>
                                         <div className='relative z-20 flex flex-col gap-4'>
-                                            <p className='text-xl font-semibold'>Engineering project study & solution design</p>
-                                            <svg className='w-10 h-10 group-hover:invert-75 group-hover:rotate-y-180' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path clip-rule="evenodd" d="m193.99 213.76c17.27 0 31.32-14.05 31.32-31.32s-14.05-31.32-31.32-31.32-31.32 14.05-31.32 31.32 14.05 31.32 31.32 31.32zm0-52.64c11.75 0 21.32 9.56 21.32 21.32 0 11.75-9.56 21.32-21.32 21.32s-21.32-9.56-21.32-21.32c.01-11.75 9.57-21.32 21.32-21.32zm-49.53 2.36-9.43.88c-5.82.54-10.3 4.98-10.9 10.79-.52 5.03-.5 10.12.06 15.15.65 5.81 5.17 10.21 10.99 10.71l9.44.8c.69.06 1.02.49 1.16.84s.23.88-.22 1.42l-6.05 7.28c-3.73 4.5-3.76 10.8-.08 15.34 3.19 3.93 6.81 7.52 10.77 10.68 4.56 3.64 10.87 3.56 15.33-.21l7.24-6.1c.53-.45 1.06-.37 1.41-.23s.78.46.85 1.16l.88 9.43c.54 5.82 4.98 10.3 10.79 10.9 2.42.25 4.86.38 7.3.38 2.62 0 5.24-.15 7.85-.43 5.81-.65 10.21-5.17 10.71-10.99l.8-9.44c.06-.7.49-1.02.84-1.16s.88-.23 1.42.22l7.29 6.05c4.5 3.73 10.8 3.77 15.34.08 3.93-3.19 7.52-6.81 10.68-10.77 3.64-4.56 3.56-10.87-.21-15.33l-6.1-7.24c-.45-.53-.37-1.06-.23-1.41s.46-.78 1.16-.85l9.43-.88c5.82-.54 10.3-4.98 10.9-10.79.52-5.03.5-10.12-.06-15.15-.65-5.81-5.17-10.21-10.99-10.71l-9.44-.8c-.7-.06-1.02-.49-1.16-.84-.15-.35-.23-.88.22-1.42l6.05-7.29c3.73-4.5 3.77-10.8.08-15.34-3.19-3.93-6.81-7.52-10.77-10.68-4.56-3.64-10.87-3.56-15.33.21l-7.24 6.1c-.53.45-1.06.38-1.41.23-.35-.14-.78-.46-.85-1.16l-.88-9.43c-.54-5.82-4.98-10.3-10.79-10.9-5.03-.52-10.12-.5-15.15.06-5.81.65-10.21 5.17-10.7 10.99l-.8 9.44c-.06.7-.49 1.02-.84 1.16-.35.15-.88.23-1.42-.22l-7.29-6.05c-4.5-3.73-10.8-3.76-15.34-.08-3.93 3.19-7.52 6.81-10.68 10.77-3.64 4.57-3.56 10.87.21 15.33l6.1 7.24c.45.53.37 1.06.23 1.41-.15.35-.47.78-1.17.85zm8.57-8.71-6.1-7.24c-.66-.78-.67-1.85-.04-2.65 2.71-3.39 5.79-6.5 9.17-9.24.8-.65 1.86-.64 2.65.01l7.29 6.05c3.28 2.72 7.75 3.39 11.67 1.75s6.58-5.3 6.94-9.54l.8-9.44c.09-1.02.83-1.78 1.85-1.9 4.32-.48 8.7-.5 13.01-.05 1.02.11 1.77.86 1.86 1.88l.88 9.43c.39 4.24 3.08 7.87 7.01 9.48s8.4.9 11.65-1.84l7.23-6.1c.78-.66 1.85-.68 2.65-.04 3.4 2.71 6.5 5.79 9.24 9.17.65.79.64 1.86-.02 2.65l-6.05 7.29c-2.72 3.28-3.39 7.75-1.75 11.67s5.3 6.58 9.54 6.94l9.44.8c1.02.09 1.78.83 1.9 1.85.48 4.32.5 8.7.05 13.01-.11 1.02-.86 1.77-1.88 1.86l-9.43.88c-4.24.39-7.87 3.08-9.48 7.01s-.91 8.4 1.84 11.65l6.1 7.24c.66.78.67 1.85.04 2.65-2.71 3.4-5.79 6.5-9.17 9.24-.8.65-1.86.64-2.65-.01l-7.29-6.05c-3.28-2.72-7.75-3.39-11.67-1.75s-6.58 5.3-6.94 9.54l-.8 9.44c-.09 1.02-.83 1.78-1.85 1.9-4.32.48-8.7.5-13.01.05-1.02-.11-1.77-.86-1.86-1.88l-.88-9.43c-.39-4.24-3.08-7.87-7.01-9.48-1.4-.57-2.86-.85-4.31-.85-2.64 0-5.24.92-7.34 2.69l-7.23 6.1c-.78.66-1.85.68-2.65.04-3.4-2.71-6.5-5.79-9.24-9.17-.65-.8-.64-1.86.01-2.65l6.05-7.29c2.72-3.28 3.39-7.75 1.75-11.67s-5.3-6.58-9.54-6.94l-9.44-.8c-1.02-.09-1.78-.83-1.9-1.85-.48-4.32-.5-8.7-.05-13.01.11-1.02.86-1.77 1.88-1.86l9.43-.88c4.24-.39 7.87-3.08 9.48-7.02 1.62-3.92.92-8.39-1.83-11.64zm336.24 306.92-41.1-41.1c-2.71-2.71-6.33-4.21-10.18-4.21-1.04 0-2.06.12-3.05.33l-26.5-26.5c9.81-14.3 15.56-31.6 15.56-50.22 0-35.88-21.35-66.87-52.01-80.94v-156.48c0-27.92-22.71-50.63-50.63-50.63h-61.83c-3.22-6.9-10.2-11.7-18.3-11.7h-13.36c-2.43-16.52-16.7-29.24-33.88-29.24s-31.45 12.72-33.88 29.24h-13.36c-8.1 0-15.08 4.8-18.3 11.7h-61.82c-27.92 0-50.63 22.71-50.63 50.63v347.8c0 27.92 22.71 50.63 50.63 50.63h254.73c27.92 0 50.63-22.71 50.63-50.63v-29.43c4.64-2.13 9.06-4.64 13.23-7.5l26.51 26.51c-1 4.62.29 9.64 3.87 13.23l41.1 41.1c4.49 4.49 10.39 6.74 16.29 6.74s11.8-2.25 16.29-6.74c4.34-4.34 6.73-10.12 6.73-16.29s-2.4-11.96-6.74-16.3zm-75.27-121.7c0 43.56-35.44 79-79 79s-79-35.44-79-79 35.44-79 79-79 79 35.44 79 79zm-52.02-237.42v152.62c-4.62-1.47-9.41-2.58-14.32-3.28v-149.34c0-14.51-11.8-26.31-26.31-26.31h-59.93v-14.32h59.93c22.41 0 40.63 18.22 40.63 40.63zm-225.43-42.13c0-5.62 4.58-10.2 10.2-10.2h17.99c2.76 0 5-2.24 5-5 0-13.37 10.88-24.24 24.24-24.24 13.37 0 24.24 10.88 24.24 24.24 0 2.76 2.24 5 5 5h17.99c5.62 0 10.2 4.58 10.2 10.2v17.32c0 5.62-4.58 10.2-10.2 10.2h-94.47c-5.62 0-10.2-4.58-10.2-10.2v-17.32zm10.2 37.52h94.47c8.1 0 15.08-4.8 18.3-11.7h61.83c8.99 0 16.31 7.32 16.31 16.31v148.47c-.89-.03-1.77-.04-2.67-.04-49.07 0-89 39.92-89 89s39.92 89 89 89c.89 0 1.78-.02 2.67-.04v21.42c0 8.99-7.32 16.31-16.31 16.31h-254.72c-8.99 0-16.31-7.32-16.31-16.31v-347.8c0-8.99 7.32-16.31 16.31-16.31h61.83c3.21 6.89 10.19 11.69 18.29 11.69zm215.23 352.41c0 22.4-18.23 40.63-40.63 40.63h-254.72c-22.4 0-40.63-18.23-40.63-40.63v-347.8c0-22.4 18.23-40.63 40.63-40.63h59.93v14.32h-59.93c-14.51 0-26.31 11.8-26.31 26.31v347.8c0 14.51 11.8 26.31 26.31 26.31h254.73c14.51 0 26.31-11.8 26.31-26.31v-22.28c4.91-.7 9.7-1.81 14.32-3.28v25.56zm40.3-52.18 23.97 23.97-9.08 9.08-23.97-23.97c3.24-2.8 6.27-5.84 9.08-9.08zm79.92 89.01c-5.08 5.08-13.35 5.08-18.43 0l-41.1-41.1c-1.71-1.71-1.71-4.5 0-6.22l12.22-12.22c.86-.86 1.98-1.29 3.11-1.29s2.25.43 3.11 1.29l41.1 41.1c2.45 2.45 3.8 5.72 3.8 9.22-.01 3.5-1.36 6.77-3.81 9.22zm-215.29-147.21c0 37.54 30.54 68.09 68.09 68.09s68.09-30.54 68.09-68.09c0-37.54-30.54-68.09-68.09-68.09s-68.09 30.55-68.09 68.09zm126.18 0c0 32.03-26.06 58.09-58.09 58.09s-58.09-26.06-58.09-58.09 26.06-58.09 58.09-58.09 58.09 26.06 58.09 58.09zm-83.3-11.61c-2.34-3.08-5.74-5.07-9.57-5.59s-7.64.47-10.72 2.81-5.07 5.74-5.59 9.57c-.53 3.83.47 7.64 2.81 10.72l21.19 27.9c2.51 3.3 6.31 5.38 10.45 5.69.37.03.73.04 1.1.04 3.75 0 7.38-1.46 10.09-4.09l46.5-45.1c2.78-2.7 4.33-6.32 4.39-10.19.05-3.87-1.4-7.53-4.1-10.31s-6.32-4.33-10.19-4.39c-3.85-.03-7.53 1.4-10.3 4.1l-34.75 33.7zm53.01-11.67c.86-.84 2.02-1.31 3.2-1.27 1.2.02 2.32.5 3.16 1.36s1.29 2 1.27 3.2-.5 2.32-1.36 3.16l-46.49 45.09c-.94.91-2.18 1.35-3.47 1.25-1.3-.1-2.45-.73-3.24-1.77l-21.19-27.9c-.72-.95-1.03-2.13-.87-3.31.16-1.19.78-2.24 1.73-2.96s2.13-1.04 3.32-.87c1.19.16 2.24.78 2.96 1.73l14.71 19.36c.87 1.14 2.18 1.85 3.6 1.96s2.83-.4 3.86-1.4zm-280.3-18.54c0-2.76 2.24-5 5-5h141.42c2.76 0 5 2.24 5 5s-2.24 5-5 5h-141.42c-2.77 0-5-2.24-5-5zm88.16 127.85c0 2.76-2.24 5-5 5h-78.16c-2.76 0-5-2.24-5-5s2.24-5 5-5h78.16c2.76 0 5 2.23 5 5zm68.16-31.97c0 2.76-2.24 5-5 5h-146.32c-2.76 0-5-2.24-5-5s2.24-5 5-5h146.32c2.76 0 5 2.24 5 5zm-156.32-31.96c0-2.76 2.24-5 5-5h135.66c2.76 0 5 2.24 5 5s-2.24 5-5 5h-135.66c-2.77 0-5-2.23-5-5zm0-31.96c0-2.76 2.24-5 5-5h133.94c2.76 0 5 2.24 5 5s-2.24 5-5 5h-133.94c-2.77 0-5-2.24-5-5zm371.68 42.39c1.63 3.65 5.13 5.92 9.13 5.92s7.49-2.27 9.13-5.92l19.37-43.29c.29-.64.44-1.34.44-2.04v-246.32c0-15.95-12.98-28.93-28.93-28.93s-28.93 12.98-28.93 28.93v246.32c0 .7.15 1.4.44 2.04zm9.13-4.09-16.22-36.25h32.44zm-18.93-46.24v-207.46h37.87v207.46zm18.93-260.25c10.44 0 18.93 8.49 18.93 18.93v23.86h-37.87v-23.86c.01-10.44 8.5-18.93 18.94-18.93zm-277.42-19.08c0-4.48 3.63-8.11 8.11-8.11s8.11 3.63 8.11 8.11-3.63 8.11-8.11 8.11c-4.49 0-8.11-3.63-8.11-8.11z" fill-rule="evenodd"></path></svg>
-                                            <p className='font-semibold text-gray-500'>We collaborate closely on with you and examine the strategy and install and integrate the mechanical.</p>
+                                            <p className='text-xl font-semibold'>Troubleshooting & Restoration</p>
+                                            <svg className='w-10 h-10 group-hover:invert-75 group-hover:rotate-y-180' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path clipRule="evenodd" d="m193.99 213.76c17.27 0 31.32-14.05 31.32-31.32s-14.05-31.32-31.32-31.32-31.32 14.05-31.32 31.32 14.05 31.32 31.32 31.32zm0-52.64c11.75 0 21.32 9.56 21.32 21.32 0 11.75-9.56 21.32-21.32 21.32s-21.32-9.56-21.32-21.32c.01-11.75 9.57-21.32 21.32-21.32zm-49.53 2.36-9.43.88c-5.82.54-10.3 4.98-10.9 10.79-.52 5.03-.5 10.12.06 15.15.65 5.81 5.17 10.21 10.99 10.71l9.44.8c.69.06 1.02.49 1.16.84s.23.88-.22 1.42l-6.05 7.28c-3.73 4.5-3.76 10.8-.08 15.34 3.19 3.93 6.81 7.52 10.77 10.68 4.56 3.64 10.87 3.56 15.33-.21l7.24-6.1c.53-.45 1.06-.37 1.41-.23s.78.46.85 1.16l.88 9.43c.54 5.82 4.98 10.3 10.79 10.9 2.42.25 4.86.38 7.3.38 2.62 0 5.24-.15 7.85-.43 5.81-.65 10.21-5.17 10.71-10.99l.8-9.44c.06-.7.49-1.02.84-1.16s.88-.23 1.42.22l7.29 6.05c4.5 3.73 10.8 3.77 15.34.08 3.93-3.19 7.52-6.81 10.68-10.77 3.64-4.56 3.56-10.87-.21-15.33l-6.1-7.24c-.45-.53-.37-1.06-.23-1.41s.46-.78 1.16-.85l9.43-.88c5.82-.54 10.3-4.98 10.9-10.79.52-5.03.5-10.12-.06-15.15-.65-5.81-5.17-10.21-10.99-10.71l-9.44-.8c-.7-.06-1.02-.49-1.16-.84-.15-.35-.23-.88.22-1.42l6.05-7.29c3.73-4.5 3.77-10.8.08-15.34-3.19-3.93-6.81-7.52-10.77-10.68-4.56-3.64-10.87-3.56-15.33.21l-7.24 6.1c-.53.45-1.06.38-1.41.23-.35-.14-.78-.46-.85-1.16l-.88-9.43c-.54-5.82-4.98-10.3-10.79-10.9-5.03-.52-10.12-.5-15.15.06-5.81.65-10.21 5.17-10.7 10.99l-.8 9.44c-.06.7-.49 1.02-.84 1.16-.35.15-.88.23-1.42-.22l-7.29-6.05c-4.5-3.73-10.8-3.76-15.34-.08-3.93 3.19-7.52 6.81-10.68 10.77-3.64 4.57-3.56 10.87.21 15.33l6.1 7.24c.45.53.37 1.06.23 1.41-.15.35-.47.78-1.17.85zm8.57-8.71-6.1-7.24c-.66-.78-.67-1.85-.04-2.65 2.71-3.39 5.79-6.5 9.17-9.24.8-.65 1.86-.64 2.65.01l7.29 6.05c3.28 2.72 7.75 3.39 11.67 1.75s6.58-5.3 6.94-9.54l.8-9.44c.09-1.02.83-1.78 1.85-1.9 4.32-.48 8.7-.5 13.01-.05 1.02.11 1.77.86 1.86 1.88l.88 9.43c.39 4.24 3.08 7.87 7.01 9.48s8.4.9 11.65-1.84l7.23-6.1c.78-.66 1.85-.68 2.65-.04 3.4 2.71 6.5 5.79 9.24 9.17.65.79.64 1.86-.02 2.65l-6.05 7.29c-2.72 3.28-3.39 7.75-1.75 11.67s5.3 6.58 9.54 6.94l9.44.8c1.02.09 1.78.83 1.9 1.85.48 4.32.5 8.7.05 13.01-.11 1.02-.86 1.77-1.88 1.86l-9.43.88c-4.24.39-7.87 3.08-9.48 7.01s-.91 8.4 1.84 11.65l6.1 7.24c.66.78.67 1.85.04 2.65-2.71 3.4-5.79 6.5-9.17 9.24-.8.65-1.86.64-2.65-.01l-7.29-6.05c-3.28-2.72-7.75-3.39-11.67-1.75s-6.58 5.3-6.94 9.54l-.8 9.44c-.09 1.02-.83 1.78-1.85 1.9-4.32.48-8.7.5-13.01.05-1.02-.11-1.77-.86-1.86-1.88l-.88-9.43c-.39-4.24-3.08-7.87-7.01-9.48-1.4-.57-2.86-.85-4.31-.85-2.64 0-5.24.92-7.34 2.69l-7.23 6.1c-.78.66-1.85.68-2.65.04-3.4-2.71-6.5-5.79-9.24-9.17-.65-.8-.64-1.86.01-2.65l6.05-7.29c2.72-3.28 3.39-7.75 1.75-11.67s-5.3-6.58-9.54-6.94l-9.44-.8c-1.02-.09-1.78-.83-1.9-1.85-.48-4.32-.5-8.7-.05-13.01.11-1.02.86-1.77 1.88-1.86l9.43-.88c4.24-.39 7.87-3.08 9.48-7.02 1.62-3.92.92-8.39-1.83-11.64zm336.24 306.92-41.1-41.1c-2.71-2.71-6.33-4.21-10.18-4.21-1.04 0-2.06.12-3.05.33l-26.5-26.5c9.81-14.3 15.56-31.6 15.56-50.22 0-35.88-21.35-66.87-52.01-80.94v-156.48c0-27.92-22.71-50.63-50.63-50.63h-61.83c-3.22-6.9-10.2-11.7-18.3-11.7h-13.36c-2.43-16.52-16.7-29.24-33.88-29.24s-31.45 12.72-33.88 29.24h-13.36c-8.1 0-15.08 4.8-18.3 11.7h-61.82c-27.92 0-50.63 22.71-50.63 50.63v347.8c0 27.92 22.71 50.63 50.63 50.63h254.73c27.92 0 50.63-22.71 50.63-50.63v-29.43c4.64-2.13 9.06-4.64 13.23-7.5l26.51 26.51c-1 4.62.29 9.64 3.87 13.23l41.1 41.1c4.49 4.49 10.39 6.74 16.29 6.74s11.8-2.25 16.29-6.74c4.34-4.34 6.73-10.12 6.73-16.29s-2.4-11.96-6.74-16.3zm-75.27-121.7c0 43.56-35.44 79-79 79s-79-35.44-79-79 35.44-79 79-79 79 35.44 79 79zm-52.02-237.42v152.62c-4.62-1.47-9.41-2.58-14.32-3.28v-149.34c0-14.51-11.8-26.31-26.31-26.31h-59.93v-14.32h59.93c22.41 0 40.63 18.22 40.63 40.63zm-225.43-42.13c0-5.62 4.58-10.2 10.2-10.2h17.99c2.76 0 5-2.24 5-5 0-13.37 10.88-24.24 24.24-24.24 13.37 0 24.24 10.88 24.24 24.24 0 2.76 2.24 5 5 5h17.99c5.62 0 10.2 4.58 10.2 10.2v17.32c0 5.62-4.58 10.2-10.2 10.2h-94.47c-5.62 0-10.2-4.58-10.2-10.2v-17.32zm10.2 37.52h94.47c8.1 0 15.08-4.8 18.3-11.7h61.83c8.99 0 16.31 7.32 16.31 16.31v148.47c-.89-.03-1.77-.04-2.67-.04-49.07 0-89 39.92-89 89s39.92 89 89 89c.89 0 1.78-.02 2.67-.04v21.42c0 8.99-7.32 16.31-16.31 16.31h-254.72c-8.99 0-16.31-7.32-16.31-16.31v-347.8c0-8.99 7.32-16.31 16.31-16.31h61.83c3.21 6.89 10.19 11.69 18.29 11.69zm215.23 352.41c0 22.4-18.23 40.63-40.63 40.63h-254.72c-22.4 0-40.63-18.23-40.63-40.63v-347.8c0-22.4 18.23-40.63 40.63-40.63h59.93v14.32h-59.93c-14.51 0-26.31 11.8-26.31 26.31v347.8c0 14.51 11.8 26.31 26.31 26.31h254.73c14.51 0 26.31-11.8 26.31-26.31v-22.28c4.91-.7 9.7-1.81 14.32-3.28v25.56zm40.3-52.18 23.97 23.97-9.08 9.08-23.97-23.97c3.24-2.8 6.27-5.84 9.08-9.08zm79.92 89.01c-5.08 5.08-13.35 5.08-18.43 0l-41.1-41.1c-1.71-1.71-1.71-4.5 0-6.22l12.22-12.22c.86-.86 1.98-1.29 3.11-1.29s2.25.43 3.11 1.29l41.1 41.1c2.45 2.45 3.8 5.72 3.8 9.22-.01 3.5-1.36 6.77-3.81 9.22zm-215.29-147.21c0 37.54 30.54 68.09 68.09 68.09s68.09-30.54 68.09-68.09c0-37.54-30.54-68.09-68.09-68.09s-68.09 30.55-68.09 68.09zm126.18 0c0 32.03-26.06 58.09-58.09 58.09s-58.09-26.06-58.09-58.09 26.06-58.09 58.09-58.09 58.09 26.06 58.09 58.09zm-83.3-11.61c-2.34-3.08-5.74-5.07-9.57-5.59s-7.64.47-10.72 2.81-5.07 5.74-5.59 9.57c-.53 3.83.47 7.64 2.81 10.72l21.19 27.9c2.51 3.3 6.31 5.38 10.45 5.69.37.03.73.04 1.1.04 3.75 0 7.38-1.46 10.09-4.09l46.5-45.1c2.78-2.7 4.33-6.32 4.39-10.19.05-3.87-1.4-7.53-4.1-10.31s-6.32-4.33-10.19-4.39c-3.85-.03-7.53 1.4-10.3 4.1l-34.75 33.7zm53.01-11.67c.86-.84 2.02-1.31 3.2-1.27 1.2.02 2.32.5 3.16 1.36s1.29 2 1.27 3.2-.5 2.32-1.36 3.16l-46.49 45.09c-.94.91-2.18 1.35-3.47 1.25-1.3-.1-2.45-.73-3.24-1.77l-21.19-27.9c-.72-.95-1.03-2.13-.87-3.31.16-1.19.78-2.24 1.73-2.96s2.13-1.04 3.32-.87c1.19.16 2.24.78 2.96 1.73l14.71 19.36c.87 1.14 2.18 1.85 3.6 1.96s2.83-.4 3.86-1.4zm-280.3-18.54c0-2.76 2.24-5 5-5h141.42c2.76 0 5 2.24 5 5s-2.24 5-5 5h-141.42c-2.77 0-5-2.24-5-5zm88.16 127.85c0 2.76-2.24 5-5 5h-78.16c-2.76 0-5-2.24-5-5s2.24-5 5-5h78.16c2.76 0 5 2.23 5 5zm68.16-31.97c0 2.76-2.24 5-5 5h-146.32c-2.76 0-5-2.24-5-5s2.24-5 5-5h146.32c2.76 0 5 2.24 5 5zm-156.32-31.96c0-2.76 2.24-5 5-5h135.66c2.76 0 5 2.24 5 5s-2.24 5-5 5h-135.66c-2.77 0-5-2.23-5-5zm0-31.96c0-2.76 2.24-5 5-5h133.94c2.76 0 5 2.24 5 5s-2.24 5-5 5h-133.94c-2.77 0-5-2.24-5-5zm371.68 42.39c1.63 3.65 5.13 5.92 9.13 5.92s7.49-2.27 9.13-5.92l19.37-43.29c.29-.64.44-1.34.44-2.04v-246.32c0-15.95-12.98-28.93-28.93-28.93s-28.93 12.98-28.93 28.93v246.32c0 .7.15 1.4.44 2.04zm9.13-4.09-16.22-36.25h32.44zm-18.93-46.24v-207.46h37.87v207.46zm18.93-260.25c10.44 0 18.93 8.49 18.93 18.93v23.86h-37.87v-23.86c.01-10.44 8.5-18.93 18.94-18.93zm-277.42-19.08c0-4.48 3.63-8.11 8.11-8.11s8.11 3.63 8.11 8.11-3.63 8.11-8.11 8.11c-4.49 0-8.11-3.63-8.11-8.11z" fill-rule="evenodd"></path></svg>
+                                            <p className='font-semibold text-gray-500'>Even the best systems can face issues. Our fast and reliable repair services quickly diagnose.</p>
                                         </div>
                                         <div className='absolute top-18 right-8 z-15 '>
                                             <span className='text-[70px]  text-gray-200 font-extrabold'>02</span>
                                         </div>
                                     </Card>
-                                    <Card className='relative group w-full md:w-80 flex flex-col h-80 p-10 gap-4 hover:border-b-2 hover:mt-3 border-primary'>
-                                        <div className='relative z-20 flex flex-col gap-4'>
-                                            <p className='text-xl font-semibold'>Solution execution phase and installation done</p>
+                                    <Card className='relative group w-full md:w-80 flex flex-col h-80 p-10 pt-12  gap-4 hover:border-b-2 hover:mt-3 border-primary'>
+                                        <div className='relative z-20 flex flex-col gap-4 '>
+                                            <p className='text-xl font-semibold'>Optimization & Prevention</p>
                                             <svg className='w-10 h-10 group-hover:invert-75 group-hover:rotate-y-180' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g data-name="23 Computer repair" id="_23_Computer_repair"><g><path d="M25,23a1,1,0,0,0-1,1V46H2V36H21a1,1,0,0,0,0-2H2V24H12a1,1,0,0,0,0-2H2V13a1,1,0,0,1,1-1h8a1,1,0,0,0,0-2H3a3,3,0,0,0-3,3V55a1,1,0,0,0,2,0V48H24V61a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V59a1,1,0,0,0-2,0v2a3,3,0,0,0,3,3H23a3,3,0,0,0,3-3V24A1,1,0,0,0,25,23Z"></path><path d="M61,21H29a1,1,0,0,0,0,2H61a1,1,0,0,1,1,1V47H29a1,1,0,0,0,0,2H62v3a1,1,0,0,1-1,1H29a1,1,0,0,0,0,2H40.613l-1.561,4.684A1,1,0,0,0,40,61h8a1,1,0,0,0,.948-1.316L47.387,55H61a3,3,0,0,0,3-3V24A3,3,0,0,0,61,21ZM46.612,59H41.388l1.332-4h2.56Z"></path><circle cx="5" cy="19" r="1"></circle><circle cx="9" cy="19" r="1"></circle><path d="M17,55a4,4,0,1,0-4,4A4,4,0,0,0,17,55Zm-6,0a2,2,0,1,1,2,2A2,2,0,0,1,11,55Z"></path><path d="M10.5,8h5a1,1,0,0,0,0-2H12.183a8.988,8.988,0,0,1,15.265.5,1,1,0,0,0,.865.5H53.5a1,1,0,0,0,0-2H28.872A10.989,10.989,0,0,0,9.584,6.6,1,1,0,0,0,10.5,8Z"></path><path d="M41.5,17a1,1,0,0,0,0-2H28.313a1,1,0,0,0-.865.5,8.989,8.989,0,0,1-15.266.5h7.48a1,1,0,0,0,.895-.553l2-4a1,1,0,0,0,0-.894l-2-4a1,1,0,1,0-1.789.894L20.544,11l-1.5,3H10.5a1,1,0,0,0-.917,1.4A10.99,10.99,0,0,0,28.872,17Z"></path><path d="M53.5,15h-8a1,1,0,0,0,0,2h8a1,1,0,0,0,0-2Z"></path><path d="M42,39a1,1,0,0,0,.707-.293l7-7a1,1,0,0,0-1.414-1.414L42,36.586l-2.293-2.293a1,1,0,0,0-1.414,1.414l3,3A1,1,0,0,0,42,39Z"></path></g></g></svg>
-                                            <p className='font-semibold text-gray-500'>We collaborate closely on with you and examine the strategy and install and integrate the mechanical.</p>
+                                            <p className='font-semibold text-gray-500'>Routine maintenance keeps your systems running smoothly and prevents costly breakdowns.</p>
                                         </div>
                                         <div className='absolute top-18 right-8 z-15 '>
                                             <span className='text-[70px]  text-gray-200 font-extrabold'>03</span>
@@ -288,20 +318,20 @@ const Home = () => {
                     <div className='w-full flex justify-center '>
                         {/* Historique des travaux------------------------------------  */}
                         <ScrollAnimation>
-                            <div className='w-full p-8 lg:w-2/3 relative py-20 '>
-                                <div> <button className='text-primary text-xl flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg>Recent Work</button></div>
+                            <div className='w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 relative py-20 '>
+                                <div> <button className='text-primary text-xl flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clipRule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg>Recent Work</button></div>
                                 <div className='flex flex-col md:flex-row justify-between'>
                                     <div className='w-full md:w-1/2 text-2xl md:text-5xl font-semibold text-black'>Explore Large-Scale Projects</div>
                                     <div className='flex justify-between md:justify-evenly gap-4'>
-                                        <button onClick={prev} className='border-2 border-gray-500 h-10 mx-4 flex gap-2 items-center'><ArrowLeft /></button>
-                                        <button onClick={next} className='border-2 border-gray-500 h-10 mx-4 flex gap-2 items-center'><ArrowRight /></button>
+                                        <button onClick={prev} className='border-2 border-gray-500 p-2 mx-4 flex gap-2 items-center'><ArrowLeft /></button>
+                                        <button onClick={next} className='border-2 border-gray-500 p-2 mx-4 flex gap-2 items-center'><ArrowRight /></button>
                                     </div>
                                 </div>
                                 <div className='overflow-hidden relative p-10'>
-                                    <div className='flex transition-transform relative z-20 ease-out duration-500 gap-20 ' style={{ transform: `translateX(-${curr * 100}%) ` }}>
-                                        {carouselHome.map((carousel) => {
+                                    <motion.div transition={{ duration: 1.5, ease: 'linear' }} className='flex transition-transform relative z-20 ease-out duration-1000 gap-20 ' style={{ transform: `translateX(-${curr * 100}%) ` }}>
+                                        {carouselHome.map((carousel, index) => {
                                             return (
-                                                <div className='flex flex-row  gap-10' >
+                                                <motion.div key={index}  className='flex flex-row  gap-10' >
                                                     <Card className='group w-80 md:w-90 relative  '>
                                                         <img src={carousel.carousel1.image} alt="" />
                                                         <div className='absolute z-20 top-80 left-10 flex flex-col gap-4 group-hover:-translate-y-20 ease-in ease-initial duration-500'>
@@ -326,19 +356,19 @@ const Home = () => {
                                                             <button className='g-5 w-6 rounded-full bg-primary group-hover:ease-initial'><ArrowRight className='invert-100' /></button>
                                                         </div>
                                                     </Card>
-                                                </div>
+                                                </motion.div>
                                             )
                                         }
                                         )}
 
-                                    </div>
+                                    </motion.div>
                                     <div className='w-full relative p-5 md:px-20 z-10 -top-0  md:-top-15 bg-primary md:h-80 flex flex-col md:flex-row justify-evenly items-center gap-8'>
                                         <div className='w-full md:w-1/4'>
                                             <p className='text-6xl text-white font-semibold'>3,050</p>
                                             <p className='text-white font-semibold'>Success Projects</p>
                                         </div>
                                         <div className='w-full md:w-2/4 text-white font-semibold'>There are many variations of passages lorem ipsum available, but the majority have suffered alteration in some form.</div>
-                                        <button className='w-full md:w-1/4 bg-white font-semibold flex justify-evenly '> consultation & Quote <ArrowRight /></button>
+                                        <button className='w-full md:w-1/4 bg-white font-semibold flex justify-evenly  py-3'> consultation & Quote <ArrowRight /></button>
                                     </div>
                                 </div>
                             </div>
@@ -347,14 +377,14 @@ const Home = () => {
 
                     </div>
                     {/* Div colaborateur------------------------------------------------ */}
-                    
-                    <Employer/>
+
+                    <Employer />
                     {/* Div partneer--------------------------------------------- */}
 
-                    <div className='w-full h-300 flex flex-col items-center bg-gray-50'>
+                    <div className='w-full flex flex-col items-center bg-gray-50'>
                         <ScrollAnimation>
-                            <div className='w-full p-8 lg:w-2/3 flex flex-col py-20'>
-                                <div > <button className='text-primary text-xl flex items-center h-12 font-semibold w-1/4'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg>Testimonials</button></div>
+                            <div className='w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 flex flex-col py-20'>
+                                <div > <button className='text-primary text-xl flex items-center h-12 font-semibold w-1/4'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clipRule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg>Testimonials</button></div>
                                 <div className='flex flex-col md:flex-row w-full gap-4 justify-between'>
                                     <div className='w-full md:w-1/3 text-4xl font-semibold text-black'>What people say about Industrie company</div>
                                     <div className='flex gap-4 justify-center'>
@@ -368,16 +398,16 @@ const Home = () => {
                                                 <Card className='group  md:w-90 lg:w-80 h-70 relative '>
                                                     <div className='w-full flex  h-full  items-center justify-between flex-col  font-semibold p-10'>
                                                         <div className='flex w-full gap-4'>
-                                                            <img className='w-10 h-10 rounded-full' src='https://industrie.rstheme.com/main/wp-content/uploads/2024/02/t_h_2.jpg' alt="" />
+                                                            <img className='w-10 h-10 rounded-full' src={emplo.image} alt="" />
                                                             <div className=''>
                                                                 <p className='font-semibold'>Bm Askey Toren</p>
-                                                                <p className='text-gray-300 flex justify-between'> Ceo <img src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/testimonial_clogo.png" alt="" /></p>
+                                                                <p className='text-gray-300 flex justify-between'> Ceo <img className='w-5' src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/testimonial_clogo.png" alt="" /></p>
                                                             </div>
                                                         </div>
                                                         <p> At the heart of the global landscape, the industry stands as a multidimensional force of progress driving.</p>
                                                         <div className='border-t-2 w-full border-gray-400 flex justify-between'>
-                                                            <div className='flex items-center '>
-                                                                {/* <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-line"></i> */}
+                                                            <div className='flex items-center text-primary '>
+                                                                 <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-line"></i>
                                                             </div>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="43" viewBox="0 0 60 43" fill="none"><path d="M57.3913 0H33.913C32.4746 0 31.3043 1.14482 31.3043 2.55199V24.2439C31.3043 25.6511 32.4746 26.7959 33.913 26.7959H45V42.1077C45 42.7082 45.805 42.9717 46.1739 42.4907L59.8696 24.6267C59.9542 24.5163 60 24.382 60 24.2439V2.55199C60 1.14482 58.8299 0 57.3913 0ZM58.6957 24.0312L46.3043 40.1939V26.1579C46.3043 25.8055 46.0124 25.5199 45.6522 25.5199H33.913C33.1938 25.5199 32.6087 24.9475 32.6087 24.2439V2.55199C32.6087 1.84841 33.1938 1.276 33.913 1.276H57.3913C58.1105 1.276 58.6957 1.84841 58.6957 2.55199V24.0312ZM26.087 0H2.6087C1.17026 0 0 1.14482 0 2.55199V24.2439C0 25.6511 1.17026 26.7959 2.6087 26.7959H13.6957V42.1079C13.6957 42.7049 14.5004 42.9721 14.8696 42.4907L28.5652 24.6267C28.6499 24.5163 28.6957 24.382 28.6957 24.2439V2.55199C28.6957 1.14482 27.5254 0 26.087 0ZM27.3913 24.0312L15 40.1939V26.1579C15 25.8055 14.708 25.5199 14.3478 25.5199H2.6087C1.88948 25.5199 1.30435 24.9475 1.30435 24.2439V2.55199C1.30435 1.84841 1.88948 1.276 2.6087 1.276H26.087C26.8062 1.276 27.3913 1.84841 27.3913 2.55199V24.0312Z" fill="#1F1F1F"></path></svg>
                                                         </div>
@@ -391,8 +421,8 @@ const Home = () => {
                             </div>
                         </ScrollAnimation>
 
-                        {/* <div className='w-full lg:w-2/3 flex flex-col py-20'>
-                            <div className='flex justify-center'> <button className='text-primary text-xl flex items-center font-semibold'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg>Partners</button></div>
+                        {/* <div className='w-full lg:w-5/6 xl:w-4/5 2xl:w-3/4 flex flex-col py-20'>
+                            <div className='flex justify-center'> <button className='text-primary text-xl flex items-center font-semibold'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clipRule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg>Partners</button></div>
                             <div className='flex justify-center items-center'>
                                 <div className=' text-5xl font-semibold text-black'>Explore Large-Scale Projects</div>
                             </div>
@@ -422,8 +452,8 @@ const Home = () => {
                     {/* blog et articles de l'entreprise--------------------------------- */}
                     <ScrollAnimation>
                         <div className='w-full  flex flex-col items-center' >
-                            <div className='w-full p-8 lg:w-2/3 flex h-full flex-col py-20'>
-                                <div > <button className='text-primary text-xl flex items-center h-12 font-semibold w-1/4'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg>Testimonials</button></div>
+                            <div className='w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 flex h-full flex-col py-20'>
+                                <div > <button className='text-primary text-xl flex items-center h-12 font-semibold w-1/4'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clipRule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg>Testimonials</button></div>
                                 <div className='flex flex-col md:flew-row w-full justify-between gap-4'>
                                     <div className='w-full md:w-1/3 text-4xl font-semibold text-black'>Articles & blog posts with useful information</div>
                                     <div className='flex gap-4'>
@@ -434,31 +464,33 @@ const Home = () => {
                                     <Card className='group w-full md:w-1/2 h-full relative'>
                                         <div className='w-full h-full absolute z-10 group-hover:scale-105'><img className='h-full object-cover' src={blog4} alt="" /></div>
                                         <div className='w-full h-full absolute z-15 bg-[rgba(0,0,0,0.4)] '></div>
-                                        <div className='w-2/3 flex flex-col gap-8 h-full absolute z-20 top-60 left-8'>
+                                        <div className='w-2/3 flex flex-col gap-8 h-full absolute z-20 top-50 left-8'>
                                             <p className='text-gray-300 font-semibold'>By Sagar . Feb 8 ,2024</p>
-                                            <p className='text-2xl text-white font-semibold'>Construction of a new high tech plant in washingtons</p>
-                                            <p className=' text-gray-400 font-semibold'>Industry's standard dummy text ever...</p>
-                                            <button className='bg-primary text-white flex justify-center items-center h-10 w-1/2 p-4 rounded-sm'> company</button>
+                                            <p className='text-2xl text-white font-semibold'>VRF Air Conditioning: Your Complete Guide</p>
+                                            <p className=' text-gray-400 font-semibold'>VRF Air Conditioning: Your Complete Guide
+Enhance Climate Control with Advanced VRF Air Conditioning Variable Refrigerant Flow (VRF) air conditioning offers precise, multi-zone climate control by expertly adjusting refrigerant flow to meet the exact thermal needs of each space.</p>
+                                            <button className='bg-primary text-white flex justify-center items-center h-10 w-1/2 p-4 rounded-sm'>Installation</button>
                                         </div>
                                     </Card>
                                     <div className='w-full md:w-1/2 h-full flex flex-col gap-4'>
                                         <Card className='group grid grid-cols-2 h-1/2 w-full bg-gray-50'>
                                             <div className='flex flex-col justify-between p-5'>
                                                 <p className='text-gray-300 font-semibold'>By Sagar . Feb 8 ,2024</p>
-                                                <p className='text-xl font-semibold'>Construction of a new high tech plant in washingtons</p>
-                                                <p className=' text-gray-400 font-semibold'>Industry's standard dummy text ever...</p>
-                                                <button className='flex justify-center items-center bg-primary text-white h-10 w-1/2 p-4 rounded-sm'> company</button>
+                                                <p className='text-xl font-semibold'>How Much Does a Blast Chiller Cost?</p>
+                                                <p className=' text-gray-400 font-semibold'>How Much Does a Blast Chiller Cost?
+How Much Does a Blast Chiller Cost? UK 2025 Price Guide & Buyer Tips Ever opened the walk-in.</p>
+                                                <button className='flex justify-center items-center bg-primary text-white h-10 w-1/2 p-4 rounded-sm'>Maintenance</button>
                                             </div>
                                             <img className='h-full group-hover:scale-105' src={blog5} alt="" />
                                         </Card>
                                         <Card className='group grid grid-cols-2 h-1/2 w-full bg-gray-50'>
-                                            <div className='flex flex-col justify-between p-5'>
-                                                <p className='text-gray-300 font-semibold'>By Sagar . Feb 8 ,2024</p>
-                                                <p className='text-xl font-semibold'>Construction of a new high tech plant in washingtons</p>
-                                                <p className=' text-gray-400 font-semibold'>Industry's standard dummy text ever...</p>
-                                                <button className='flex justify-center items-center bg-primary text-white h-10 w-1/2 p-4 rounded-sm'> company</button>
+                                            <div className='flex flex-col h-full justify-around  p-5'>
+                                                <p className='text-gray-300 font-semibold'>By Sagar . Feb 8 ,2025</p>
+                                                <p className='text-xl font-semibold'>Inverter vs Non Inverter AC</p>
+                                                <p className=' text-gray-400 font-semibold'>Inverter vs Non-Inverter AC: Your Friendly Guide to Smarter Cooling Choosing the right air conditioner goes beyond just brand and BTU rating.</p>
+                                                <button className='flex justify-center items-center bg-primary text-white h-10 w-1/2 p-4 rounded-sm'>Repair</button>
                                             </div>
-                                            <img className='h-full group-hover:scale-105' src={blog6} alt="" />
+                                            <img className='h-70 w-full group-hover:scale-105' src={blog6} alt="" />
                                         </Card>
                                     </div>
                                 </div>

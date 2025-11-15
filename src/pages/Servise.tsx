@@ -25,7 +25,7 @@ const Servise = () => {
                     </div>
                 </div>
                 <div className='w-full flex flex-col items-center'>
-                    <div className='w-full  pl-25 lg:p-8 lg:w-2/3 flex flex-wrap gap-8 items-center py-25'>
+                    <div className='w-full  pl-25 lg:p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 flex flex-wrap gap-8 items-center py-25'>
                         {tabs.map((tabder) => {
                             return (
                                 <div className='group w-1/3 lg:w-1/5  flex flex-col hover:bg-black'>
@@ -121,7 +121,7 @@ const Servise = () => {
                         <div className='text-2xl pl-10 mb-10 md:text-5xl font-semibold '>Project implementation process </div>
                     </div>
                     <div className='flex flex-col lg:flex-row lg:h-150 gap-8'>
-                        <div className='w-full lg:w-2/3 h-full grid grid-cols-2 p-8 '>
+                        <div className='w-full lg:w-5/6 xl:w-4/5 2xl:w-3/4 h-full grid grid-cols-2 p-8 '>
                             <div className='border-b-2 lg:h-70 border-gray-500 flex flex-col gap-4 p-10'>
                                 <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary'>01</div><p className='text-gray-300 font-bold text-2xl'>Step</p></div>
                                 <p className='font-semibold text-xl'>Design and Planning</p>
