@@ -16,35 +16,35 @@ const Footer = () => {
                     <div className='absolute  w-full bg-black flex justify-center md:h-200'>
                         <img src={globe} className='relative z-1 top-0 left-0  invert-100 lg:w-3/4 h-200' alt="" />
                     </div>
-                    <div className='relative z-10 flex flex-col justify-center items-center p-10 lg:p-0 md:flex-row w-full h-full gap-20 '>
-                        <div className='w-3/4 lg:w-1/3 '>
+                    <div className='relative z-10 flex flex-col justify-around items-center p-10 lg:p-0 md:flex-row w-full h-full gap-20 '>
+                        <div className='w-4/5 lg:w-1/3 '>
                             <p className='text-primary text-2xl'> Contact</p>
                             <p className='text-2xl font-bold text-white md:text-4xl'>Have a project in mind? <br /> Contact with us</p>
                             <p className='text-gray-300 text-xl '>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour.</p>
                             <div className='grid grid-cols-1  md:grid-cols-2 gap-9 mt-9'>
-                                <div className='flex gap-10'>
-                                    <Card className='flex justify-center items-center w-15 h-20 bg-primary'><MapPinned className='invert-100 ' size={35} /></Card>
+                                <div className='flex gap-8 md:grid grid-cols-2 '>
+                                    <Card className='flex justify-center items-center w-20 md:w-15 h-20 bg-primary'><MapPinned className='invert-100 ' size={35} /></Card>
                                     <div className='w-2/3'>
                                         <p className='text-2xl font-bold text-white'>London</p>
                                         <p className='text-gray-400 text-sm '>London Postcode Se15 6rs Rue 149 glengall road</p>
                                     </div>
                                 </div>
-                                <div className='flex gap-10' >
-                                    <Card className='flex justify-center items-center w-15 h-20 bg-primary'><AtSign className='invert-100' size={35} /></Card>
+                                <div className='flex gap-8 md:grid grid-cols-2' >
+                                    <Card className='flex justify-center items-center w-20 md:w-15 h-20 bg-primary'><AtSign className='invert-100' size={35} /></Card>
                                     <div className='w-2/3'>
                                         <p className='text-2xl font-bold text-white' >Email Address</p>
                                         <p className='text-gray-400 text-sm '>Interested in working with us? takcooling@gmail.com</p>
                                     </div>
                                 </div>
-                                <div className='flex gap-10' >
-                                    <Card className='flex justify-center items-center w-15 h-20 bg-primary'><PhoneCall className='invert-100' size={35} /></Card>
+                                <div className='flex gap-8 md:grid grid-cols-2' >
+                                    <Card className='flex justify-center items-center w-20 md:w-15 h-20 bg-primary'><PhoneCall className='invert-100' size={35} /></Card>
                                     <div>
                                         <p className='text-2xl font-bold text-white'>Phone Number</p>
                                         <p className='text-gray-400 text-sm '>+ 00447877020977</p>
                                     </div>
                                 </div>
-                                <div className='flex gap-10 '>
-                                    <Card className='flex justify-center items-center w-15 h-20 bg-primary'><Hourglass className='invert-100' size={35} /></Card>
+                                <div className='flex gap-8  md:grid grid-cols-2 '>
+                                    <Card className='flex justify-center items-center w-20 md:w-15 h-20 bg-primary'><Hourglass className='invert-100' size={35} /></Card>
                                     <div >
                                         <p className='text-2xl font-bold text-white'>Opening Hour</p>
                                         <p className='text-gray-400 text-sm '>Mon - Fri: 09am - 07pm</p>
@@ -54,7 +54,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className='w-5/6  lg:w-1/4 h-120'>
-                            <Card className='flex flex-col bg-[rgba(255,119,0,0.9)] h-full justify-center items-center gap-10 p-10 '>
+                            <Card className='flex flex-col bg-[rgba(42,105,160,0.9)] h-full justify-center items-center gap-10 p-10 '>
                                 <p className='text-2xl text-white mt-4 '>Get in Touch</p>
                                 <p className='text-white '>The point of using Lorem Ipsum is that it has more-or-less normal</p>
                                 <div className='flex flex-col gap-4 w-full mb-4'>

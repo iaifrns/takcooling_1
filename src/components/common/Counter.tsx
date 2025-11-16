@@ -22,7 +22,7 @@ import { useInView } from 'react-intersection-observer';
   }, [inView, target]);
 
   return (
-    <p ref={ref} className="text-[20px] md:text-[50px] lg:text-[80px] font-bold text-gray-400 font-[Poppins] border-b-2 border-b-gray-500">{count}{text}</p>
+    <p ref={ref} className="text-[20px] md:text-[50px] lg:text-[70px] font-bold text-gray-400 font-[Poppins] border-b-2 border-b-gray-500">{count}{text}</p>
   );
 };
 export default Counter

@@ -3,7 +3,7 @@ import logo from '@/assets/image/logo.png'
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-
+import Logo from '@/assets/image/logo.png'
 
 import { Menu, X, Instagram, Twitter, Facebook, Search } from 'lucide-react'
 
@@ -37,8 +37,8 @@ const Header = () => {
 
             <div className="flex w-full h-full justify-around items-center">
                 {/* Logo/Nom */}
-                <Link to="/" className="w-4/6 md:w-1/6 h-full flex font-bold justify-center items-center  bg-gray-100 border-gray-200 text-black hover:transition-colors">
-                    Takcooling
+                <Link to="/" className="w-4/6 md:w-1/6 h-full flex font-bold justify-center items-center border-gray-200 text-black hover:transition-colors">
+                    <img className='h-19 w-3/4 rounded-sm' src={Logo} alt="" />
                 </Link>
 
                 
