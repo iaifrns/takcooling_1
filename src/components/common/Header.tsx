@@ -109,7 +109,7 @@ const Header = () => {
                                 <Link
                                     key={item.path}
                                     to={item.path}
-                                    className={`text-sm transition-colors hover:text-primary ${location.pathname === item.path ? 'text-white' : 'text-foreground'
+                                    className={`text-sm transition-colors hover:text-primary ${location.pathname === item.path ? 'text-primary' : 'text-foreground'
                                         }`}
                                     onClick={() => setIsMenuOpen(false)}
                                 >
