@@ -70,7 +70,7 @@ const About = () => {
                 </div>
               </div>
               <div className='w-full lg:w-1/2 h-full flex relative'>
-                <img className='h-2/3 w-1/2' src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/about-page-img1.jpg" alt="" />
+                <img className='h-2/3 w-1/2' src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/about-page-img2.jpg" alt="" />
                 <div className='h-2/3 w-1/2 pl-4 flex justify-center'><img className=' object-cover' src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/icon1.png" alt="" /></div>
                 <div className='absolute w-2/3  border-b-2 border-primary top-40 left-35 bg-gray-50 p-10'>
                   <p className='font-semibold text-xl '>Our Vision</p>
