@@ -35,7 +35,7 @@ const Servise = () => {
                     <div className='w-full  justify-center lg:p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 flex flex-wrap gap-8 items-center py-25'>
                         {tabs.map((tabder) => {
                             return (
-                                <div className='group w-1/3 lg:w-1/5  flex flex-col hover:bg-black'>
+                                <div className='group w-4/5 sm:w-1/3 lg:w-1/5  flex flex-col hover:bg-black'>
                                     <img className='w-full h-1/2' src={tabder.image} alt="" />
                                     <div className='w-full h-1/2 p-10 bg-gray-50 group-hover:bg-black'>
                                         <p className='group-hover:text-primary'>{tabder.title} </p>
@@ -49,7 +49,7 @@ const Servise = () => {
                     </div>
                 </div>
                 <div className='w-full relative flex flex-col items-center'>
-                    <div className='w-full flex h-360 lg:h-240 xl:h-200'>
+                    <div className='w-full flex h-400 sm:h-360 lg:h-240 xl:h-200'>
                         <div className='w-3/5 h-full bg-primary'></div>
                         <img className='w-2/5 h-full  object-cover' src={serviceimg} alt="" />
                     </div>
@@ -66,7 +66,7 @@ const Servise = () => {
                                 </div>
                                 <div className='flex flex-col gap-4' >
                                     <p className='font-semibold text-xl'>Quality Control System</p>
-                                    <p className='text-gray-500'>Modern society consumes consectetur adipisicing elitid.</p>
+                                    <p className='text-gray-500 text-sm '>Modern society consumes consectetur adipisicing elitid.</p>
                                 </div>
                             </div>
                             <div className='group w-full p-5 bg-white flex rounded-xs gap-8'>
@@ -76,7 +76,7 @@ const Servise = () => {
                                 </div>
                                 <div className='flex flex-col gap-4' >
                                     <p className='font-semibold text-xl'>Quality Control System</p>
-                                    <p className='text-gray-500 '>Modern society consumes consectetur adipisicing elitid.</p>
+                                    <p className='text-gray-500 text-sm '>Modern society consumes consectetur adipisicing elitid.</p>
                                 </div>
                             </div>
                             <div className='w-full p-5 bg-white flex rounded-xs gap-8'>
@@ -86,7 +86,7 @@ const Servise = () => {
                                 </div>
                                 <div className='flex flex-col gap-4' >
                                     <p className='font-semibold text-xl'>Quality Control System</p>
-                                    <p className='text-gray-500'>Modern society consumes consectetur adipisicing elitid.</p>
+                                    <p className='text-gray-500 text-sm '>Modern society consumes consectetur adipisicing elitid.</p>
                                 </div>
                             </div>
                             <div className='w-full p-5 bg-white flex rounded-xs gap-8'>
@@ -96,7 +96,7 @@ const Servise = () => {
                                 </div>
                                 <div className='flex flex-col gap-4' >
                                     <p className='font-semibold text-xl'>Quality Control System</p>
-                                    <p className='text-gray-500'>Modern society consumes consectetur adipisicing elitid.</p>
+                                    <p className='text-gray-500 text-sm '>Modern society consumes consectetur adipisicing elitid.</p>
                                 </div>
                             </div>
                             <div className='w-full p-5 bg-white flex rounded-xs gap-8'>
@@ -106,7 +106,7 @@ const Servise = () => {
                                 </div>
                                 <div className='flex flex-col gap-4' >
                                     <p className='font-semibold text-xl'>Quality Control System</p>
-                                    <p className='text-gray-500'>Modern society consumes consectetur adipisicing elitid.</p>
+                                    <p className='text-gray-500 text-sm '>Modern society consumes consectetur adipisicing elitid.</p>
                                 </div>
                             </div>
                             <div className='w-full p-5 bg-white flex rounded-xs gap-8'>
@@ -116,7 +116,7 @@ const Servise = () => {
                                 </div>
                                 <div className='flex flex-col gap-4' >
                                     <p className='font-semibold text-xl'>Quality Control System</p>
-                                    <p className='text-gray-500'>Modern society consumes consectetur adipisicing elitid.</p>
+                                    <p className='text-gray-500 text-sm '>Modern society consumes consectetur adipisicing elitid.</p>
                                 </div>
                             </div>
                         </div>
@@ -127,30 +127,30 @@ const Servise = () => {
                     <div className='flex w-full'>
                         <div className='text-2xl pl-10 mb-10 md:text-5xl font-semibold '>Project implementation process </div>
                     </div>
-                    <div className='flex flex-col lg:flex-row lg:h-150 gap-8'>
+                    <div className='flex flex-col items-center lg:flex-row lg:h-150 gap-8'>
                         <div className='w-full lg:w-5/6 xl:w-4/5 2xl:w-3/4 h-full grid grid-cols-2 p-8 '>
                             <div className='border-b-2 lg:h-70 border-gray-500 flex flex-col gap-4 p-10'>
-                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary'>01</div><p className='text-gray-300 font-bold text-2xl'>Step</p></div>
+                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary p-1'>01</div><p className='text-gray-300 font-bold text-xl sm:text-2xl'>Step</p></div>
                                 <p className='font-semibold text-xl'>Design and Planning</p>
-                                <p className='font-semibold text-sm   2xl:text-xl text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
+                                <p className='font-semibold hidden sm:flex text-sm  2xl:text-xl text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
                             </div>
                             <div className='border-b-2 lg:h-70 border-l-2 border-gray-500 flex flex-col gap-4 p-10'>
-                                <div className='flex gap-10'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary'>01</div><p className='text-gray-300 font-bold text-2xl'>Step</p></div>
+                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary p-1'>01</div><p className='text-gray-300 font-bold text-xl sm:text-2xl'>Step</p></div>
                                 <p className='font-semibold text-xl'>Design and Planning</p>
-                                <p className='font-semibold text-sm 2xl:text-xl text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
+                                <p className='font-semibold hidden sm:flex text-sm 2xl:text-xl text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
                             </div>
                             <div className=' border-gray-500 lg:h-70 flex flex-col gap-4 p-10'>
-                                <div className='flex gap-10'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary'>01</div><p className='text-gray-300 font-bold text-2xl'>Step</p></div>
+                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary p-1'>01</div><p className='text-gray-300 font-bold text-xl sm:text-2xl'>Step</p></div>
                                 <p className='font-semibold text-xl'>Design and Planning</p>
-                                <p className='font-semibold text-sm 2xl:text-xl text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
+                                <p className='font-semibold hidden sm:flex text-sm 2xl:text-xl text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
                             </div>
                             <div className='border-l-2 lg:h-70 border-gray-500 flex flex-col gap-4 p-10'>
-                                <div className='flex gap-10'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary'>01</div><p className='text-gray-300 font-bold text-2xl'>Step</p></div>
+                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary p-1'>01</div><p className='text-gray-300 font-bold text-xl sm:text-2xl'>Step</p></div>
                                 <p className='font-semibold text-xl'>Design and Planning</p>
-                                <p className='font-semibold text-sm 2xl:text-xl text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
+                                <p className='font-semibold hidden sm:flex text-sm 2xl:text-xl text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
                             </div>
                         </div>
-                        <div className='flex flex-col pl-4  gap-4 py-10 px-8 bg-white mr-8 border-t-4 border-primary rounded-xs'>
+                        <div className='flex w-4/5 flex-col gap-4 py-10 px-8 bg-white sm:mr-8 border-t-4 border-primary rounded-xs'>
                             <p className='font-semibold text-xl'>Have any Question?</p>
                             <p className='text-gray-500 font-semibold'>The point of using Lorem Ipsum is that it has more-or-less packages normal point of using.</p>
                             <input className='h-15 bg-gray-50 px-4' placeholder='Full Name' type="text" /><input placeholder='Email Address' className='h-15 bg-gray-50 px-4' type="text" /><input placeholder='Your Requery' className='h-15 bg-gray-50 px-4' type="text" />
@@ -164,9 +164,9 @@ const Servise = () => {
                     <div className='flex justify-between border-2-xl w-full '>
                         <div className='text-2xl pl-10 mb-10 md:text-5xl font-semibold '>Our friendly packages</div>
                         <div className='relative w-60 flex justify-between h-10 border-2 border-gray-100 rounded-3xl mx-2 '>
-                            <button onClick={() => setDaily(!daily)} className='w-25 h-10 rounded-2xl text-gray-300'>Monthly Plan</button>
-                            <button onClick={() => setDaily(!daily)} className='w-25 h-10 rounded-2xl text-gray-300'>Yearly Plan</button>
-                            <div className={`absolute  w-30 h-9 rounded-2xl bg-primary text-white flex justify-center items-center ${daily && 'translate-x-30'}`} >{daily ? 'Monthly Plan':'Yearly Plan'} </div>
+                            <button onClick={() => setDaily(!daily)} className='w-25 text-sm  h-10 rounded-2xl text-gray-300'>Monthly Plan</button>
+                            <button onClick={() => setDaily(!daily)} className='w-25 text-sm  h-10 rounded-2xl text-gray-300'>Yearly Plan</button>
+                            <div className={`absolute  w-30 h-9 rounded-2xl bg-primary text-sm text-white flex justify-center items-center ${daily && 'translate-x-30'}`} >{daily ? 'Monthly Plan':'Yearly Plan'} </div>
                         </div>
                     </div>
                     <div className='flex lg:flex-row flex-col w-full xl:h-170 gap-8 items-end justify-between '>

@@ -16,8 +16,8 @@ const Footer = () => {
                     <div className='absolute  w-full bg-black flex justify-center md:h-200'>
                         <img src={globe} className='relative z-1 top-0 left-0  invert-100 lg:w-3/4 h-200' alt="" />
                     </div>
-                    <div className='relative z-10 flex flex-col justify-around items-center p-10 lg:p-0 md:flex-row w-full h-full gap-20 '>
-                        <div className='w-4/5 lg:w-1/3 '>
+                    <div className='relative z-10 flex flex-col justify-around items-center p-8 lg:p-0 md:flex-row w-full h-full gap-20 '>
+                        <div className='w-full sm:w-4/5 lg:w-1/3 '>
                             <p className='text-primary text-2xl'> Contact</p>
                             <p className='text-2xl font-bold text-white md:text-4xl'>Have a project in mind? <br /> Contact with us</p>
                             <p className='text-gray-300 text-xl '>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour.</p>
@@ -53,8 +53,8 @@ const Footer = () => {
 
                             </div>
                         </div>
-                        <div className='w-5/6  lg:w-1/4 h-120'>
-                            <Card className='flex flex-col bg-[rgba(42,105,160,0.9)] h-full justify-center items-center gap-10 p-10 '>
+                        <div className='w-full sm:w-5/6 lg:w-1/4 h-120'>
+                            <Card className='flex flex-col bg-[rgba(42,105,160,0.9)] h-full justify-center items-center gap-4 sm:gap-10 p-10 '>
                                 <p className='text-2xl text-white mt-4 '>Get in Touch</p>
                                 <p className='text-white '>The point of using Lorem Ipsum is that it has more-or-less normal</p>
                                 <div className='flex flex-col gap-4 w-full mb-4'>
@@ -62,7 +62,7 @@ const Footer = () => {
                                     <input type="text" placeholder='Email Address' className='bg-[rgba(255,255,255,0.3)] border-2 border-gray-200 h-10 pl-2 text-white' />
                                     <input type="text" placeholder='Your requiry' className='bg-[rgba(255,255,255,0.3)] border-2 border-gray-200 h-10 pl-2 text-white' />
                                     <textarea name="" placeholder='Write where' className='bg-[rgba(255,255,255,0.3)] border-2 border-gray-200 h-15 pl-2 text-white' id=""></textarea>
-                                     <button className='bg-black w-3/4 h-10 flex justify-center items-center text-white gap-1 hover:invert-25 gap-2 transition-colors'><p>Send Message </p><ArrowRight className='invert-25 w-5' /></button>
+                                     <button className='bg-black w-3/4 h-10 flex justify-center items-center text-white p-1 hover:invert-25 gap-2 transition-colors'><p>Send Message </p><ArrowRight className='invert-25 w-5' /></button>
                                 </div>
                             </Card>
                         </div>

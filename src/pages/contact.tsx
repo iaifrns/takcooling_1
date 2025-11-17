@@ -54,7 +54,7 @@ const contact = () => {
             <div className='flex justify-center items-center py-10'>
               <div className='text-2xl w-2/3 text-center md:text-5xl font-semibold text-black'>Global Office</div>
             </div>
-            <div className='flex flex-col md:flex-row w-full justify-center md:px-0 px-20 gap-10 h-200 md:h-120'>
+            <div className='flex flex-col md:flex-row w-full justify-center md:px-0 px-10 gap-10 h-200 md:h-120'>
               <div className='w-full  md:w-1/4 bg-gray-50 h-full flex flex-col items-center md:items-start gap-4 p-10'>
                 <p className='text-2xl font-semibold'>San Francisco</p>
                 <div className='font-semibold text-gray-500'>+32 (0) 73 240 396</div>
@@ -84,7 +84,7 @@ const contact = () => {
           </div>
         </div>
         <div className='relative w-full h-200 bg-gray-300'>
-          <div className='absolute flex flex-col w-2/3 md:w-1/2 -top-50 right-[15%] md:right-[25%] md:h-150 border-t-primary border-4 border-l-white border-r-white border-b-white bg-gray-50 rounded-xl p-15 gap-8'>
+          <div className='absolute flex flex-col w-4/5 md:w-1/2 -top-50 right-[15%] md:right-[25%] md:h-150 border-t-primary border-4 border-l-white border-r-white border-b-white bg-gray-50 rounded-xl p-15 gap-8'>
             <p className='text-2xl w-2/3 text-center md:text-5xl font-semibold text-black'>Get in Touch</p>
             <p className=' font-semibold text-gray-300'>The point of using Lorem Ipsum is that it has more-or-less packages normal  make a type specimen book it has survived</p>
             <div className=' flex flex-col md:flex-row gap-4 justify-between'>

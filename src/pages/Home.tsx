@@ -334,7 +334,7 @@ const Home = () => {
                                         {carouselHome.map((carousel, index) => {
                                             return (
                                                 <motion.div key={index} className='flex flex-row w-full  gap-10' >
-                                                    <Card className='group w-80 md:w-90 relative  '>
+                                                    <Card className='group w-80 md:w-90 2xl:w-105 relative  '>
                                                         <img src={carousel.carousel1.image} alt="" />
                                                         <div className='absolute z-20 top-80 left-10 flex flex-col gap-4 group-hover:-translate-y-20 ease-in ease-initial duration-500'>
                                                             <button className='bg-primary w-30 text-white text-xl rounded-2xl font-semibold'>Company</button>
@@ -342,7 +342,7 @@ const Home = () => {
                                                             <button className='g-5 w-6 rounded-full bg-primary group-hover:ease-initial '><ArrowRight className='invert-100' /></button>
                                                         </div>
                                                     </Card>
-                                                    <Card className='group w-80 md:w-90 relative '>
+                                                    <Card className='group w-80 md:w-90 2xl:w-105 relative '>
                                                         <img src={carousel.carousel2.image} alt="" />
                                                         <div className='absolute z-20 top-80 left-10 flex flex-col gap-4 group-hover:-translate-y-20 ease-in ease-initial'>
                                                             <button className='bg-primary w-30 text-white text-xl rounded-2xl font-semibold'>Company</button>
@@ -350,7 +350,7 @@ const Home = () => {
                                                             <button className='g-5 w-6 rounded-full bg-primary group-hover:ease-initial '><ArrowRight className='invert-100' /></button>
                                                         </div>
                                                     </Card>
-                                                    <Card className='group w-80 md:w-90 relative '>
+                                                    <Card className='group w-80 md:w-90 2xl:w-105 relative '>
                                                         <img src={carousel.carousel2.image} alt="" />
                                                         <div className='absolute z-20 top-80 left-10 flex flex-col gap-4 group-hover:-translate-y-20 ease-in ease-initial'>
                                                             <button className='bg-primary w-30 text-white text-xl rounded-2xl font-semibold'>Company</button>
@@ -469,7 +469,7 @@ const Home = () => {
                                         <div className='w-2/3 flex flex-col gap-8 h-full absolute z-20 top-30 lg:top-50 left-8'>
                                             <p className='text-gray-300 font-semibold'>By Sagar . Feb 8 ,2024</p>
                                             <p className='text-xl lg:text-2xl text-white font-semibold'>VRF Air Conditioning: Your Complete Guide</p>
-                                            <p className=' text-gray-400 text-sm  2xl:font-semibold'>VRF Air Conditioning: Your Complete Guide
+                                            <p className=' text-gray-400 hidden sm:flex text-sm  2xl:font-semibold'>VRF Air Conditioning: Your Complete Guide
                                                 Enhance Climate Control with Advanced VRF Air Conditioning Variable Refrigerant Flow (VRF) air conditioning offers precise, multi-zone climate control by expertly adjusting refrigerant flow to meet the exact thermal needs of each space.</p>
                                             <button className='bg-primary text-white text-sm 2xl:text-xl flex justify-center items-center h-10 w-1/2 p-4 rounded-sm'>Installation</button>
                                         </div>
@@ -479,7 +479,7 @@ const Home = () => {
                                             <div className='flex flex-col justify-between p-5'>
                                                 <p className='text-gray-300 font-semibold'>By Sagar . Feb 8 ,2024</p>
                                                 <p className='text-sm lg:text-xl  font-semibold'>How Much Does a Blast Chiller Cost?</p>
-                                                <p className=' text-gray-400 text-sm xl:font-semibold'>How Much Does a Blast Chiller Cost?
+                                                <p className=' text-gray-400 hidden sm:flex text-sm xl:font-semibold'>How Much Does a Blast Chiller Cost?
                                                     How Much Does a Blast Chiller Cost? UK 2025 Price Guide & Buyer Tips Ever opened the walk-in.</p>
                                                 <button className='flex justify-center w-full sm:text-sm xl:text-xl items-center bg-primary text-white h-10 sm:w-2/3  p-4 rounded-sm '>Maintenance</button>
                                             </div>
@@ -489,7 +489,7 @@ const Home = () => {
                                             <div className='flex flex-col h-full justify-around  p-5'>
                                                 <p className='text-gray-300 font-semibold'>By Sagar . Feb 8 ,2025</p>
                                                 <p className='text-sm lg:text-xl font-semibold'>Inverter vs Non Inverter AC</p>
-                                                <p className=' text-gray-400 text-sm  xl:font-semibold'>Inverter vs Non-Inverter AC: Your Friendly Guide to Smarter Cooling Choosing the right air conditioner goes beyond just brand and BTU rating.</p>
+                                                <p className=' text-gray-400 hidden sm:flex text-sm  xl:font-semibold'>Inverter vs Non-Inverter AC: Your Friendly Guide to Smarter Cooling Choosing the right air conditioner goes beyond just brand and BTU rating.</p>
                                                 <button className='flex justify-center w-full sm:text-sm xl:text-xl items-center bg-primary text-white h-10 sm:w-2/3  p-4 rounded-sm'>Repair</button>
                                             </div>
                                             <img className='h-70 w-full object-cover group-hover:scale-105' src={blog6} alt="" />

@@ -60,19 +60,19 @@ const About = () => {
             <div className='flex justify-center items-center'>
               <div className='text-2xl w-2/3 text-center md:text-5xl font-semibold text-black'>Welcome to Industrie, your trusted partner in cooling, refrigeration, and air conditioning services.</div>
             </div>
-            <div className='flex gap-60 sm:h-250 md:gap-30 lg:gap-2 w-full flex-col justify-around px-10  lg:flex-row h-230 md:h-200  xl:h-100 pt-10'>
+            <div className='flex gap-60 h-300 sm:h-250 md:gap-30 lg:gap-2 w-full flex-col justify-around px-10  lg:flex-row  md:h-200  xl:h-100 pt-10'>
               <div className='w-full lg:w-1/2 h-full flex relative'>
-                <img className='h-2/3 w-1/2' src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/about-page-img1.jpg" alt="" />
-                <div className='h-2/3 w-1/2 pl-4 flex justify-center'><img src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/Icon.png" alt="" /></div>
-                <div className='absolute w-2/3   border-b-2 border-primary top-40 left-35 bg-gray-50 p-10'>
+                <img className='h-2/3  w-2/3 sm:w-1/2 object-cover' src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/about-page-img1.jpg" alt="" />
+                <div className='h-2/3 w-20 sm:w-1/2 pl-4 flex justify-center'><img src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/Icon.png" alt="" /></div>
+                <div className='absolute w-4/5 sm:w-2/3  border-b-2 border-primary top-40 left-20 sm:left-35 bg-gray-50 p-10'>
                   <p className='font-semibold text-xl'>Our Mission</p>
                   <p className='text-gray-300 text-sm pt-5'>Deliver reliable, energy-efficient refrigeration and air-conditioning services through expert craftsmanship, innovative technology, and a commitment to customer satisfaction.</p>
                 </div>
               </div>
               <div className='w-full lg:w-1/2 h-full flex relative'>
-                <img className='h-2/3 w-1/2' src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/about-page-img2.jpg" alt="" />
-                <div className='h-2/3 w-1/2 pl-4 flex justify-center'><img className=' object-cover' src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/icon1.png" alt="" /></div>
-                <div className='absolute w-2/3  border-b-2 border-primary top-40 left-35 bg-gray-50 p-10'>
+                <img className='h-2/3 w-2/3 sm:w-1/2 object-cover' src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/about-page-img2.jpg" alt="" />
+                <div className='h-2/3 w-20 sm:w-1/2 pl-4 flex justify-center'><img  src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/icon1.png" alt="" /></div>
+                <div className='absolute w-4/5 sm:w-2/3  border-b-2 border-primary top-40 left-20 sm:left-35 bg-gray-50 p-10'>
                   <p className='font-semibold text-xl '>Our Vision</p>
                   <p className='text-gray-300 text-sm pt-5'>Become the leading provider of sustainable cooling and air-conditioning solutions, ensuring comfort, efficiency, and environmental responsibility for every home and business.</p>
                 </div>
@@ -154,14 +154,14 @@ const About = () => {
                 </div>
                 <div className='flex flex-col w-full md:w-1/2 gap-4'>
                   <p className='text-2xl font-semibold'>Best Company</p>
-                  <p className=' font-semibold text-sm lg:text-xl text-gray-300'>Podcasting operational change management inside of workflows to
+                  <p className='hidden sm:flex font-semibold text-sm lg:text-xl text-gray-300'>Podcasting operational change management inside of workflows to
                     establish a framework seamless key performance indicators.</p>
                   <hr />
                   <div className='flex justify-between'>
                     <p className='text-2xl font-bold'>Brist Tomson</p>
                     <div className='flex gap-2'>
-                      <button className='bg-primary'><ArrowLeft className='invert-0'/></button>
-                      <button className='bg-primary'><ArrowRight className='invert-0'/></button>
+                      <button className='bg-primary h-10'><ArrowLeft className='invert-0'/></button>
+                      <button className='bg-primary h-10'><ArrowRight className='invert-0'/></button>
                     </div>
                   </div>
                 </div>
