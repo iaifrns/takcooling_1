@@ -13,6 +13,7 @@ import fond2 from '@/assets/image/fond_hom.jpg'
 import Aboutimg from '@/assets/image/about-main1.png'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import Counter from '@/components/common/Counter'
+import headerImg from '@/assets/image/hearderImg.png'
 
 const About = () => {
   const [date, setDate] = useState(1)
@@ -48,10 +49,7 @@ const About = () => {
     <PageTransition>
       <div className='w-screen mt-20 flex flex-col items-center bg-white '>
         <div className='relative flex w-full h-100' >
-          <div className='absolute top-0 left-0  bg-primary w-1/2 h-100 rounded-xs' style={{ clipPath: 'polygon(0 0,100% 0%, 80% 100%, 0 100%)' }}></div>
-          <div className='absolute top-0 right-0 w-1/2 h-100 rounded-xl' style={{ clipPath: 'polygon(20% 0,100% 0%, 100% 100%, 0 100%)' }}>
-            <img src={ing5} alt="" className='object-cover rounded-2xl' />
-          </div>
+          <img className='w-full h-full' src={headerImg} alt="" />
         </div>
         {/* corp du About */}
         <div className='w-full flex flex-col items-center'>
@@ -174,10 +172,10 @@ const About = () => {
               <div className='flex justify-center items-center'>
                 <div className='text-2xl  text-center md:text-5xl font-semibold text-black'>Discover the future of factories and industries</div>
               </div>
-              <div className={`relative left-50 h-full flex gap-8 overflow-hidden`} style={{ transform: `translateX(-${curr * 400}px)` }} >
+              <div className={`relative left-155 h-full flex gap-8 overflow-hidden`} style={{ transform: `translateX(-${curr * 428}px)` }} >
                 {tabs.map((taber) => {
                   return (
-                    <div className='relative  w-[400px] bg-gray-200  h-full flex flex-col'>
+                    <div className='relative   w-[420px] bg-gray-200  h-full flex flex-col'>
                       <img className='w-full h-1/2' src={taber.image} alt="" />
                       <div className='flex flex-col p-10 gap-8'>
                         <p className='font-semibold text-xl'>{taber.label} </p>

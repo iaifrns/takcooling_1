@@ -10,6 +10,7 @@ import blog6 from '@/assets/image/ing6.png'
 import ing5 from '@/assets/image/ing5.jpeg'
 import { ArrowRight, Check, X } from 'lucide-react';
 import serviceimg from '@/assets/image/service.jpeg'
+import headerImg from '@/assets/image/hearderImg.png'
 
 const Servise = () => {
     const [daily, setDaily] = useState(false)
@@ -26,10 +27,7 @@ const Servise = () => {
         <PageTransition>
             <div className='w-screen mt-20 flex flex-col items-center bg-white '>
                 <div className='relative flex w-full h-100' >
-                    <div className='absolute top-0 left-0  bg-primary w-1/2 h-100 rounded-xs' style={{ clipPath: 'polygon(0 0,100% 0%, 80% 100%, 0 100%)' }}></div>
-                    <div className='absolute top-0 right-0 w-1/2 h-100 rounded-xl' style={{ clipPath: 'polygon(20% 0,100% 0%, 100% 100%, 0 100%)' }}>
-                        <img src={ing5} alt="" className='object-cover rounded-2xl' />
-                    </div>
+                    <img className='w-full h-full' src={headerImg} alt="" />
                 </div>
                 <div className='w-full flex flex-col items-center'>
                     <div className='w-full  justify-center lg:p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 flex flex-wrap gap-8 items-center py-25'>

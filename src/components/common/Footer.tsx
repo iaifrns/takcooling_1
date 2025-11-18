@@ -79,7 +79,7 @@ const Footer = () => {
                             <Link to="/" className=" flex font-bold text-white text-3xl hover:transition-colors">
                                 Takcooling
                             </Link>
-                            <p className='text-gray-600 lg:w-80 flex text-xl md:text-sm font-bold justify-end items-center'>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently works.</p>
+                            <p className='text-gray-600 w-50 lg:w-80 flex text-xl md:text-sm font-bold justify-end items-center'>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently works.</p>
                             <p className='text-primary text-4xl'>Since 2007</p>
                             <p>© 2025 Industrie. Designed By RS<b className='text-primary'>Theme.</b> </p>
                         </div>

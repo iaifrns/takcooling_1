@@ -19,6 +19,7 @@ import villeImg2 from '@/assets/image/villeHome2.jpg'
 import serviceImg from '@/assets/image/service.jpeg'
 import Blog from './Blog'
 import Counter from '@/components/common/Counter'
+import headerImg from '@/assets/image/hearderImg.png'
 
 
 
