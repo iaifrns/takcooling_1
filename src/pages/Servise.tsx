@@ -1,34 +1,39 @@
 import PageTransition from '@/components/common/PagesTransition'
 import React, { useState } from 'react'
+import fond2 from '@/assets/image/fond_hom.jpg'
+import About from '@/assets/image/about-main1.png'
+import blog2 from '@/assets/image/ing2.jpeg'
+import blog3 from '@/assets/image/ing3.jpeg'
+import blog4 from '@/assets/image/ing4.jpeg'
+import blog5 from '@/assets/image/ing5.jpeg'
+import blog6 from '@/assets/image/ing6.png'
 import ing5 from '@/assets/image/ing5.jpeg'
 import { ArrowRight, Check, X } from 'lucide-react';
 import serviceimg from '@/assets/image/service.jpeg'
+import headerImg from '@/assets/image/hearderImg.png'
 
 const Servise = () => {
     const [daily, setDaily] = useState(false)
-    const tabs = [
-        { id: 1, label: 'Industrial Construction', image: "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/s_tab_img_01.jpg", title: 'We solve worldwide industrial every problem', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 2, label: 'High regulation Industrial', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/02/s_tab_img_02.jpg', title: 'A high regulation industry refers', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 3, label: 'Bridge Construction', image: "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/s_tab_img_03.jpg", title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 4, label: 'Oil gaz & energy', image: "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/s_tab_img_04.jpg", title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 5, label: 'Mechanical Engineery', image: "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/s_tab_img_05.jpg", title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 6, label: 'Automation industrial', image: "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/s_tab_img_05.jpg", title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
+   const tabs = [
+        { id: 1, label: 'Air conditioning installation', image: fond2, title: 'Professional Air Conditioning Installation for Perfect Home Comfort', content: 'Upgrade your home or business with a modern, energy-efficient AC system installed by certified experts. We deliver fast, clean, and reliable installation services tailored to your space, ensuring powerful cooling and maximum comfort all year round. Stay cool the smart way!' },
+        { id: 2, label: 'Air conditioning Repair', image: blog2, title: 'Fast & Reliable Air Conditioning Repair — Stay Cool Again in No Time', content: 'Is your AC making noise, blowing warm air, or not starting at all? Our skilled technicians diagnose and repair all AC issues with precision and speed. We restore your cooling system quickly so you can enjoy fresh, comfortable air without interruption' },
+        { id: 3, label: 'Air conditioning Maintenance', image: blog3, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
+        { id: 4, label: 'Refrigeration install', image: blog4, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
+        { id: 5, label: 'refrigeraition Repair', image: blog5, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
+        { id: 6, label: 'Refrigeration Maintenance', image: blog6, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
     ];
 
     return (
         <PageTransition>
             <div className='w-screen mt-20 flex flex-col items-center bg-white '>
                 <div className='relative flex w-full h-100' >
-                    <div className='absolute top-0 left-0  bg-primary w-1/2 h-100 rounded-xs' style={{ clipPath: 'polygon(0 0,100% 0%, 80% 100%, 0 100%)' }}></div>
-                    <div className='absolute top-0 right-0 w-1/2 h-100 rounded-xl' style={{ clipPath: 'polygon(20% 0,100% 0%, 100% 100%, 0 100%)' }}>
-                        <img src={ing5} alt="" className='object-cover rounded-2xl' />
-                    </div>
+                    <img className='w-full h-full' src={headerImg} alt="" />
                 </div>
                 <div className='w-full flex flex-col items-center'>
-                    <div className='w-full  pl-25 lg:p-8 lg:w-2/3 flex flex-wrap gap-8 items-center py-25'>
+                    <div className='w-full  justify-center lg:p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 flex flex-wrap gap-8 items-center py-25'>
                         {tabs.map((tabder) => {
                             return (
-                                <div className='group w-1/3 lg:w-1/5  flex flex-col hover:bg-black'>
+                                <div className='group w-4/5 sm:w-1/3 lg:w-1/5  flex flex-col hover:bg-black'>
                                     <img className='w-full h-1/2' src={tabder.image} alt="" />
                                     <div className='w-full h-1/2 p-10 bg-gray-50 group-hover:bg-black'>
                                         <p className='group-hover:text-primary'>{tabder.title} </p>
@@ -42,7 +47,7 @@ const Servise = () => {
                     </div>
                 </div>
                 <div className='w-full relative flex flex-col items-center'>
-                    <div className='w-full flex h-360 lg:h-180'>
+                    <div className='w-full flex h-400 sm:h-360 lg:h-240 xl:h-200'>
                         <div className='w-3/5 h-full bg-primary'></div>
                         <img className='w-2/5 h-full  object-cover' src={serviceimg} alt="" />
                     </div>
@@ -59,7 +64,7 @@ const Servise = () => {
                                 </div>
                                 <div className='flex flex-col gap-4' >
                                     <p className='font-semibold text-xl'>Quality Control System</p>
-                                    <p className='text-gray-500'>Modern society consumes consectetur adipisicing elitid.</p>
+                                    <p className='text-gray-500 text-sm '>Modern society consumes consectetur adipisicing elitid.</p>
                                 </div>
                             </div>
                             <div className='group w-full p-5 bg-white flex rounded-xs gap-8'>
@@ -69,7 +74,7 @@ const Servise = () => {
                                 </div>
                                 <div className='flex flex-col gap-4' >
                                     <p className='font-semibold text-xl'>Quality Control System</p>
-                                    <p className='text-gray-500'>Modern society consumes consectetur adipisicing elitid.</p>
+                                    <p className='text-gray-500 text-sm '>Modern society consumes consectetur adipisicing elitid.</p>
                                 </div>
                             </div>
                             <div className='w-full p-5 bg-white flex rounded-xs gap-8'>
@@ -79,7 +84,7 @@ const Servise = () => {
                                 </div>
                                 <div className='flex flex-col gap-4' >
                                     <p className='font-semibold text-xl'>Quality Control System</p>
-                                    <p className='text-gray-500'>Modern society consumes consectetur adipisicing elitid.</p>
+                                    <p className='text-gray-500 text-sm '>Modern society consumes consectetur adipisicing elitid.</p>
                                 </div>
                             </div>
                             <div className='w-full p-5 bg-white flex rounded-xs gap-8'>
@@ -89,7 +94,7 @@ const Servise = () => {
                                 </div>
                                 <div className='flex flex-col gap-4' >
                                     <p className='font-semibold text-xl'>Quality Control System</p>
-                                    <p className='text-gray-500'>Modern society consumes consectetur adipisicing elitid.</p>
+                                    <p className='text-gray-500 text-sm '>Modern society consumes consectetur adipisicing elitid.</p>
                                 </div>
                             </div>
                             <div className='w-full p-5 bg-white flex rounded-xs gap-8'>
@@ -99,7 +104,7 @@ const Servise = () => {
                                 </div>
                                 <div className='flex flex-col gap-4' >
                                     <p className='font-semibold text-xl'>Quality Control System</p>
-                                    <p className='text-gray-500'>Modern society consumes consectetur adipisicing elitid.</p>
+                                    <p className='text-gray-500 text-sm '>Modern society consumes consectetur adipisicing elitid.</p>
                                 </div>
                             </div>
                             <div className='w-full p-5 bg-white flex rounded-xs gap-8'>
@@ -109,60 +114,60 @@ const Servise = () => {
                                 </div>
                                 <div className='flex flex-col gap-4' >
                                     <p className='font-semibold text-xl'>Quality Control System</p>
-                                    <p className='text-gray-500'>Modern society consumes consectetur adipisicing elitid.</p>
+                                    <p className='text-gray-500 text-sm '>Modern society consumes consectetur adipisicing elitid.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='w-full md:w-4/5 bg-gray-50 relative flex flex-col items-center py-20'>
+                <div className='w-full md:w-5/6 lg:w-full xl:w-4/5 bg-gray-50 relative flex flex-col items-center py-20'>
                     <div> <button className='text-white text-xl flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg> About industrie</button></div>
                     <div className='flex w-full'>
                         <div className='text-2xl pl-10 mb-10 md:text-5xl font-semibold '>Project implementation process </div>
                     </div>
-                    <div className='flex flex-col lg:flex-row lg:h-150 gap-8'>
-                        <div className='w-full lg:w-2/3 h-full grid grid-cols-2 p-8 '>
+                    <div className='flex flex-col items-center lg:flex-row lg:h-150 gap-8'>
+                        <div className='w-full lg:w-5/6 xl:w-4/5 2xl:w-3/4 h-full grid grid-cols-2 p-8 '>
                             <div className='border-b-2 lg:h-70 border-gray-500 flex flex-col gap-4 p-10'>
-                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary'>01</div><p className='text-gray-300 font-bold text-2xl'>Step</p></div>
+                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary p-1'>01</div><p className='text-gray-300 font-bold text-xl sm:text-2xl'>Step</p></div>
                                 <p className='font-semibold text-xl'>Design and Planning</p>
-                                <p className='font-semibold  text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
+                                <p className='font-semibold hidden sm:flex text-sm  2xl:text-xl text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
                             </div>
                             <div className='border-b-2 lg:h-70 border-l-2 border-gray-500 flex flex-col gap-4 p-10'>
-                                <div className='flex gap-10'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary'>01</div><p className='text-gray-300 font-bold text-2xl'>Step</p></div>
+                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary p-1'>01</div><p className='text-gray-300 font-bold text-xl sm:text-2xl'>Step</p></div>
                                 <p className='font-semibold text-xl'>Design and Planning</p>
-                                <p className='font-semibold  text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
+                                <p className='font-semibold hidden sm:flex text-sm 2xl:text-xl text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
                             </div>
                             <div className=' border-gray-500 lg:h-70 flex flex-col gap-4 p-10'>
-                                <div className='flex gap-10'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary'>01</div><p className='text-gray-300 font-bold text-2xl'>Step</p></div>
+                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary p-1'>01</div><p className='text-gray-300 font-bold text-xl sm:text-2xl'>Step</p></div>
                                 <p className='font-semibold text-xl'>Design and Planning</p>
-                                <p className='font-semibold  text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
+                                <p className='font-semibold hidden sm:flex text-sm 2xl:text-xl text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
                             </div>
                             <div className='border-l-2 lg:h-70 border-gray-500 flex flex-col gap-4 p-10'>
-                                <div className='flex gap-10'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary'>01</div><p className='text-gray-300 font-bold text-2xl'>Step</p></div>
+                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary p-1'>01</div><p className='text-gray-300 font-bold text-xl sm:text-2xl'>Step</p></div>
                                 <p className='font-semibold text-xl'>Design and Planning</p>
-                                <p className='font-semibold  text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
+                                <p className='font-semibold hidden sm:flex text-sm 2xl:text-xl text-gray-500'>Industry standard dummy text took since the when an unknown printer galley type scrambled.</p>
                             </div>
                         </div>
-                        <div className='flex flex-col gap-4 py-10 px-8 bg-white mr-8 border-t-4 border-primary rounded-xs'>
+                        <div className='flex w-4/5 flex-col gap-4 py-10 px-8 bg-white sm:mr-8 border-t-4 border-primary rounded-xs'>
                             <p className='font-semibold text-xl'>Have any Question?</p>
                             <p className='text-gray-500 font-semibold'>The point of using Lorem Ipsum is that it has more-or-less packages normal point of using.</p>
                             <input className='h-15 bg-gray-50 px-4' placeholder='Full Name' type="text" /><input placeholder='Email Address' className='h-15 bg-gray-50 px-4' type="text" /><input placeholder='Your Requery' className='h-15 bg-gray-50 px-4' type="text" />
                             <textarea placeholder='write here' className='h-20 bg-gray-50' name="" id=""></textarea>
-                            <button className='w-1/2 bg-primary'>Send Messege</button>
+                            <button className='w-1/2 h-13 bg-primary'>Send Messege</button>
                         </div>
                     </div>
                 </div>
-                <div className='w-2/3 relative flex flex-col items-center py-20'>
+                <div className='w-5/6 xl:w-4/5 relative flex flex-col items-center py-20'>
                     <div> <button className='text-primary text-xl flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg> About industrie</button></div>
                     <div className='flex justify-between border-2-xl w-full '>
                         <div className='text-2xl pl-10 mb-10 md:text-5xl font-semibold '>Our friendly packages</div>
                         <div className='relative w-60 flex justify-between h-10 border-2 border-gray-100 rounded-3xl mx-2 '>
-                            <button onClick={() => setDaily(!daily)} className='w-25 h-10 rounded-2xl text-gray-300'>Monthly Plan</button>
-                            <button onClick={() => setDaily(!daily)} className='w-25 h-10 rounded-2xl text-gray-300'>Yearly Plan</button>
-                            <div className={`absolute  w-30 h-9 rounded-2xl bg-primary text-white flex justify-center items-center ${daily && 'translate-x-30'}`} >{daily ? 'Monthly Plan':'Yearly Plan'} </div>
+                            <button onClick={() => setDaily(!daily)} className='w-25 text-sm  h-10 rounded-2xl text-gray-300'>Monthly Plan</button>
+                            <button onClick={() => setDaily(!daily)} className='w-25 text-sm  h-10 rounded-2xl text-gray-300'>Yearly Plan</button>
+                            <div className={`absolute  w-30 h-9 rounded-2xl bg-primary text-sm text-white flex justify-center items-center ${daily && 'translate-x-30'}`} >{daily ? 'Monthly Plan':'Yearly Plan'} </div>
                         </div>
                     </div>
-                    <div className='flex lg:flex-row flex-col w-full lg:h-170 gap-8 items-end justify-between '>
+                    <div className='flex lg:flex-row flex-col w-full xl:h-170 gap-8 items-end justify-between '>
                         <div className='w-full lg:w-1/3 h-160 border-t-4 bg-gray-50 border-primary rounded-xs '>
                             <div className='flex flex-col justify-around items-center p-10 border-b-2 border-gray-300'>
                                 <p className='text-2xl font-bold'>Basic Plan</p>

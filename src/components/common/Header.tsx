@@ -3,15 +3,15 @@ import logo from '@/assets/image/logo.png'
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import Logo from '@/assets/image/takcooling.png'
 
-
-import { Menu, X, Instagram, Twitter, Facebook ,Search} from 'lucide-react'
+import { Menu, X, Instagram, Twitter, Facebook, Search } from 'lucide-react'
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const location = useLocation()
     const [ActiveSlide, setActiveSlide] = useState(false)
-    const [ActiveSearch, setActiveSearch] =useState(false)
+    const [ActiveSearch, setActiveSearch] = useState(false)
 
     const navItems = [
         { name: 'Home', path: '/' },
@@ -35,25 +35,13 @@ const Header = () => {
             transition={{ duration: 0.6 }}
         >
 
-            <div className="flex w-full h-full justify-around items-center">
+            <div className=" flex w-full h-full justify-between items-center">
                 {/* Logo/Nom */}
-                <Link to="/" className="w-4/6 md:w-1/6 h-full flex font-bold justify-center items-center  bg-gray-100 border-gray-200 text-black hover:transition-colors">
-                    Takcooling
+                <Link to="/" className="w-4/6 md:w-1/5 h-full flex font-bold bg-gray-50 justify-center  items-center border-gray-200 text-black hover:transition-colors py-1">
+                    <img className='h-full w-1/2 rounded-sm ' src={Logo} alt="" />
                 </Link>
 
-                {/* Réseaux sociaux Desktop */}
-                <div className="hidden md:flex w-1/10 h-full items-center justify-around space-x-4  border-gray-200">
-                    {socialLinks.map((social, index) => (
-                        <a
-                            key={index}
-                            href={social.href}
-                            className=" hover:text-white transition-colors"
-                            aria-label={social.label}
-                        >
-                            <social.icon className='invert-25' size={16} />
-                        </a>
-                    ))}
-                </div>
+                
 
                 {/* Navigation Desktop */}
                 <nav className="hidden md:flex w-3/6 ml-8 items-center h-full gap-8 space-x-8 text-gray-500">
@@ -74,11 +62,21 @@ const Header = () => {
                         </Link>
                     ))}
                 </nav>
-                {/* slide destop */}
-                <div className='hidden md:flex w-1/6 justify-end items-center mr-10 gap-8 border-gray-300'>
-                    <div className={`${ActiveSearch && 'w-50 rounded-4xl shadow-xl backdrop-blur-xl bg-primary ease-in  px-4 duration-200 transition-colors flex justify-between'}`}><button onClick={()=>setActiveSearch(!ActiveSearch) }><Search size={20} className='invert-25'/></button>{ActiveSearch && (<input className='w-25 border-0' ></input>)} </div>
-                    <button className='border-0' onClick={()=>setActiveSlide(!ActiveSlide) }>{ActiveSlide ? <X size={20} /> : <Menu size={20} />}</button>
+
+                {/* Réseaux sociaux Desktop */}
+                <div className="hidden md:flex w-1/7 h-full items-center justify-center gap-4 space-x-4  border-gray-200">
+                    {socialLinks.map((social, index) => (
+                        <a
+                            key={index}
+                            href={social.href}
+                            className=" hover:text-white transition-colors"
+                            aria-label={social.label}
+                        >
+                            <social.icon className='invert-25' size={16} />
+                        </a>
+                    ))}
                 </div>
+
 
                 {/* Menu Mobile */}
                 <button
@@ -111,7 +109,7 @@ const Header = () => {
                                 <Link
                                     key={item.path}
                                     to={item.path}
-                                    className={`text-sm transition-colors hover:text-primary ${location.pathname === item.path ? 'text-white' : 'text-foreground'
+                                    className={`text-sm transition-colors hover:text-primary ${location.pathname === item.path ? 'text-primary' : 'text-foreground'
                                         }`}
                                     onClick={() => setIsMenuOpen(false)}
                                 >
