@@ -3,7 +3,7 @@ import logo from '@/assets/image/logo.png'
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import Logo from '@/assets/image/logo.png'
+import Logo from '@/assets/image/takcooling.png'
 
 import { Menu, X, Instagram, Twitter, Facebook, Search } from 'lucide-react'
 
@@ -35,10 +35,10 @@ const Header = () => {
             transition={{ duration: 0.6 }}
         >
 
-            <div className="flex w-full h-full justify-around items-center">
+            <div className=" flex w-full h-full justify-between items-center">
                 {/* Logo/Nom */}
-                <Link to="/" className="w-4/6 md:w-1/6 h-full flex font-bold justify-center items-center border-gray-200 text-black hover:transition-colors">
-                    <img className='h-19 w-3/4 rounded-sm' src={Logo} alt="" />
+                <Link to="/" className="w-4/6 md:w-1/5 h-full flex font-bold bg-gray-50 justify-center  items-center border-gray-200 text-black hover:transition-colors py-1">
+                    <img className='h-full w-1/2 rounded-sm ' src={Logo} alt="" />
                 </Link>
 
                 
@@ -64,7 +64,7 @@ const Header = () => {
                 </nav>
 
                 {/* Réseaux sociaux Desktop */}
-                <div className="hidden md:flex w-1/10 h-full items-center justify-around space-x-4  border-gray-200">
+                <div className="hidden md:flex w-1/7 h-full items-center justify-center gap-4 space-x-4  border-gray-200">
                     {socialLinks.map((social, index) => (
                         <a
                             key={index}

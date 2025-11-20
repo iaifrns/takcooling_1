@@ -102,9 +102,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className='w-full flex flex-col items-center'>
-          <Employes />
-        </div>
+        
         <div className='w-full flex flex-col items-center'>
           <div className='relative w-full h-100 p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 bg-gray-50 flex flex-col items-center py-25'>
             <div> <button className='text-primary text-xl flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg> About industrie</button></div>
