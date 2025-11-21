@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import Logo from '@/assets/image/takcooling.png'
-
+import { FaWhatsapp } from "react-icons/fa"
 import { Menu, X, Instagram, Twitter, Facebook, Search } from 'lucide-react'
 
 const Header = () => {
@@ -22,8 +22,8 @@ const Header = () => {
     ]
 
     const socialLinks = [
+        { icon: FaWhatsapp, href: '#', label: 'Twitter' },
         { icon: Instagram, href: '#', label: 'Instagram' },
-        { icon: Twitter, href: '#', label: 'Twitter' },
         { icon: Facebook, href: '#', label: 'Facebook' }
     ]
 
@@ -35,13 +35,12 @@ const Header = () => {
             transition={{ duration: 0.6 }}
         >
 
-            <div className=" flex w-full h-full justify-between items-center">
+            <div className=" flex w-full h-full md:justify-between items-center">
                 {/* Logo/Nom */}
                 <Link to="/" className="w-4/6 md:w-1/5 h-full flex font-bold bg-gray-50 justify-center  items-center border-gray-200 text-black hover:transition-colors py-1">
-                    <img className='h-full w-1/2 rounded-sm ' src={Logo} alt="" />
+                    <img className='h-full w-1/2 rounded-sm' src={Logo} alt="" />
                 </Link>
 
-                
 
                 {/* Navigation Desktop */}
                 <nav className="hidden md:flex w-3/6 ml-8 items-center h-full gap-8 space-x-8 text-gray-500">
@@ -79,13 +78,16 @@ const Header = () => {
 
 
                 {/* Menu Mobile */}
-                <button
-                    className="md:hidden bg-primary w-10 h-10 rounded-sm flex justify-center items-center hover:text-foreground transition-colors"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    aria-label="Toggle menu"
-                >
-                    {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-                </button>
+                <div className='md:hidden w-2/6 flex justify-center'>
+                    <button
+                        className="md:hidden bg-primary w-10 h-10 rounded-sm flex justify-center items-center hover:text-foreground transition-colors"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+                    </button>
+                </div>
+
             </div>
             <div className={`absolute z-30 w-1/2 h-300 shadow-xl backdrop-blur-xl right-0  ${!ActiveSlide && 'translate-x-300'} bg-[rgba(255,255,255,0.5)]`}  >
                 <div className='w-full flex  justify-center  '>

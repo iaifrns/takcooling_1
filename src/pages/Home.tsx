@@ -19,12 +19,14 @@ import villeImg2 from '@/assets/image/villeHome2.jpg'
 import serviceImg from '@/assets/image/service.jpeg'
 import Blog from './Blog'
 import Counter from '@/components/common/Counter'
+import { FaWhatsapp } from "react-icons/fa"
+import { Link } from 'react-router-dom'
 
 
 
 const Home = () => {
     const [fondH, setFondH] = useState(0)
-    const [tab, setTab] = useState(0)
+    const [tab, setTab] = useState(1)
     const [curr, setCurr] = useState(0)
     const autoSlide = false
     const autoSlideIntervale = 10000
@@ -57,7 +59,7 @@ const Home = () => {
         { id: 3, label: 'Air conditioning Maintenance', image: blog3, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
         { id: 4, label: 'Refrigeration install', image: blog4, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
         { id: 5, label: 'refrigeraition Repair', image: blog5, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 6, label: 'Refrigeration Maintenance', image: blog6, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
+        { id: 6, label: 'refrigeraition Maintenance', image: blog6, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
     ];
 
     const carouselHome = [
@@ -145,8 +147,7 @@ const Home = () => {
                             <motion.p initial={{ opacity: [0, 0.5, 0], translateX: 20 }} animate={{ opacity: 1, translateX: -20 }} transition={{ duration: 1.5, ease: 'linear' }} className='font-serif text-2xl md:text-3xl lg:text-7xl text-white '>{backgroundHome[fondH].title}</motion.p>
                             <motion.p initial={{ opacity: [0, 0.5, 0], translateY: 20 }} animate={{ opacity: 1, translateY: -20 }} transition={{ duration: 1.5, ease: 'linear' }} className='text-gray-300 lg:text-xl'>{backgroundHome[fondH].content}</motion.p>
                             <div className='flex items-center gap-10'>
-                                <button className='w-40 bg-primary h-12 text-white flex justify-evenly items-center font-semibold rounded-sm'>Explore More <ArrowRight className='invert-0' /></button>
-                                <button className=' bg-primary h-12 w-12 flex justify-center items-center rounded-full'><ArrowRight className='invert-100' /></button>
+                                <button className='w-45 bg-green-600 h-12 text-white flex justify-evenly items-center font-semibold rounded-sm'>Contact Us <FaWhatsapp size={20}  /></button>
                             </div>
                         </div>
                         <div className='hidden md:flex h-4/5 flex-col justify-center  gap-10'>
@@ -221,7 +222,7 @@ const Home = () => {
                     <ScrollAnimation>
                         <Card className='relative w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 h-100 py-5 '>
                             <img src={serviceImg} className='w-full h-150 object-cover' alt="" />
-                            <div className='absolute z-10 bottom-85 left-[70%] px-1 bg-primary lg:w-1/6 h-15 flex items-center justify-center text-white'>Discover More  <ArrowRight className='invert-0' /></div>
+                            <Link to='/about' className='absolute z-10 bottom-85 left-[70%] px-1 bg-primary lg:w-1/6 h-15 flex items-center justify-center text-white cursor-pointer'>Discover More  <ArrowRight className='invert-0' /></Link>
                         </Card>
                     </ScrollAnimation>
 
@@ -254,13 +255,13 @@ const Home = () => {
                                 <div> <button className='text-primary text-xl flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clipRule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg>Our Services</button></div>
                                 <div className='flex flex-col md:flex-row  justify-between'>
                                     <div className='w-full md:w-1/2 text-2xl md:text-5xl font-semibold text-black'>Creative features from climatisation</div>
-                                    <button className='border-2 border-gray-500 h-12 m-8 md:mx-4 flex justify-center items-center gap-2 px-2'>Views All Solutions <ArrowRight /></button>
+                                    <Link to='/blog' className='border-2 border-gray-500 h-12 m-8 md:mx-4 flex justify-center items-center gap-2 px-2 cursor-pointer'>Views All Solutions <ArrowRight /></Link>
                                 </div>
                                 <div className='flex flex-col md:flex-row justify-between py-10'>
                                     <div className='w-full md:w-1/3 flex flex-wrap md:flex-col justify-evenly items-center h-100'>
                                         {tabs.map((taber, index) => {
                                             return (
-                                                <button key={index} onClick={() => setTab(taber.id)} className={`w-2/3 border-2 border-gray-500 font-bold ${tab === taber.id && 'bg-primary border-0'} h-12 hover:bg-primary`}>{taber.label}</button>
+                                                <button key={index} onClick={() => setTab(taber.id)} className={`w-2/3 border-2 border-gray-500 font-bold rounded-sm bg-gray-100 ${tab === taber.id && 'bg-primary border-0'} h-12 hover:bg-primary`}>{taber.label}</button>
                                             )
                                         })}
                                     </div>
@@ -370,7 +371,7 @@ const Home = () => {
                                             <p className='text-white font-semibold'>Success Projects</p>
                                         </div>
                                         <div className='w-full lg:w-2/4 text-white font-semibold'>There are many variations of passages lorem ipsum available, but the majority have suffered alteration in some form.</div>
-                                        <button className='w-full md:w-1/4 bg-white font-semibold flex justify-evenly px-2 py-3'> consultation & Quote <ArrowRight /></button>
+                                        <Link to='/service' className='w-full md:w-1/4 bg-white font-semibold flex justify-evenly px-2 py-3'> consultation & Quote <ArrowRight /></Link>
                                     </div>
                                 </div>
                             </div>
@@ -380,7 +381,7 @@ const Home = () => {
                     </div>
                     {/* Div colaborateur------------------------------------------------ */}
 
-                 
+
                     {/* Div partneer--------------------------------------------- */}
 
                     <div className='w-full flex flex-col items-center bg-gray-50'>
@@ -390,7 +391,7 @@ const Home = () => {
                                 <div className='flex flex-col md:flex-row w-full gap-4 justify-between'>
                                     <div className='w-full md:w-1/3 text-4xl font-semibold text-black'>What people say about Industrie company</div>
                                     <div className='flex gap-4 justify-center'>
-                                        <button className='bg-primary text-white font-semibold p-2 h-10 mx-4 flex gap-2 items-center'> More Reviews<ArrowRight /></button>
+                                        <Link to='/blog' className='bg-primary text-white font-semibold p-2 h-10 mx-4 flex gap-2 items-center'> More Reviews<ArrowRight /></Link>
                                     </div>
                                 </div>
                                 <div className='w-full grid grid-cols-1 pl-5  md:grid-cols-2 lg:grid-cols-3 gap-8  py-10 justify-center'>
@@ -459,7 +460,7 @@ const Home = () => {
                                 <div className='flex flex-col md:flew-row w-full justify-between gap-4'>
                                     <div className='w-full md:w-2/3 text-4xl font-semibold text-black'>Articles & blog posts with useful information</div>
                                     <div className='flex gap-4'>
-                                        <button className='bg-primary text-white font-semibold p-2  h-10 mx-4 flex gap-2 items-center'> More Reviews<ArrowRight /></button>
+                                        <Link to='/blog' className='bg-primary text-white font-semibold p-2  h-10 mx-4 flex gap-2 items-center'> More Reviews<ArrowRight /></Link>
                                     </div>
                                 </div>
                                 <div className='w-full h-200 xl:h-160 gap-8 py-10 flex flex-col md:flex-row'>
