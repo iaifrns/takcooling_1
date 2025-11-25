@@ -1,24 +1,21 @@
-import React, { useEffect, useState } from 'react'
-import PageTransition from '@/components/common/PagesTransition'
 import fond from '@/assets/image/fond.jpg'
 import fond2 from '@/assets/image/fond_hom.jpg'
-import About from '@/assets/image/about-main1.png'
 import blog2 from '@/assets/image/ing2.jpeg'
 import blog3 from '@/assets/image/ing3.jpeg'
 import blog4 from '@/assets/image/ing4.jpeg'
 import blog5 from '@/assets/image/ing5.jpeg'
 import blog6 from '@/assets/image/ing6.png'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
-import { AnimatePresence, motion, type Variants } from 'framer-motion'
-import { Card } from '@/components/ui/card'
-import Carousel from '@/components/common/CarouselHome'
-import ScrollAnimation from '@/components/common/ScrollAnimation'
-import Employer from '@/components/common/Employes'
-import villeImg from '@/assets/image/villeHome.jpg'
-import villeImg2 from '@/assets/image/villeHome2.jpg'
 import serviceImg from '@/assets/image/service.jpeg'
-import Blog from './Blog'
+import villeImg from '@/assets/image/villeHome.jpg'
 import Counter from '@/components/common/Counter'
+import PageTransition from '@/components/common/PagesTransition'
+import ScrollAnimation from '@/components/common/ScrollAnimation'
+import { Card } from '@/components/ui/card'
+import { email, phone } from '@/constant/generalInfo'
+import { redirectToWhatsapp } from '@/services/redirectToWhatsapp'
+import { AnimatePresence, motion } from 'framer-motion'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import { FaWhatsapp } from "react-icons/fa"
 import { Link } from 'react-router-dom'
 
@@ -76,11 +73,11 @@ const Home = () => {
 
         }
     ]
-    const employer = [
+    /* const employer = [
         { Name: 'Peter Hase', poste: 'Sr. ingineer', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/02/tem_6-414x500.jpg' },
         { Name: 'Lawrence Pater', poste: 'Four Man', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/01/team_img_4-414x500.jpg' },
         { Name: 'Braley Raws', poste: 'Sr. ingineer', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/01/team_img_5-414x500.jpg' }
-    ]
+    ] */
     const parteneer = [
         { Name: 'Peter Hase', poste: 'Sr. ingineer', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/02/t_h_1.jpg', avis: 'Excellent service! Quick installation and very professional team. My AC works perfectly.' },
         { Name: 'Lawrence Pater', poste: 'Four Man', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/02/t_h_2.jpg', avis: 'Fast repair and great customer support. They saved my day! Highly recommended.' },
@@ -129,7 +126,7 @@ const Home = () => {
                 <div className='w-full h-[800px] mt-20'>
 
                     <div className='hidden h-25  relative text-gray-600 bg-white md:flex pl-80 items-center z-10 -left-[48%] -rotate-90'>
-                        <p className='text-sm font-semibold'>Email. takcooling@gmail.com   |   Call. + 00447877020977 </p>
+                        <p className='text-sm font-semibold'>Email. {email}   |   Call. {phone} </p>
                     </div>
                     <div className='w-full h-[800px] absolute z-4 left-0 top-0 bg-[rgba(0,0,0,0.6)] '></div>
                     <AnimatePresence >
@@ -147,7 +144,7 @@ const Home = () => {
                             <motion.p initial={{ opacity: [0, 0.5, 0], translateX: 20 }} animate={{ opacity: 1, translateX: -20 }} transition={{ duration: 1.5, ease: 'linear' }} className='font-serif text-2xl md:text-3xl lg:text-7xl text-white '>{backgroundHome[fondH].title}</motion.p>
                             <motion.p initial={{ opacity: [0, 0.5, 0], translateY: 20 }} animate={{ opacity: 1, translateY: -20 }} transition={{ duration: 1.5, ease: 'linear' }} className='text-gray-300 lg:text-xl'>{backgroundHome[fondH].content}</motion.p>
                             <div className='flex items-center gap-10'>
-                                <button className='w-45 bg-green-600 h-12 text-white flex justify-evenly items-center font-semibold rounded-sm'>Contact Us <FaWhatsapp size={20}  /></button>
+                                <button className='w-45 bg-green-600 h-12 text-white flex justify-evenly items-center font-semibold rounded-sm' onClick={redirectToWhatsapp}>Contact Us <FaWhatsapp size={20}  /></button>
                             </div>
                         </div>
                         <div className='hidden md:flex h-4/5 flex-col justify-center  gap-10'>
