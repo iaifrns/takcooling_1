@@ -5,7 +5,7 @@ import blog3 from "@/assets/image/ing3.jpeg";
 import blog4 from "@/assets/image/ing4.jpeg";
 import blog5 from "@/assets/image/ing5.jpeg";
 import blog6 from "@/assets/image/ing6.png";
-import serviceImg from "@/assets/image/service.jpeg";
+import serviceImg from "@/assets/other/imgM16.jpg";
 import villeImg from "@/assets/image/villeHome.jpg";
 import Counter from "@/components/common/Counter";
 import PageTransition from "@/components/common/PagesTransition";
@@ -288,7 +288,7 @@ const Home = () => {
                   </div>
                   <div className="absolute top-14 -right-1 z-15 ">
                     <span className="text-[200px] text-gray-200 font-extrabold">
-                      0{ind+1}
+                      0{ind + 1}
                     </span>
                   </div>
                 </Card>
@@ -321,20 +321,21 @@ const Home = () => {
                   </svg>{" "}
                   About Us
                 </button>
-                <p className="text-black text-2xl md:text-5xl font-semibold">
-                  Air Conditioning & Refrigeration Experts{" "}
-                  <span className="text-primary">Since 2004.</span>{" "}
+                <p className="text-black text-2xl md:text-[40px] font-semibold">
+                  Your London Partner for Reliable Cooling, Comfort and{" "}
+                  <span className="text-primary">Technical Maintenance</span>{" "}
                 </p>
               </div>
               <div className="w-full md:w-2/5 font-semibold flex flex-col gap-3">
                 <p className="text-black">
-                  Welcome to Industrie, a leading industry innovator with a rich
-                  history of excellence.
+                  Operating since 2023, we specialise in delivering dependable
+                  cooling solutions — from AC installations and cold-room setups
+                  to routine servicing and emergency repairs.
                 </p>
                 <p className="text-gray-500">
-                  Founded in 2004 by the Elm Family, Be Cool Refrigeration &
-                  Air-conditioning is a true family-run specialist in commercial
-                  cooling solutions across the London area.
+                  Our approach blends engineering know-how with friendly,
+                  responsive service to keep your space comfortable, efficient,
+                  and worry-free throughout the year.
                 </p>
               </div>
             </div>
@@ -343,7 +344,7 @@ const Home = () => {
             <Card className="relative w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 h-100 py-5 ">
               <img
                 src={serviceImg}
-                className="w-full h-150 object-cover"
+                className="w-full h-full object-cover bg-center"
                 alt=""
               />
               <Link
