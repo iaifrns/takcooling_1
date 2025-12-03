@@ -211,3 +211,27 @@ export const parteneer = [
       avis: "Reliable, efficient, and affordable. My refrigeration system has never worked better.",
     },
   ];
+
+export const partaneer = [
+    {
+      Name: "Peter Hase",
+      poste: "Sr. ingineer",
+      image:
+        "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/t_h_1.jpg",
+      avis: "Excellent service! Quick installation and very professional team. My AC works perfectly.",
+    },
+    {
+      Name: "Lawrence Pater",
+      poste: "Four Man",
+      image:
+        "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/t_h_2.jpg",
+      avis: "Fast repair and great customer support. They saved my day! Highly recommended.",
+    },
+    {
+      Name: "Braley Raws",
+      poste: "Sr. ingineer",
+      image:
+        "https://industrie.rstheme.com/main/wp-content/uploads/2024/01/team_img_5-414x500.jpg",
+      avis: "Reliable, efficient, and affordable. My refrigeration system has never worked better.",
+    },
+  ];
