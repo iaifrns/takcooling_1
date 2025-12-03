@@ -1,5 +1,5 @@
 import PageTransition from '@/components/common/PagesTransition'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import About from '@/assets/image/about-main1.png'
 import blog2 from '@/assets/image/ing2.jpeg'
 import blog3 from '@/assets/image/ing3.jpeg'
@@ -11,10 +11,12 @@ import { ArrowLeft, ArrowRight, Check, Search, X } from 'lucide-react';
 import serviceimg from '@/assets/image/service.jpeg'
 import { motion } from 'framer-motion'
 import headerImg from '@/assets/image/hearderImg.png'
+import { useLocation } from 'react-router-dom'
 
 
 const Blog = () => {
 
+  const location = useLocation()
   const tabs = [
     { id: 1, label: 'Air conditioning installation', image: fond2, title: 'Professional Air Conditioning Installation for Perfect Home Comfort', content: 'Upgrade your home or business with a modern, energy-efficient AC system installed by certified experts. We deliver fast, clean, and reliable installation services tailored to your space, ensuring powerful cooling and maximum comfort all year round. Stay cool the smart way!' },
     { id: 2, label: 'Air conditioning Repair', image: blog2, title: 'Fast & Reliable Air Conditioning Repair — Stay Cool Again in No Time', content: 'Is your AC making noise, blowing warm air, or not starting at all? Our skilled technicians diagnose and repair all AC issues with precision and speed. We restore your cooling system quickly so you can enjoy fresh, comfortable air without interruption' },
@@ -30,6 +32,15 @@ const Blog = () => {
     searchTerm !== '' ? tab.title.toLowerCase().includes(searchTerm.toLowerCase()) : tab.title.toLowerCase().includes("")
   );
 
+  // useEffect(() => {
+    // if (location.hash) {
+      // const element = document.querySelector(location.hash);
+      // if (element) {
+        // element.scrollIntoView({ behavior: "smooth" });
+      // }
+    // }
+  // }, [location]);
+
 
   return (
     <PageTransition>
@@ -41,7 +52,7 @@ const Blog = () => {
           <div className='w-full md:w-2/3 flex flex-col gap-8'>
             {TabsFilter.map((tabder, index) => {
               return (
-                <motion.div key={index}
+                <motion.div id={`containe${String(tabder.id)}`} key={index}
                   initial={{ opacity: [0, 0.5, 0], translateX: 20 }} animate={{ opacity: 1, translateX: -20 }} transition={{ duration: 1.5, ease: 'linear' }} className='w-full h-150 flex flex-col gap-4 py-8 border-b-2 border-gray-300'>
                   <div className='relative w-full h-2/3 rounded-xs overflow-hidden'>
                     <img className='w-full h-full hover:scale-110 object-cover' src={tabder.image} alt="" />
@@ -69,9 +80,9 @@ const Blog = () => {
             <div className='w-full h-120 bg-gray-50 flex flex-col gap-4 py-10 px-4'>
               <p className='text-2xl font-semibold'>Categories</p>
               <div className='w-full flex flex-col gap-2'>
-                {tabs.map((tabder) => {
+                {tabs.map((tabder,index) => {
                   return (
-                    <button onClick={() => setSearchTerm(tabder.title)} className='group w-full h-12 bg-white border-2 border-gray-200 border-xs flex justify-between items-center px-8 hover:bg-primary '>
+                    <button key={index} onClick={() => setSearchTerm(tabder.title)} className='group w-full h-12 bg-white border-2 border-gray-200 border-xs flex justify-between items-center px-8 hover:bg-primary '>
                       <p>{tabder.label} </p>
                       <ArrowRight className='group-hover:invert-100' />
                     </button>
