@@ -1,12 +1,12 @@
 import fond from "@/assets/image/fond.jpg";
 import fond2 from "@/assets/image/fond_hom.jpg";
-import blog2 from "@/assets/image/ing2.jpeg";
-import blog3 from "@/assets/image/ing3.jpeg";
-import blog4 from "@/assets/image/ing4.jpeg";
-import blog5 from "@/assets/image/ing5.jpeg";
-import blog6 from "@/assets/image/ing6.png";
 import serviceImg from "@/assets/other/imgM16.jpg";
 import villeImg from "@/assets/image/villeHome.jpg";
+import blog2 from '@/assets/image/ing2.jpeg'
+import blog3 from '@/assets/image/ing3.jpeg'
+import blog4 from '@/assets/image/ing4.jpeg'
+import blog5 from '@/assets/image/ing5.jpeg'
+import blog6 from '@/assets/image/ing6.png'
 import Counter from "@/components/common/Counter";
 import PageTransition from "@/components/common/PagesTransition";
 import ScrollAnimation from "@/components/common/ScrollAnimation";
@@ -19,6 +19,9 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { backgroundHome } from "@/store/appStore";
+import { tabs , carouselHome ,parteneer } from "@/store/appStore";
+
 
 const Home = () => {
   const [fondH, setFondH] = useState(0);
@@ -27,153 +30,18 @@ const Home = () => {
   const autoSlide = false;
   const autoSlideIntervale = 10000;
 
-  const backgroundHome = [
-    {
-      id: 1,
-      title: "Your Trusted Cooling Experts in London",
-      content:
-        "Based in the heart of London, Takcooling provides fast, reliable, and engineered cooling solutions for homes, offices, and businesses across the city.",
-      image: fond,
-    },
-    {
-      id: 2,
-      title: "Experience the Comfort of Perfect Cooling",
-      content:
-        "We install high-efficiency air conditioners that keep your spaces cool, quiet, and energy-efficient — designed for your comfort all year round.",
-      image: villeImg,
-    },
-    {
-      id: 3,
-      title: "Engineered Installations, Built to Last",
-      content:
-        "Our certified engineers deliver precise and durable installations — because at Takcooling, every detail matters for performance and reliability.",
-      image: fond2,
-    },
-  ];
-
-  const tabs = [
-    {
-      id: 1,
-      label: "Air conditioning installation",
-      image: fond2,
-      title:
-        "Professional Air Conditioning Installation for Perfect Home Comfort",
-      content:
-        "Upgrade your home or business with a modern, energy-efficient AC system installed by certified experts. We deliver fast, clean, and reliable installation services tailored to your space, ensuring powerful cooling and maximum comfort all year round. Stay cool the smart way!",
-    },
-    {
-      id: 2,
-      label: "Air conditioning Repair",
-      image: blog2,
-      title:
-        "Fast & Reliable Air Conditioning Repair — Stay Cool Again in No Time",
-      content:
-        "Is your AC making noise, blowing warm air, or not starting at all? Our skilled technicians diagnose and repair all AC issues with precision and speed. We restore your cooling system quickly so you can enjoy fresh, comfortable air without interruption",
-    },
-    {
-      id: 3,
-      label: "Air conditioning Maintenance",
-      image: blog3,
-      title: "Bridge construction is a complex engineering",
-      content:
-        "The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.",
-    },
-    {
-      id: 4,
-      label: "Refrigeration install",
-      image: blog4,
-      title: "Bridge construction is a complex engineering",
-      content:
-        "The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.",
-    },
-    {
-      id: 5,
-      label: "refrigeraition Repair",
-      image: blog5,
-      title: "Bridge construction is a complex engineering",
-      content:
-        "The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.",
-    },
-    {
-      id: 6,
-      label: "refrigeraition Maintenance",
-      image: blog6,
-      title: "Bridge construction is a complex engineering",
-      content:
-        "The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.",
-    },
-  ];
-
-  const carouselHome = [
-    {
-      carousel1: {
-        title: "Metal Industry",
-        image:
-          "https://industrie.rstheme.com/main/wp-content/uploads/2024/01/p_company_img_4.jpg",
-      },
-      carousel2: {
-        title: "Metal Industry",
-        image:
-          "https://industrie.rstheme.com/main/wp-content/uploads/2024/01/p_company_img_3.jpg",
-      },
-      carousel3: {
-        title: "Metal Industry",
-        image:
-          "https://industrie.rstheme.com/main/wp-content/uploads/2024/01/p_company_img_2.jpg",
-      },
-    },
-    {
-      carousel1: {
-        title: "Metal Industry",
-        image:
-          "https://industrie.rstheme.com/main/wp-content/uploads/2024/01/p_slider_img_1.jpg",
-      },
-      carousel2: {
-        title: "Metal Industry",
-        image:
-          "https://industrie.rstheme.com/main/wp-content/uploads/2024/01/p_company_img_2.jpg",
-      },
-      carousel3: {
-        title: "Metal Industry",
-        image:
-          "https://industrie.rstheme.com/main/wp-content/uploads/2024/01/p_company_img_3.jpg",
-      },
-    },
-  ];
   /* const employer = [
         { Name: 'Peter Hase', poste: 'Sr. ingineer', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/02/tem_6-414x500.jpg' },
         { Name: 'Lawrence Pater', poste: 'Four Man', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/01/team_img_4-414x500.jpg' },
         { Name: 'Braley Raws', poste: 'Sr. ingineer', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/01/team_img_5-414x500.jpg' }
     ] */
-  const parteneer = [
-    {
-      Name: "Peter Hase",
-      poste: "Sr. ingineer",
-      image:
-        "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/t_h_1.jpg",
-      avis: "Excellent service! Quick installation and very professional team. My AC works perfectly.",
-    },
-    {
-      Name: "Lawrence Pater",
-      poste: "Four Man",
-      image:
-        "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/t_h_2.jpg",
-      avis: "Fast repair and great customer support. They saved my day! Highly recommended.",
-    },
-    {
-      Name: "Braley Raws",
-      poste: "Sr. ingineer",
-      image:
-        "https://industrie.rstheme.com/main/wp-content/uploads/2024/01/team_img_5-414x500.jpg",
-      avis: "Reliable, efficient, and affordable. My refrigeration system has never worked better.",
-    },
-  ];
+ 
 
   const prev = () => setCurr(curr == 0 ? 1 : 0);
   const next = () => setCurr(curr == 1 ? 0 : 1);
 
   const handlenext = () => {
-    setFondH(fondH === backgroundHome.length - 1 ? 0 : fondH + 1);
+    setFondH(fondH === backgroundHome.length ? 0 : fondH + 1);
   };
 
   const handleprev = () => {
@@ -182,7 +50,7 @@ const Home = () => {
 
   useEffect(() => {
     const SlideIntervale = setInterval(() => {
-      setFondH((prev) => (prev === backgroundHome.length - 1 ? 0 : prev + 1));
+      setFondH((prev) => (prev === backgroundHome.length - 1 ? 1 : prev + 1));
     }, 10000);
 
     return () => clearInterval(SlideIntervale);
@@ -207,22 +75,14 @@ const Home = () => {
             </p>
           </div>
           <div className="w-full h-[800px] absolute z-4 left-0 top-0 bg-[rgba(0,0,0,0.6)] "></div>
-          <AnimatePresence>
-            <motion.div
-              key={fondH}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.6 }}
-              className="w-full absolute z-1 left-0 top-0 "
-            >
-              <motion.img
-                src={backgroundHome[fondH].image}
-                className="relative object-cover z-2 h-[800px] w-full "
-                alt=""
-              />
-            </motion.div>
-          </AnimatePresence>
+          {backgroundHome.map((back, index) => {
+            return (
+              <div className={`${back.id !== fondH && "hidden"}`}>
+                <back.image />
+              </div>
+              
+            )
+          })}
           <motion.div
             key={fondH}
             className="absolute z-5 w-full top-0 h-[800px] flex justify-evenly items-end "
@@ -432,9 +292,8 @@ const Home = () => {
                         <button
                           key={index}
                           onClick={() => setTab(taber.id)}
-                          className={`w-2/3 border-2 border-gray-500 font-bold rounded-sm bg-gray-100 ${
-                            tab === taber.id && "bg-primary border-0"
-                          } h-12 hover:bg-primary`}
+                          className={`w-2/3 border-2 border-gray-500 font-bold rounded-sm bg-gray-100 ${tab === taber.id && "bg-primary border-0"
+                            } h-12 hover:bg-primary`}
                         >
                           {taber.label}
                         </button>
@@ -897,12 +756,12 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="w-full h-200 xl:h-160 gap-8 py-10 flex flex-col md:flex-row">
-                  <Card className="group hidden md:flex w-full md:w-1/2 h-full relative">
+                  <Card className="group hidden md:flex cursor-pointer w-full md:w-1/2 h-full relative">
                     <div className="w-full h-full absolute z-10 group-hover:scale-105">
                       <img className="h-full object-cover" src={blog4} alt="" />
                     </div>
                     <div className="w-full h-full absolute z-15 bg-[rgba(0,0,0,0.4)] "></div>
-                    <div className="w-2/3 flex flex-col gap-8 h-full absolute z-20 top-30 lg:top-50 left-8">
+                    <Link to="/blog#containe6" className="w-2/3 flex flex-col gap-8 h-full absolute z-20 top-30 lg:top-50 left-8">
                       <p className="text-gray-300 font-semibold">
                         By Sagar . Feb 8 ,2024
                       </p>
@@ -920,11 +779,11 @@ const Home = () => {
                       <button className="bg-primary text-white text-sm 2xl:text-xl flex justify-center items-center h-10 w-1/2 p-4 rounded-sm">
                         Installation
                       </button>
-                    </div>
+                    </Link>
                   </Card>
                   <div className="w-full md:w-1/2 h-full flex flex-col gap-4">
-                    <Card className="group grid grid-cols-2 h-1/2 w-full bg-gray-50">
-                      <div className="flex flex-col justify-between p-5">
+                    <Card className="group grid grid-cols-2 cursor-pointer h-1/2 w-full bg-gray-50">
+                      <Link to="blog#containe5" className="flex flex-col justify-between p-5">
                         <p className="text-gray-300 font-semibold">
                           By Sagar . Feb 8 ,2024
                         </p>
@@ -939,15 +798,15 @@ const Home = () => {
                         <button className="flex justify-center w-full sm:text-sm xl:text-xl items-center bg-primary text-white h-10 sm:w-2/3  p-4 rounded-sm ">
                           Maintenance
                         </button>
-                      </div>
+                      </Link>
                       <img
                         className="h-full object-cover group-hover:scale-105"
                         src={blog5}
                         alt=""
                       />
                     </Card>
-                    <Card className="group grid grid-cols-2 h-1/2 w-full bg-gray-50">
-                      <div className="flex flex-col h-full justify-around  p-5">
+                    <Card className="group grid grid-cols-2 h-1/2 w-full cursor-pointer bg-gray-50">
+                      <Link to="/blog#containe6" className="flex flex-col h-full justify-around  p-5">
                         <p className="text-gray-300 font-semibold">
                           By Sagar . Feb 8 ,2025
                         </p>
@@ -962,7 +821,7 @@ const Home = () => {
                         <button className="flex justify-center w-full sm:text-sm xl:text-xl items-center bg-primary text-white h-10 sm:w-2/3  p-4 rounded-sm">
                           Repair
                         </button>
-                      </div>
+                      </Link>
                       <img
                         className="h-70 w-full object-cover group-hover:scale-105"
                         src={blog6}
