@@ -2,11 +2,11 @@ import fond from "@/assets/image/fond.jpg";
 import fond2 from "@/assets/image/fond_hom.jpg";
 import serviceImg from "@/assets/other/imgM16.jpg";
 import villeImg from "@/assets/image/villeHome.jpg";
-import blog2 from '@/assets/image/ing2.jpeg'
-import blog3 from '@/assets/image/ing3.jpeg'
-import blog4 from '@/assets/image/ing4.jpeg'
-import blog5 from '@/assets/image/ing5.jpeg'
-import blog6 from '@/assets/image/ing6.png'
+import blog2 from "@/assets/image/ing2.jpeg";
+import blog3 from "@/assets/image/ing3.jpeg";
+import blog4 from "@/assets/image/ing4.jpeg";
+import blog5 from "@/assets/image/ing5.jpeg";
+import blog6 from "@/assets/image/ing6.png";
 import Counter from "@/components/common/Counter";
 import PageTransition from "@/components/common/PagesTransition";
 import ScrollAnimation from "@/components/common/ScrollAnimation";
@@ -20,8 +20,7 @@ import { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { backgroundHome } from "@/store/appStore";
-import { tabs , carouselHome ,parteneer } from "@/store/appStore";
-
+import { tabs, carouselHome, parteneer } from "@/store/appStore";
 
 const Home = () => {
   const [fondH, setFondH] = useState(0);
@@ -35,7 +34,6 @@ const Home = () => {
         { Name: 'Lawrence Pater', poste: 'Four Man', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/01/team_img_4-414x500.jpg' },
         { Name: 'Braley Raws', poste: 'Sr. ingineer', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/01/team_img_5-414x500.jpg' }
     ] */
- 
 
   const prev = () => setCurr(curr == 0 ? 1 : 0);
   const next = () => setCurr(curr == 1 ? 0 : 1);
@@ -80,8 +78,7 @@ const Home = () => {
               <div className={`${back.id !== fondH && "hidden"}`}>
                 <back.image />
               </div>
-              
-            )
+            );
           })}
           <motion.div
             key={fondH}
@@ -290,8 +287,9 @@ const Home = () => {
                         <button
                           key={index}
                           onClick={() => setTab(index)}
-                          className={`w-2/3 border-2 border-gray-500 font-bold rounded-sm bg-gray-100 ${tab === index && "bg-primary border-0"
-                            } h-12 hover:bg-primary`}
+                          className={`w-2/3 border border-gray-500 font-bold rounded-sm bg-gray-100 ${
+                            tab === index && "bg-primary border-0"
+                          } h-15 hover:bg-primary`}
                         >
                           {taber.label}
                         </button>
@@ -354,7 +352,7 @@ const Home = () => {
                       <div className="relative z-20 flex flex-col gap-4">
                         <p className="text-xl font-semibold">{serv.title}</p>
                         <serv.logo />
-                        <p className="font-semibold text-gray-400 text-[15px] text-justify">
+                        <p className="font-semibold text-gray-500 text-[15px] text-justify">
                           {serv.desc}
                         </p>
                       </div>
@@ -430,33 +428,34 @@ const Home = () => {
                           className="flex flex-row w-full  gap-10"
                         >
                           <Card className="group w-80 md:w-90 2xl:w-100 relative  ">
-                            <img src={carousel.image} className="h-70 w-full" alt="" />
-                            <div className="absolute z-20 top-80 left-10 flex flex-col gap-4 group-hover:-translate-y-20 ease-in ease-initial duration-500">
-                              <button className="bg-primary w-30 text-white text-xl rounded-2xl font-semibold">
-                                Company
+                            <img
+                              src={carousel.image}
+                              className="h-70 w-full object-cover"
+                              alt={carousel.title}
+                            />
+                            <div className="absolute z-20 top-55 left-5 w-2/3 flex flex-col gap-4 group-hover:-translate-y-20 ease-in ease-initial duration-500">
+                              <button className="bg-primary py-3 text-white rounded-xl font-semibold">
+                                {carousel.title}
                               </button>
-                              <p className="text-4xl font-semibold text-white">
+                              <p className="text-2xl font-semibold text-white">
                                 {carousel.title}
                               </p>
-                              <button className="g-5 w-6 rounded-full bg-primary group-hover:ease-initial ">
-                                <ArrowRight className="invert-100" />
-                              </button>
                             </div>
                           </Card>
                         </motion.div>
                       );
                     })}
                   </motion.div>
-                  <div className="w-full relative p-5 md:px-20 z-10 -top-0  md:-top-15 bg-primary md:h-80 flex flex-col md:flex-row justify-evenly items-center gap-8">
+                  <div className="w-full relative p-5 md:px-20 z-10   md:-top-15 bg-primary md:h-80 flex flex-col md:flex-row justify-evenly items-center gap-8">
                     <div className="w-full md:w-1/4">
-                      <p className="text-6xl text-white font-semibold">2.52</p>
+                      <p className="text-6xl text-white font-semibold">252</p>
                       <p className="text-white font-semibold">
                         Success Projects
                       </p>
                     </div>
                     <div className="w-full lg:w-2/4 text-white font-semibold">
-                      We carry out our projects with a single objective: the satisfaction of our clients.
-
+                      We carry out our projects with a single objective: the
+                      satisfaction of our clients.
                     </div>
                     <Link
                       to="/service"
@@ -503,11 +502,11 @@ const Home = () => {
                 </div>
                 <div className="flex flex-col md:flex-row w-full gap-4 justify-between">
                   <div className="w-full md:w-1/3 text-4xl font-semibold text-black">
-                    What people say about Industrie company
+                    What people say about Takcooling
                   </div>
                   <div className="flex gap-4 justify-center">
                     <Link
-                      to="/blog"
+                      to="/contact"
                       className="bg-primary text-white font-semibold p-2 h-10 mx-4 flex gap-2 items-center"
                     >
                       {" "}
@@ -529,31 +528,20 @@ const Home = () => {
                                 alt=""
                               />
                               <div className="">
-                                <p className="font-semibold">Bm Askey Toren</p>
+                                <p className="font-semibold">{emplo.Name}</p>
                                 <p className="text-gray-300 flex justify-between w-full">
                                   {emplo.poste}
-                                  {" "}
-                                  <img
-                                    className="w-15"
-                                    src={emplo.entreprise}
-                                    alt=""
-                                  />
                                 </p>
                               </div>
                             </div>
-                            <p>
-                              {" "}
-                              At the heart of the global landscape, the industry
-                              stands as a multidimensional force of progress
-                              driving.
-                            </p>
+                            <p>{emplo.avis}</p>
                             <div className="border-t-2 w-full border-gray-400 flex justify-between">
                               <div className="flex items-center text-primary ">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-half-line"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-fill"></i>
+                                <i className="ri-star-half-line"></i>
                               </div>
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -606,7 +594,7 @@ const Home = () => {
                         </div> */}
           </div>
           {/* blog et articles de l'entreprise--------------------------------- */}
-          <ScrollAnimation>
+          {/* <ScrollAnimation>
             <div className="w-full  flex flex-col items-center">
               <div className="w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 flex h-full flex-col py-20">
                 <div>
@@ -630,7 +618,7 @@ const Home = () => {
                         fill="#EA5501"
                       ></path>
                     </svg>
-                    Article 
+                    Article
                   </button>
                 </div>
                 <div className="flex flex-col md:flew-row w-full justify-between gap-4">
@@ -654,7 +642,10 @@ const Home = () => {
                       <img className="h-full object-cover" src={blog4} alt="" />
                     </div>
                     <div className="w-full h-full absolute z-15 bg-[rgba(0,0,0,0.4)] "></div>
-                    <Link to="/blog#containe6" className="w-2/3 flex flex-col gap-8 h-full absolute z-20 top-30 lg:top-50 left-8 cursor-pointer">
+                    <Link
+                      to="/blog#containe6"
+                      className="w-2/3 flex flex-col gap-8 h-full absolute z-20 top-30 lg:top-50 left-8 cursor-pointer"
+                    >
                       <p className="text-gray-300 font-semibold">
                         By Sagar . Feb 8 ,2024
                       </p>
@@ -676,7 +667,10 @@ const Home = () => {
                   </Card>
                   <div className="w-full md:w-1/2 h-full flex flex-col gap-4">
                     <Card className="group grid grid-cols-2 cursor-pointer h-1/2 w-full bg-gray-50">
-                      <Link to="blog#containe5" className="flex flex-col justify-between p-5">
+                      <Link
+                        to="blog#containe5"
+                        className="flex flex-col justify-between p-5"
+                      >
                         <p className="text-gray-300 font-semibold">
                           By Sagar . Feb 8 ,2024
                         </p>
@@ -699,7 +693,10 @@ const Home = () => {
                       />
                     </Card>
                     <Card className="group grid grid-cols-2 h-1/2 w-full cursor-pointer bg-gray-50">
-                      <Link to="/blog#containe6" className="flex flex-col h-full justify-around  p-5">
+                      <Link
+                        to="/blog#containe6"
+                        className="flex flex-col h-full justify-around  p-5"
+                      >
                         <p className="text-gray-300 font-semibold">
                           By Sagar . Feb 8 ,2025
                         </p>
@@ -725,7 +722,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </ScrollAnimation> */}
         </div>
       </div>
     </PageTransition>

@@ -1,30 +1,28 @@
-import type { BackgroundHome, Tabs, CarouselHome, Parteneer } from "@/type/service"
 import fond from "@/assets/image/fond.jpg";
 import fond2 from "@/assets/image/fond_hom.jpg";
-import blog2 from '@/assets/image/ing2.jpeg'
-import blog3 from '@/assets/image/ing3.jpeg'
-import blog4 from '@/assets/image/ing4.jpeg'
-import blog5 from '@/assets/image/ing5.jpeg'
-import blog6 from '@/assets/image/ing6.png'
-import imageM3 from '@/assets/other/imgM3.jpg'
-import imageM13 from '@/assets/other/imgM13.jpg'
-import imageM10 from '@/assets/other/imgM10.jpg'
-import imageM12 from '@/assets/other/imgM12.jpg'
-import imageM15 from '@/assets/other/imgM15.jpg'
-import imageM16 from '@/assets/other/imgM16.jpg'
+import blog2 from "@/assets/image/ing2.jpeg";
+import blog3 from "@/assets/image/ing3.jpeg";
+import blog4 from "@/assets/image/ing4.jpeg";
+import blog5 from "@/assets/image/ing5.jpeg";
+import blog6 from "@/assets/image/ing6.png";
 import villeImg from "@/assets/image/villeHome.jpg";
-import { Divide } from "lucide-react";
+import imageM10 from "@/assets/other/imgM10.jpg";
+import imageM12 from "@/assets/other/imgM12.jpg";
+import imageM15 from "@/assets/other/imgM15.jpg";
+import imageM16 from "@/assets/other/imgM16.jpg";
+import imageM3 from "@/assets/other/imgM3.jpg";
+import { images } from "@/constant/images";
+import type { BackgroundHome } from "@/type/service";
 import { AnimatePresence, motion } from "framer-motion";
 
-
-interface appState {
+/* interface appState {
 
   backgroundHome: BackgroundHome[];
   tabs: Tabs[];
   carouselHome: CarouselHome[]
   parteneer: Parteneer[];
 
-}
+} */
 
 export const backgroundHome: BackgroundHome[] = [
   {
@@ -49,8 +47,8 @@ export const backgroundHome: BackgroundHome[] = [
             />
           </motion.div>
         </AnimatePresence>
-      )
-    }
+      );
+    },
   },
   {
     id: 1,
@@ -74,8 +72,8 @@ export const backgroundHome: BackgroundHome[] = [
             />
           </motion.div>
         </AnimatePresence>
-      )
-    }
+      );
+    },
   },
   {
     id: 2,
@@ -99,8 +97,8 @@ export const backgroundHome: BackgroundHome[] = [
             />
           </motion.div>
         </AnimatePresence>
-      )
-    }
+      );
+    },
   },
 ];
 
@@ -158,38 +156,27 @@ export const tabs = [
 ];
 
 export const carouselHome = [
-  
-    {
-      title: "Metal Industry",
-      image:
-        imageM10
-    },
-    {
-      title: "Metal Industry",
-      image:
-        imageM3,
-    },
-     {
-      title: "Metal Industry",
-      image:
-        imageM12,
-    },
-     {
-      title: "Metal Industry",
-      image:
-        imageM13,
-    },
-       {
-    title: "Metal Industry",
-    image:
-      imageM15,
+  {
+    title: "Refrigeration install",
+    image: imageM10,
   },
   {
-    title: "Metal Industry",
-    image:
-      imageM16,
-  }
-  ];
+    title: "Refrigeraition Maintenance",
+    image: imageM3,
+  },
+  {
+    title: "Air conditioning installation",
+    image: imageM12,
+  },
+  {
+    title: "Air conditioning Maintenance",
+    image: imageM15,
+  },
+  {
+    title: "Sales Of Equipments",
+    image: images.SERV5,
+  },
+];
 
 export const parteneer = [
   {
@@ -197,22 +184,20 @@ export const parteneer = [
     poste: "Ceo",
     image:
       "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/t_h_1.jpg",
-    avis: "Excellent service! Quick installation and very professional team. My AC works perfectly.",
-    entreprise: "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/testimonial_clogo.png"
+    avis: "Excellent installation work fast, clean, and the cooling performance has been outstanding.",
   },
   {
-    Name: "Lawrence Pater",
+    Name: "Jannet Lawrence",
     poste: "housewife",
-    image:
-      "https://industrie.rstheme.com/main/wp-content/uploads/2024/02/t_h_2.jpg",
-    avis: "Fast repair and great customer support. They saved my day! Highly recommended.",
+    image: images.TESTY1,
+    avis: "Reliable service from start to finish quick maintenance and a noticeable improvement in cooling.",
   },
   {
     Name: "Braley Raws",
     poste: "Sr. ingineer",
     image:
       "https://industrie.rstheme.com/main/wp-content/uploads/2024/01/team_img_5-414x500.jpg",
-    avis: "Reliable, efficient, and affordable. My refrigeration system has never worked better.",
+    avis: "Professional execution throughout precise installation and a system that works perfectly.",
   },
 ];
 

@@ -13,6 +13,14 @@ export interface BackgroundHome {
     image: () => ReactNode;
 }
 
+export interface ServiceTab {
+    id: number;
+    label: string;
+    image: string;
+    title: string;
+    content: string;
+}
+
 export interface Tabs {
     id: number;
     label: string;
