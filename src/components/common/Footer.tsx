@@ -22,30 +22,30 @@ const Footer = () => {
                             <p className='text-2xl font-bold text-white md:text-4xl'>Have a project in mind? <br /> Contact with us</p>
                             <p className='text-gray-300 text-xl '>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour.</p>
                             <div className='grid grid-cols-1  md:grid-cols-2 gap-9 mt-9'>
-                                <div className='flex gap-8 md:grid grid-cols-2 '>
-                                    <Card className='flex justify-center items-center w-20 md:w-15 h-20 bg-primary'><MapPinned className='invert-100 ' size={35} /></Card>
-                                    <div className='w-2/3'>
+                                <div className='flex gap-8 md:flex  '>
+                                    <Card className='flex justify-center items-center w-20 md:w-15 gap-4 flex-col h-20 bg-primary'><MapPinned className='invert-100 ' size={35} /></Card>
+                                    <div className='w-2/3 flex flex-col gap-2'>
                                         <p className='text-2xl font-bold text-white'>London</p>
                                         <p className='text-gray-400 text-sm '>London Postcode Se15 6rs Rue 149 glengall road</p>
                                     </div>
                                 </div>
-                                <div className='flex gap-8 md:grid grid-cols-2' >
-                                    <Card className='flex justify-center items-center w-20 md:w-15 h-20 bg-primary'><AtSign className='invert-100' size={35} /></Card>
-                                    <div className='w-2/3'>
+                                <div className='flex gap-8 md:flex ' >
+                                    <Card className='flex justify-center items-center w-20 md:w-15 gap-4 h-20 bg-primary'><AtSign className='invert-100' size={35} /></Card>
+                                    <div className='w-2/3 flex flex-col gap-2'>
                                         <p className='text-2xl font-bold text-white' >Email Address</p>
                                         <p className='text-gray-400 text-sm '>Interested in working with us? takcooling@gmail.com</p>
                                     </div>
                                 </div>
-                                <div className='flex gap-8 md:grid grid-cols-2' >
-                                    <Card className='flex justify-center items-center w-20 md:w-15 h-20 bg-primary'><PhoneCall className='invert-100' size={35} /></Card>
-                                    <div>
+                                <div className='flex gap-8 md:flex ' >
+                                    <Card className='flex justify-center items-center w-20 md:w-15 gap-4 h-20 bg-primary'><PhoneCall className='invert-100' size={35} /></Card>
+                                    <div className='w-2/3 flex flex-col gap-2'>
                                         <p className='text-2xl font-bold text-white'>Phone Number</p>
                                         <p className='text-gray-400 text-sm '>+ 00447877020977</p>
                                     </div>
                                 </div>
-                                <div className='flex gap-8  md:grid grid-cols-2 '>
-                                    <Card className='flex justify-center items-center w-20 md:w-15 h-20 bg-primary'><Hourglass className='invert-100' size={35} /></Card>
-                                    <div >
+                                <div className='flex gap-8  md:flex  '>
+                                    <Card className='flex justify-center items-center w-20 md:w-15 gap-4 h-20 bg-primary'><Hourglass className='invert-100' size={35} /></Card>
+                                    <div className='w-2/3 flex flex-col gap-2'>
                                         <p className='text-2xl font-bold text-white'>Opening Hour</p>
                                         <p className='text-gray-400 text-sm '>Mon - Fri: 09am - 07pm</p>
                                     </div>
@@ -80,7 +80,7 @@ const Footer = () => {
                                 Takcooling
                             </Link>
                             <p className='text-gray-600 w-50 lg:w-80 flex text-xl md:text-sm font-bold justify-end items-center'>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently works.</p>
-                            <p className='text-primary text-4xl'>Since 2007</p>
+                            <p className='text-primary text-4xl'>Since 2020</p>
                             <p>© 2025 Industrie. Designed By RS<b className='text-primary'>Theme.</b> </p>
                         </div>
                     </div>

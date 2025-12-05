@@ -400,7 +400,7 @@ const Home = () => {
                 </div>
                 <div className="flex flex-col md:flex-row justify-between md:items-center">
                   <div className="w-full md:w-1/2 text-2xl md:text-5xl font-semibold text-black">
-                    Explore Large-Scale Projects
+                    Discover our latest project
                   </div>
                   <div className="hidden md:flex justify-between md:justify-evenly gap-4">
                     <button
@@ -421,7 +421,7 @@ const Home = () => {
                   <motion.div
                     transition={{ duration: 1.5, ease: "linear" }}
                     className="hidden w-full md:flex relative z-20  gap-10 duration-700 transition-all "
-                    style={{ transform: `translateX(-${curr * 100}%) ` }}
+                    style={{ transform: `translateX(-${curr * 105}%) ` }}
                   >
                     {carouselHome.map((carousel, index) => {
                       return (
@@ -429,44 +429,16 @@ const Home = () => {
                           key={index}
                           className="flex flex-row w-full  gap-10"
                         >
-                          <Card className="group w-80 md:w-90 2xl:w-105 relative  ">
-                            <img src={carousel.carousel1.image} alt="" />
+                          <Card className="group w-80 md:w-90 2xl:w-100 relative  ">
+                            <img src={carousel.image} className="h-70 w-full" alt="" />
                             <div className="absolute z-20 top-80 left-10 flex flex-col gap-4 group-hover:-translate-y-20 ease-in ease-initial duration-500">
                               <button className="bg-primary w-30 text-white text-xl rounded-2xl font-semibold">
                                 Company
                               </button>
                               <p className="text-4xl font-semibold text-white">
-                                {carousel.carousel2.title}
+                                {carousel.title}
                               </p>
                               <button className="g-5 w-6 rounded-full bg-primary group-hover:ease-initial ">
-                                <ArrowRight className="invert-100" />
-                              </button>
-                            </div>
-                          </Card>
-                          <Card className="group w-80 md:w-90 2xl:w-105 relative ">
-                            <img src={carousel.carousel2.image} alt="" />
-                            <div className="absolute z-20 top-80 left-10 flex flex-col gap-4 group-hover:-translate-y-20 ease-in ease-initial">
-                              <button className="bg-primary w-30 text-white text-xl rounded-2xl font-semibold">
-                                Company
-                              </button>
-                              <p className="text-4xl font-semibold text-white">
-                                {carousel.carousel2.title}
-                              </p>
-                              <button className="g-5 w-6 rounded-full bg-primary group-hover:ease-initial ">
-                                <ArrowRight className="invert-100" />
-                              </button>
-                            </div>
-                          </Card>
-                          <Card className="group w-80 md:w-90 2xl:w-105 relative ">
-                            <img src={carousel.carousel2.image} alt="" />
-                            <div className="absolute z-20 top-80 left-10 flex flex-col gap-4 group-hover:-translate-y-20 ease-in ease-initial">
-                              <button className="bg-primary w-30 text-white text-xl rounded-2xl font-semibold">
-                                Company
-                              </button>
-                              <p className="text-4xl font-semibold text-white">
-                                {carousel.carousel2.title}
-                              </p>
-                              <button className="g-5 w-6 rounded-full bg-primary group-hover:ease-initial">
                                 <ArrowRight className="invert-100" />
                               </button>
                             </div>
@@ -477,15 +449,14 @@ const Home = () => {
                   </motion.div>
                   <div className="w-full relative p-5 md:px-20 z-10 -top-0  md:-top-15 bg-primary md:h-80 flex flex-col md:flex-row justify-evenly items-center gap-8">
                     <div className="w-full md:w-1/4">
-                      <p className="text-6xl text-white font-semibold">3,050</p>
+                      <p className="text-6xl text-white font-semibold">2.52</p>
                       <p className="text-white font-semibold">
                         Success Projects
                       </p>
                     </div>
                     <div className="w-full lg:w-2/4 text-white font-semibold">
-                      There are many variations of passages lorem ipsum
-                      available, but the majority have suffered alteration in
-                      some form.
+                      We carry out our projects with a single objective: the satisfaction of our clients.
+
                     </div>
                     <Link
                       to="/service"
@@ -559,12 +530,12 @@ const Home = () => {
                               />
                               <div className="">
                                 <p className="font-semibold">Bm Askey Toren</p>
-                                <p className="text-gray-300 flex justify-between">
+                                <p className="text-gray-300 flex justify-between w-full">
+                                  {emplo.poste}
                                   {" "}
-                                  Ceo{" "}
                                   <img
                                     className="w-15"
-                                    src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/testimonial_clogo.png"
+                                    src={emplo.entreprise}
                                     alt=""
                                   />
                                 </p>
@@ -659,7 +630,7 @@ const Home = () => {
                         fill="#EA5501"
                       ></path>
                     </svg>
-                    Testimonials
+                    Article 
                   </button>
                 </div>
                 <div className="flex flex-col md:flew-row w-full justify-between gap-4">
@@ -683,7 +654,7 @@ const Home = () => {
                       <img className="h-full object-cover" src={blog4} alt="" />
                     </div>
                     <div className="w-full h-full absolute z-15 bg-[rgba(0,0,0,0.4)] "></div>
-                    <Link to="/blog#containe6" className="w-2/3 flex flex-col gap-8 h-full absolute z-20 top-30 lg:top-50 left-8">
+                    <Link to="/blog#containe6" className="w-2/3 flex flex-col gap-8 h-full absolute z-20 top-30 lg:top-50 left-8 cursor-pointer">
                       <p className="text-gray-300 font-semibold">
                         By Sagar . Feb 8 ,2024
                       </p>
