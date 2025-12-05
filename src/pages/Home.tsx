@@ -203,7 +203,7 @@ const Home = () => {
           <ScrollAnimation>
             <Card className="relative w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 h-100 md:h-130 py-5 ">
               <img
-                src={images.ABOUTIMG1}
+                src={serviceImg}
                 className="w-full h-full object-cover bg-center"
                 alt=""
               />
@@ -289,17 +289,9 @@ const Home = () => {
                       return (
                         <button
                           key={index}
-<<<<<<< HEAD
                           onClick={() => setTab(index)}
-                          className={`w-[200px] border border-gray-500 font-bold rounded-sm bg-gray-100 ${
-                            tab === taber.id - 1 &&
-                            "bg-primary border-0 text-white"
-                          } h-15 hover:bg-primary hover:text-white`}
-=======
-                          onClick={() => setTab(taber.id)}
-                          className={`w-2/3 border-2 border-gray-500 font-bold rounded-sm bg-gray-100 ${tab === taber.id && "bg-primary border-0"
+                          className={`w-2/3 border-2 border-gray-500 font-bold rounded-sm bg-gray-100 ${tab === index && "bg-primary border-0"
                             } h-12 hover:bg-primary`}
->>>>>>> images
                         >
                           {taber.label}
                         </button>

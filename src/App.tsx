@@ -27,7 +27,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className=''
+            className='w-full'
           >
             <Routes>
               <Route path="/" element={<Home />} />
