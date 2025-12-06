@@ -1,12 +1,4 @@
-import fond from "@/assets/image/fond.jpg";
-import fond2 from "@/assets/image/fond_hom.jpg";
 import serviceImg from "@/assets/other/imgM16.jpg";
-import villeImg from "@/assets/image/villeHome.jpg";
-import blog2 from "@/assets/image/ing2.jpeg";
-import blog3 from "@/assets/image/ing3.jpeg";
-import blog4 from "@/assets/image/ing4.jpeg";
-import blog5 from "@/assets/image/ing5.jpeg";
-import blog6 from "@/assets/image/ing6.png";
 import Counter from "@/components/common/Counter";
 import PageTransition from "@/components/common/PagesTransition";
 import ScrollAnimation from "@/components/common/ScrollAnimation";
@@ -14,20 +6,17 @@ import { Card } from "@/components/ui/card";
 import { email, phone } from "@/constant/generalInfo";
 import { extraServ, services, serviceTabs } from "@/constant/services";
 import { redirectToWhatsapp } from "@/services/redirectToWhatsapp";
-import { AnimatePresence, motion } from "framer-motion";
+import { backgroundHome, carouselHome, parteneer } from "@/store/appStore";
+import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { backgroundHome } from "@/store/appStore";
-import { tabs, carouselHome, parteneer } from "@/store/appStore";
 
 const Home = () => {
   const [fondH, setFondH] = useState(0);
   const [tab, setTab] = useState(1);
   const [curr, setCurr] = useState(0);
-  const autoSlide = false;
-  const autoSlideIntervale = 10000;
 
   /* const employer = [
         { Name: 'Peter Hase', poste: 'Sr. ingineer', image: 'https://industrie.rstheme.com/main/wp-content/uploads/2024/02/tem_6-414x500.jpg' },
@@ -75,7 +64,7 @@ const Home = () => {
           <div className="w-full h-[800px] absolute z-4 left-0 top-0 bg-[rgba(0,0,0,0.6)] "></div>
           {backgroundHome.map((back, index) => {
             return (
-              <div className={`${back.id !== fondH && "hidden"}`}>
+              <div className={`${back.id !== fondH && "hidden"}`} key={back.id + index}>
                 <back.image />
               </div>
             );

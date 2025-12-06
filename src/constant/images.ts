@@ -4,6 +4,7 @@ import SERV1 from "@/assets/other/imgM16.jpg";
 import SERV2 from "@/assets/other/imgM19.jpg";
 import SERV3 from "@/assets/other/imgM15.jpg";
 import SERV4 from "@/assets/other/imgM10.jpg";
+import MISSIONIMG from "@/assets/other/favicon.jpg";
 import SERV5 from "@/assets/other/salesconditioners.jpg";
 import TESTY1 from "@/assets/other/ChatGPT Image Sep 23, 2025, 03_14_11 PM.png";
 
@@ -16,6 +17,7 @@ const images = {
   SERV4,
   SERV5,
   TESTY1,
+  MISSIONIMG
 };
 
 export { images };
