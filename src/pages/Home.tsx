@@ -1,10 +1,11 @@
 import serviceImg from "@/assets/other/imgM16.jpg";
 import Counter from "@/components/common/Counter";
+import ExtraService from "@/components/common/ExtraService";
 import PageTransition from "@/components/common/PagesTransition";
 import ScrollAnimation from "@/components/common/ScrollAnimation";
 import { Card } from "@/components/ui/card";
 import { email, phone } from "@/constant/generalInfo";
-import { extraServ, services, serviceTabs } from "@/constant/services";
+import { services, serviceTabs } from "@/constant/services";
 import { redirectToWhatsapp } from "@/services/redirectToWhatsapp";
 import { backgroundHome, carouselHome, parteneer } from "@/store/appStore";
 import { motion } from "framer-motion";
@@ -15,7 +16,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const [fondH, setFondH] = useState(0);
-  const [tab, setTab] = useState(1);
+  const [tab, setTab] = useState(0);
   const [curr, setCurr] = useState(0);
 
   /* const employer = [
@@ -64,7 +65,10 @@ const Home = () => {
           <div className="w-full h-[800px] absolute z-4 left-0 top-0 bg-[rgba(0,0,0,0.6)] "></div>
           {backgroundHome.map((back, index) => {
             return (
-              <div className={`${back.id !== fondH && "hidden"}`} key={back.id + index}>
+              <div
+                className={`${back.id !== fondH && "hidden"}`}
+                key={back.id + index}
+              >
                 <back.image />
               </div>
             );
@@ -331,29 +335,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <ScrollAnimation>
-                <div className="w-full p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-4 py-5 ">
-                  {extraServ.map((serv, ind) => (
-                    <Card
-                      key={serv.title + ind}
-                      className="group relative w-full  flex flex-col h-80 p-10 pt-12  gap-4 hover:border-b-2 hover:mt-3 border-primary "
-                    >
-                      <div className="relative z-20 flex flex-col gap-4">
-                        <p className="text-xl font-semibold">{serv.title}</p>
-                        <serv.logo />
-                        <p className="font-semibold text-gray-500 text-[15px] text-justify">
-                          {serv.desc}
-                        </p>
-                      </div>
-                      <div className="absolute top-18 right-8 z-15 ">
-                        <span className="text-[70px]  text-gray-300 font-extrabold">
-                          {ind + 1}
-                        </span>
-                      </div>
-                    </Card>
-                  ))}
-                </div>
-              </ScrollAnimation>
+              <ExtraService />
             </div>
           </ScrollAnimation>
 

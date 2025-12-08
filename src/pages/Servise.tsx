@@ -1,120 +1,130 @@
-import PageTransition from '@/components/common/PagesTransition'
-import React, { useState } from 'react'
-import fond2 from '@/assets/image/fond_hom.jpg'
-import About from '@/assets/image/about-main1.png'
-import blog2 from '@/assets/image/ing2.jpeg'
-import blog3 from '@/assets/image/ing3.jpeg'
-import blog4 from '@/assets/image/ing4.jpeg'
-import blog5 from '@/assets/image/ing5.jpeg'
-import blog6 from '@/assets/image/ing6.png'
-import ing5 from '@/assets/image/ing5.jpeg'
-import { ArrowRight, Check, X } from 'lucide-react';
-import serviceimg from '@/assets/image/service.jpeg'
-import headerImg from '@/assets/image/hearderImg.png'
-import { services } from '@/constant/services'
+import headerImg from "@/assets/image/hearderImg.png";
+import serviceimg from "@/assets/image/service.jpeg";
+import ExtraService from "@/components/common/ExtraService";
+import PageTransition from "@/components/common/PagesTransition";
+import { services, serviceTabs } from "@/constant/services";
+import { useState } from "react";
 
 const Servise = () => {
-    const [daily, setDaily] = useState(false)
-    const tabs = [
-        { id: 1, label: 'Air conditioning installation', image: fond2, title: 'Professional Air Conditioning Installation for Perfect Home Comfort', content: 'Upgrade your home or business with a modern, energy-efficient AC system installed by certified experts. We deliver fast, clean, and reliable installation services tailored to your space, ensuring powerful cooling and maximum comfort all year round. Stay cool the smart way!' },
-        { id: 2, label: 'Air conditioning Repair', image: blog2, title: 'Fast & Reliable Air Conditioning Repair — Stay Cool Again in No Time', content: 'Is your AC making noise, blowing warm air, or not starting at all? Our skilled technicians diagnose and repair all AC issues with precision and speed. We restore your cooling system quickly so you can enjoy fresh, comfortable air without interruption' },
-        { id: 3, label: 'Air conditioning Maintenance', image: blog3, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 4, label: 'Refrigeration install', image: blog4, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 5, label: 'refrigeraition Repair', image: blog5, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-        { id: 6, label: 'Refrigeration Maintenance', image: blog6, title: 'Bridge construction is a complex engineering', content: 'The industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley.' },
-    ];
+  const [isHover, setIsHover] = useState(-1);
 
-    return (
-        <PageTransition>
-            <div className='w-screen mt-20 flex flex-col items-center bg-white '>
-                <div className='relative flex w-full h-100' >
-                    <img className='w-full h-full' src={headerImg} alt="" />
+  return (
+    <PageTransition>
+      <div className="w-screen mt-20 flex flex-col items-center bg-white ">
+        <div className="relative flex w-full h-100">
+          <img className="w-full h-full" src={headerImg} alt="" />
+        </div>
+        <div className="w-full flex flex-col items-center">
+          <div className="w-[80%] max-[500px]:w-full min-[500px]:px-10 px-2 md:px-0  flex flex-col lg:p-8 gap-8 items-center py-25">
+            {serviceTabs.map((serv, ind) => {
+              return (
+                <div
+                  className="group w-full h-[330px] cursor-default flex max-[950px]:flex-col max-[950px]:h-fit shadow-2xl border border-gray-200"
+                  key={serv.label + ind}
+                >
+                  <div className="w-[40%] max-[950px]:w-full max-[950px]:h-[300px] h-full">
+                    <img
+                      className="w-full h-full object-cover"
+                      src={serv.image}
+                      alt=""
+                    />
+                  </div>
+                  <div className="w-[60%] max-[950px]:w-full h-full min-[500px]:p-10 p-3 bg-gray-100">
+                    <p className="px-4 py-3 font-bold group-hover:text-primary max-[1400px]:text-xl text-2xl">
+                      {serv.title}{" "}
+                    </p>
+                    <p></p>
+                    <div className="flex w-full items-center gap-4">
+                      <p className="text-4xl text-gray-400 group-hover:text-primary font-bold">
+                        {serv.id}{" "}
+                      </p>
+                      <hr className="w-full border-2 border-gray-300" />
+                    </div>
+                    <p className="px-4 py-3 max-[1400px]:text-sm">
+                      {serv.desc}
+                    </p>
+                  </div>
                 </div>
-                <div className='w-full flex flex-col items-center'>
-                    <div className='w-full px-10 md:px-0  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 lg:p-8 lg:w-5/6 xl:w-4/5 2xl:w-3/4  gap-8 items-center py-25'>
-                        {tabs.map((tabder) => {
-                            return (
-                                <div className='group w-full h-100 flex flex-col hover:bg-gray-500'>
-                                    <img className='w-full h-1/2' src={tabder.image} alt="" />
-                                    <div className='w-full h-1/2 p-10 bg-gray-50 hover:bg-gray-300'>
-                                        <p className='group-hover:text-primary'>{tabder.title} </p>
-                                        <p></p>
-                                        <div className='flex w-full items-center'><p className='text-4xl text-gray-300 group-hover:text-primary font-bold'>{tabder.id} </p><hr className='w-full border-2 border-gray-200' /></div>
-                                        <div className='flex justify-between group-hover:text-gray-50'><p className='text-gray-300'>views Details</p><button className='bg-gray-300'><ArrowRight className='invert-50' /></button></div>
-                                    </div>
-                                </div>
-                            )
-                        })}
-                    </div>
-                </div>
-                <div className='w-full relative flex flex-col items-center'>
-                    <div className='w-full flex h-400 sm:h-360 lg:h-240 xl:h-200'>
-                        <div className='w-3/5 h-full bg-primary'></div>
-                        <img className='w-2/5 h-full  object-cover' src={serviceimg} alt="" />
-                    </div>
-                    <div className='absolute flex flex-col items-center top-0 py-20'>
-                        <div> <button className='text-white text-xl flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg> About industrie</button></div>
-                        <div className='flex  items-center'>
-                            <div className='text-2xl w-2/3 md:text-5xl font-semibold text-white'>Always powering your business for over <b className='text-black'>30 years</b> </div>
-                        </div>
-                        <div className='w-2/3 grid  lg:grid-cols-2  gap-8 pt-20'>
-                            {services.map((serv , ind) => {
-                                return (
-                                    <div className=' group w-full p-5 bg-white flex rounded-xs gap-8'>
-                                        <div className='flex flex-col gap-8'>
-                                            <div className='bg-gray-50 flex justify-center items-center rounded-xs w-15 h-15 group-hover:bg-primary '><svg className=' w-8 h-8 group-hover:rotate-y-180' xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd" height="512" viewBox="0 0 43.3492 43.3492" width="512"><g><g><path d="m2.0665 39.0124c-.3884 0-.7049.3167-.7049.7053l.0001 2.1879c0 .3886.3163.705.7048.705l23.5446-.0001c.3884 0 .7058-.3163.7058-.7048l.0001-2.188c0-.3886-.3175-.7053-.706-.7053zm23.5446 4.3368h-23.5446c-.7961 0-1.4435-.6472-1.4435-1.4435v-2.188c0-.7962.6472-1.4439 1.4435-1.4439h23.5446c.7963 0 1.4444.6478 1.4444 1.4439v2.1879c0 .7964-.6482 1.4437-1.4444 1.4436z"></path><path d="m21.7113 39.0124c-.2041 0-.3695-.1654-.3695-.3693l.0001-1.7384c0-.8514-.6925-1.544-1.5446-1.544l-11.917-.0001c-.851 0-1.5446.6928-1.5446 1.5442v1.7383c0 .2038-.1644.3693-.3684.3693-.2048 0-.3692-.1654-.3692-.3693l.0002-1.7384c0-1.2586 1.0231-2.2825 2.282-2.2825l11.917-.0001c1.2589 0 2.2831 1.0241 2.2831 2.2827v1.7383c0 .2038-.1654.3693-.3691.3693z"></path><path d="m10.8936 35.362c-.2041 0-.3695-.1654-.3695-.3693l.0001-14.4244c0-.2038.1653-.3692.3693-.3692.204-.0001.3692.1654.3692.3693l.0001 14.4242c0 .2039-.1655.3694-.3692.3694zm5.9224 0c-.204 0-.3695-.1654-.3695-.3693l.0002-14.3773c0-.204.1653-.3692.3692-.3692.204-.0001.3692.1653.3692.3692l.0001 14.3772c0 .2039-.1655.3694-.3692.3694z"></path><path d="m13.8816 13.0195c-2.2899 0-4.1538 1.8634-4.1538 4.1537.0001 2.2903 1.8638 4.1538 4.1538 4.1538 2.2909 0 4.1537-1.8634 4.1537-4.1538.0001-2.2904-1.8628-4.1537-4.1537-4.1537zm0 9.046c-2.6976 0-4.8924-2.1946-4.8924-4.8923.0002-2.6976 2.1947-4.8923 4.8924-4.8923s4.8924 2.1947 4.8924 4.8923c0 2.6977-2.1947 4.8924-4.8924 4.8923z"></path><path d="m13.8816 15.4431c-.9539 0-1.7302.7762-1.7302 1.7301.0001.954.7761 1.7302 1.7302 1.7302.954 0 1.7301-.7761 1.7301-1.7302.0001-.9539-.7761-1.7301-1.7301-1.7301zm0 4.1987c-1.3607 0-2.4688-1.1073-2.4688-2.4686.0002-1.3613 1.1079-2.4687 2.4688-2.4687 1.3619 0 2.4687 1.1075 2.4687 2.4687.0001 1.3612-1.1069 2.4687-2.4687 2.4686z"></path><path d="m15.8801 13.4833c-.0952 0-.1895-.036-.2616-.108-.1443-.1443-.1443-.3781 0-.5223l6.2246-6.2239c.1432-.1441.3777-.1441.522 0 .1445.1442.1443.3781 0 .5224l-6.2242 6.2237c-.0723.0721-.1666.1082-.2608.1081zm2.035 2.0103c-.0941 0-.1894-.036-.2616-.1082-.1441-.1442-.1442-.378 0-.5223l6.1996-6.1985c.1433-.1442.3778-.1442.522 0 .1443.1441.1443.378 0 .5222l-6.1993 6.1986c-.072.0722-.1665.1082-.2607.1082z"></path><path d="m26.1631.7386c-1.1099 0-2.1534.432-2.9372 1.2166-1.6196 1.6195-1.6196 4.2547 0 5.8743.7839.7845 1.8273 1.2166 2.9371 1.2166 1.1089 0 2.1524-.4321 2.9372-1.2166 1.6186-1.6197 1.6186-4.2547 0-5.8743-.7846-.7847-1.8283-1.2166-2.9371-1.2166zm0 9.046c-1.307 0-2.5362-.5088-3.4595-1.4329-1.9079-1.9075-1.908-5.0112 0-6.9188.9234-.9241 2.1524-1.4329 3.4594-1.4329 1.3063-.0001 2.5352.5088 3.4585 1.4329v-.0001c1.9081 1.9077 1.9081 5.0114 0 6.9189-.9231.924-2.1524 1.433-3.4584 1.4329z"></path><path d="m26.1631 3.1622c-.4626 0-.8974.18-1.2244.5068-.674.6746-.6741 1.7721 0 2.4467.327.3268.7617.5067 1.2243.5067.4617 0 .8963-.1799 1.2234-.5067.3261-.3269.5059-.7612.5059-1.2234 0-.4621-.1799-.8966-.5059-1.2233-.327-.3268-.7617-.5067-1.2233-.5068zm0 4.1988c-.6598 0-1.2801-.2567-1.7466-.723-.9617-.9626-.9617-2.5287 0-3.4913.4667-.4663 1.0868-.723 1.7465-.723.659-.0001 1.2792.2567 1.7456.723.4656.4662.7232 1.0862.7232 1.7456.0001.6595-.2577 1.2794-.7232 1.7457-.4664.4662-1.0868.723-1.7455.723z"></path><path d="m36.8722 12.2992c-1.8206 0-3.3028 1.4816-3.3028 3.3023.0002 1.8209 1.4821 3.3023 3.3027 3.3023 1.8206-.0001 3.3016-1.4814 3.3016-3.3023.0002-1.8208-1.4811-3.3022-3.3015-3.3023zm0 7.3432c-2.2284 0-4.0414-1.8127-4.0414-4.0409 0-2.2281 1.8129-4.0407 4.0413-4.0407 2.2274 0 4.0402 1.8127 4.0402 4.0407.0001 2.2281-1.8129 4.0409-4.0401 4.0409z"></path><path d="m36.3673 12.334c-.1019 0-.2031-.042-.2762-.1244l-5.7233-6.4621c-.1346-.1528-.1212-.3861.0317-.5213.1529-.1353.3866-.1212.5213.0316l5.7235 6.462c.1346.1527.121.3861-.0319.5213-.07.0623-.1577.0929-.2451.0929zm-3.1325 3.1323c-.0865 0-.1742-.0304-.2444-.0927l-6.4618-5.7229c-.153-.1353-.1674-.3686-.0319-.5213.1349-.1529.3684-.1669.5213-.0315l6.462 5.7227c.153.1352.1664.3687.0317.5214-.073.0823-.175.1244-.2769.1243z"></path><path d="m36.8722 14.5954c-.5549 0-1.0071.4513-1.0071 1.0061.0002.5547.452 1.0062 1.007 1.0062.5549 0 1.006-.4514 1.006-1.0062.0001-.5549-.4511-1.0061-1.0059-1.0061zm0 2.7508c-.9628 0-1.7447-.7826-1.7447-1.7447.0001-.962.7818-1.7447 1.7446-1.7447.9617 0 1.7445.7827 1.7445 1.7447.0001.962-.7828 1.7447-1.7444 1.7447z"></path><path d="m36.8722 24.9678c-1.3995 0-2.5382-1.1385-2.5382-2.5377l.0001-3.866c0-.2039.1653-.3692.3692-.3692.204-.0001.3693.1654.3693.3693v3.8658c0 .9921.8069 1.7992 1.7995 1.7992.9916 0 1.7994-.8071 1.7994-1.7991l.0002-3.866c0-.2039.1642-.3692.3691-.3692.2039-.0001.3693.1654.3693.3693l.0001 3.8658c0 1.3993-1.1388 2.5378-2.538 2.5378z"></path><path d="m35.7662 27.9017c-.2039 0-.3695-.1654-.3695-.3693l.0001-3.2391c0-.204.1654-.3693.3693-.3693.2039-.0001.3693.1654.3693.3693l.0002 3.239c0 .204-.1657.3694-.3694.3694zm2.2111 0c-.2041 0-.3686-.1654-.3686-.3693v-3.2391c0-.2041.1645-.3693.3684-.3693.2049-.0001.3693.1653.3693.3693v3.239c0 .204-.1645.3694-.3691.3694z"></path><path d="m39.6141 37.4022c-.0626 0-.1261-.016-.1848-.0495-.176-.1021-.2366-.3279-.1346-.5046l2.6363-4.5656-2.5294-4.3808h-5.0588l-2.5295 4.3808 2.6361 4.5656c.102.1767.0414.4025-.1356.5046-.1768.1017-.402.0413-.5039-.1352l-2.7429-4.7503c-.0662-.1143-.0664-.2549-.0001-.3692l2.7431-4.7502c.0653-.1143.1874-.1847.3192-.1847h5.4849c.1326 0 .2538.0704.3201.1847l2.7431 4.7502c.0654.1142.0652.255-.0001.3692l-2.7429 4.7502c-.0682.1185-.1924.1847-.3202.1848z"></path><path d="m39.6151 37.4022c-.1281 0-.2521-.0663-.3204-.1847l-1.2752-2.2095c-.0665-.1142-.0665-.255-.0001-.3693l1.3601-2.3562-1.2542-2.1714h-2.5074l-1.2531 2.1714 1.3601 2.3561c.0661.1143.0661.2552-.0002.3694l-1.2753 2.2094c-.1019.1766-.3279.2371-.5049.1353-.1769-.1021-.2366-.3279-.1346-.5046l1.1686-2.0248-1.36-2.3561c-.0662-.1143-.0664-.2549 0-.3692l1.4667-2.5409c.0664-.1142.1875-.1846.3192-.1846l2.9345-.0001c.1318 0 .2537.0705.3201.1848l1.4666 2.5408c.0656.1142.0654.255 0 .3692l-1.3606 2.3561 1.1693 2.0248c.1019.1767.0413.4025-.1357.5046-.0575.0335-.1211.0495-.1835.0495z"></path></g></g></svg></div>
-                                            <div className='rotate-90 text-2xl font-bold text-gray-300'>0{ind + 1} </div>
-                                        </div>
-                                        <div className='flex flex-col gap-4' >
-                                            <p className='font-semibold text-xl'>{serv.title}</p>
-                                            <p className='text-gray-500 text-sm '>{serv.desc} </p>
-                                        </div>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </div>
-                </div>
-                <div className='w-full md:w-5/6 lg:w-full xl:w-4/5 bg-gray-50 relative flex flex-col items-center py-20'>
-                    <div> <button className='text-black text-xl flex items-center'><svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none"><path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path></svg> About company</button></div>
-                    <div className='flex w-full'>
-                        <div className='text-2xl pl-10 mb-10 md:text-5xl font-semibold '>Project implementation process </div>
-                    </div>
-                    <div className='flex flex-col items-center lg:flex-row lg:h-150 gap-8'>
-                        <div className='w-full lg:w-5/6 xl:w-4/5 2xl:w-3/4 h-full grid grid-cols-2 p-8 '>
-                            <div className='border-b-2 lg:h-70 border-gray-500 flex flex-col gap-4 pt-4 p-10'>
-                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary p-1'>01</div><p className='text-gray-300 font-bold text-xl sm:text-2xl'>Step</p></div>
-                                <p className='font-semibold text-xl'>Assessment & Planning</p>
-                                <p className='font-semibold hidden sm:flex text-sm   text-gray-500'>TakCooling begins every project with a detailed site assessment, cooling load analysis, and technical requirements review. </p>
-                            </div>
-                            <div className='border-b-2 lg:h-70 border-l-2 border-gray-500 flex flex-col gap-4 pt-4 p-10'>
-                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary p-1'>02</div><p className='text-gray-300 font-bold text-xl sm:text-2xl'>Step</p></div>
-                                <p className='font-semibold text-xl'>System Design & Preparation</p>
-                                <p className='font-semibold hidden sm:flex text-sm  text-gray-500'>Engineers design the refrigeration or HVAC system based on performance, energy efficiency, and safety standards.</p>
-                            </div>
-                            <div className=' border-gray-500 lg:h-70 flex flex-col gap-4 pt-4 p-10'>
-                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary p-1'>03</div><p className='text-gray-300 font-bold text-xl sm:text-2xl'>Step</p></div>
-                                <p className='font-semibold text-xl'>Installation & Integration</p>
-                                <p className='font-semibold hidden sm:flex text-sm  text-gray-500'>Certified technicians install all components, configure the system, and integrate electrical and control units.</p>
-                            </div>
-                            <div className='border-l-2 lg:h-70 border-gray-500 flex flex-col gap-4 pt-4 p-10'>
-                                <div className='flex gap-4'><div className='w-10 h-10 flex justify-center items-center rounded-full bg-primary p-1'>04</div><p className='text-gray-300 font-bold text-xl sm:text-2xl'>Step</p></div>
-                                <p className='font-semibold text-xl'>Testing, Commissioning & Handover</p>
-                                <p className='font-semibold hidden sm:flex text-sm  text-gray-500'>The system undergoes performance testing, calibration, and final verification.</p>
-                            </div>
-                        </div>
-                        <div className='flex w-4/5 flex-col gap-4 py-10 px-8 bg-white sm:mr-8 border-t-4 border-primary rounded-xs'>
-                            <p className='font-semibold text-xl'>Have any Question?</p>
-                            <p className='text-gray-500 font-semibold'>The point of using Lorem Ipsum is that it has more-or-less packages normal point of using.</p>
-                            <input className='h-15 bg-gray-50 px-4' placeholder='Full Name' type="text" /><input placeholder='Email Address' className='h-15 bg-gray-50 px-4' type="text" /><input placeholder='Your Requery' className='h-15 bg-gray-50 px-4' type="text" />
-                            <textarea placeholder='write here' className='h-20 bg-gray-50' name="" id=""></textarea>
-                            <button className='w-1/2 h-13 bg-primary'>Send Messege</button>
-                        </div>
-                    </div>
-                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="w-full relative flex flex-col items-center">
+          <div className="w-full flex h-400 sm:h-360 lg:h-240 xl:h-200">
+            <div className="w-3/5 h-full bg-primary"></div>
+            <img
+              className="w-2/5 h-full  object-cover"
+              src={serviceimg}
+              alt=""
+            />
+          </div>
+          <div className="absolute flex flex-col items-center top-0 py-20">
+            <div>
+              {" "}
+              <button className="text-white text-xl flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="11"
+                  height="15"
+                  viewBox="0 0 11 15"
+                  fill="none"
+                >
+                  <path
+                    d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z"
+                    fill="#EA5501"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z"
+                    fill="#EA5501"
+                  ></path>
+                </svg>{" "}
+                About industrie
+              </button>
             </div>
-        </PageTransition>
-    )
-}
+            <div className="flex  items-center">
+              <div className="text-2xl w-2/3 md:text-5xl font-semibold text-white">
+                Always powering your business for over{" "}
+                <b className="text-black">30 years</b>{" "}
+              </div>
+            </div>
+            <div className="w-2/3 grid  lg:grid-cols-2  gap-8 pt-20">
+              {services.map((serv, ind) => {
+                return (
+                  <div
+                    className=" group w-full p-5 bg-white flex rounded-xs gap-8 cursor-default"
+                    onMouseEnter={() => setIsHover(ind)}
+                    onMouseLeave={() => setIsHover(-1)}
+                  >
+                    <div className="flex flex-col gap-8">
+                      <div className="bg-gray-50 flex justify-center items-center rounded-xs w-15 h-15 ">
+                        <serv.logo />
+                      </div>
+                      <div
+                        className={`rotate-90 text-2xl font-bold text-gray-300 ${
+                          isHover == ind && "text-gray-400"
+                        }`}
+                      >
+                        0{ind + 1}{" "}
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <p className="font-semibold text-xl">{serv.title}</p>
+                      <p className="text-gray-500 text-sm ">{serv.desc} </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        <div className="py-16 w-full">
+          <ExtraService />
+        </div>
+      </div>
+    </PageTransition>
+  );
+};
 
-export default Servise
+export default Servise;

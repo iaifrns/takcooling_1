@@ -19,6 +19,7 @@ export interface ServiceTab {
     image: string;
     title: string;
     content: string;
+    desc: string
 }
 
 export interface Tabs {

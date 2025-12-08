@@ -145,6 +145,7 @@ const serviceTabs: ServiceTab[] = [
       "Professional Air Conditioning Installation for Perfect Home Comfort",
     content:
       "Upgrade your home or business with a modern, energy-efficient AC system installed by certified experts. We deliver fast, clean, and reliable installation services tailored to your space, ensuring powerful cooling and maximum comfort all year round. Stay cool the smart way!",
+    desc: "We deliver precise AC installations designed to maximise comfort, energy efficiency, and long-term reliability. Our team evaluates your space, selects the right equipment, and installs it with engineering-grade accuracy. The result is stable, quiet, and efficient cooling tailored to your home.",
   },
   {
     id: 2,
@@ -153,6 +154,7 @@ const serviceTabs: ServiceTab[] = [
     title: "Air Conditioning Care & Maintenance",
     content:
       "Regular servicing to keep your AC running smoothly, reduce breakdowns, and improve cooling efficiency.",
+    desc: "Our maintenance service keeps your AC performing at its best through deep cleaning, inspections, and system optimisation. We identify issues early, improve airflow, and ensure efficient temperature control. This proactive care extends the lifespan of your unit and prevents costly breakdowns.",
   },
   {
     id: 3,
@@ -161,6 +163,7 @@ const serviceTabs: ServiceTab[] = [
     title: "Professional Refrigeration Installation",
     content:
       "Expert setup of cold rooms and refrigeration systems built for reliability and long-term performance.",
+    desc: "We provide expert installation of cold rooms and refrigeration systems for homes, shops, and commercial facilities. Each setup is designed for durability, temperature stability, and optimal performance. You receive a fully tested and calibrated system ready for reliable daily operation.",
   },
   {
     id: 4,
@@ -169,6 +172,7 @@ const serviceTabs: ServiceTab[] = [
     title: "Advanced Refrigeration Maintenance",
     content:
       "Skilled diagnostics and routine checks to keep your cooling units efficient, safe, and fully operational.",
+    desc: "Our refrigeration maintenance service ensures your equipment remains efficient, safe, and consistent. We check critical components, detect faults early, and optimise cooling performance. This preventive approach reduces downtime, lowers energy costs, and protects your stored products.",
   },
   {
     id: 5,
@@ -177,6 +181,7 @@ const serviceTabs: ServiceTab[] = [
     title: "Premium Equipment Sales",
     content:
       "High-quality air conditioners, refrigeration units, and genuine spare parts for residential and commercial needs.",
+    desc: "We supply high-quality air conditioners, refrigeration units, and genuine spare parts tailored to your needs. Our team guides you in selecting the right equipment for performance, budget, and space. All products include expert advice and optional professional installation for long-lasting reliability.",
   },
 ];
 
