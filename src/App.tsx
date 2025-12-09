@@ -1,16 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 
 // Composants de la layout
-import Header from './components/common/Header'
 import Footer from './components/common/Footer'
-import PageTransition from './components/common/PagesTransition'
+import Header from './components/common/Header'
 
 // Pages
-import Home from './pages/Home'
 import About from './pages/About'
 import Blog from './pages/Blog'
+import Home from './pages/Home'
 import Service from './pages/Servise'
 import Contact from './pages/contact'
 

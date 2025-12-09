@@ -11,7 +11,6 @@ import { Link, useLocation } from "react-router-dom";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const [ActiveSlide, setActiveSlide] = useState(false);
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -100,9 +99,7 @@ const Header = () => {
         </div>
       </div>
       <div
-        className={`absolute z-30 w-1/2 h-300 shadow-xl backdrop-blur-xl right-0  ${
-          !ActiveSlide && "translate-x-300"
-        } bg-[rgba(255,255,255,0.5)]`}
+        className={`absolute z-30 w-1/2 h-300 shadow-xl backdrop-blur-xl right-0 bg-[rgba(255,255,255,0.5)]`}
       >
         <div className="w-full flex  justify-center  ">
           <div className="text-4xl p-20"> Takcooling</div>
