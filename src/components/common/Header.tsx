@@ -98,14 +98,14 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <div
+      {/* <div
         className={`absolute z-30 w-1/2 h-300 shadow-xl backdrop-blur-xl right-0 bg-[rgba(255,255,255,0.5)]`}
       >
         <div className="w-full flex  justify-center  ">
           <div className="text-4xl p-20"> Takcooling</div>
           <div>description </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Menu Mobile Dropdown */}
       <AnimatePresence>

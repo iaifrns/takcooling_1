@@ -6,15 +6,7 @@ import { redirectToFacebook } from "@/services/redirectToFacebook";
 import { redirectToTikTok } from "@/services/redirectToTiktok";
 import { redirectToWhatsapp } from "@/services/redirectToWhatsapp";
 import emailjs from "emailjs-com";
-import {
-  ArrowRight,
-  Clock9,
-  Facebook,
-  Instagram,
-  MapPin,
-  Phone,
-  Twitter,
-} from "lucide-react";
+import { ArrowRight, Clock9, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
 const contact = () => {
@@ -22,10 +14,11 @@ const contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       emailjs
@@ -57,6 +50,29 @@ const contact = () => {
     }
   };
 
+  const CustomizedInput = ({
+    type,
+    placeholder,
+    onChange,
+    value,
+  }: {
+    type: React.HTMLInputTypeAttribute | undefined;
+    placeholder: string;
+    onChange: (e: string) => void;
+    value: string;
+  }) => {
+    return (
+      <input
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        className="w-full p-3 text-[16px] focus:outline-none border border-gray-400"
+        onChange={(e) => onChange(e.target.value)}
+        required
+      />
+    );
+  };
+
   return (
     <PageTransition>
       <div className="w-screen mt-20 flex flex-col items-center bg-white ">
@@ -66,8 +82,8 @@ const contact = () => {
             src={paysage}
             alt=""
           />
-          <div className="relative flex justify-end w-2/3 h-2/3">
-            <div className="absolute flex flex-col py-10 px-8 top-0 left-0 w-full md:w-100 h-120 gap-8 rounded-xs bg-black">
+          <div className="relative flex justify-center items-center w-[80%] h-full border">
+            <div className=" flex flex-col py-10 px-8 w-full md:w-100 h-120 gap-8 bg-black/80">
               <p className="text-white font-bold text-4xl">Takcooling</p>
               <div className="">
                 <p className="text-white text-2xl font-semibold">Available</p>
@@ -101,72 +117,56 @@ const contact = () => {
                 </p>
               </div>
             </div>
-            <div className="flex mt-12 mr-4 md:flex-col gap-8">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="bg-[rgba(0,0,0,0.8)] w-10 h-10 flex justify-center items-center rounded-xs hover:text-white transition-colors"
-                  aria-label={social.label}
+            <div className=" w-[75%] flex flex-col justify-center items-center">
+              <form
+                onSubmit={handleSubmit}
+                className=" flex justify-around flex-col w-full border-t-primary bg-gray-50/80 p-12 gap-6"
+              >
+                <p className="text-xl md:text-3xl w-full text-start font-semibold text-black">
+                  Contact Form
+                </p>
+                <div className=" flex flex-col  gap-4 justify-between">
+                  <CustomizedInput
+                    placeholder="Full Name"
+                    type="text"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e })}
+                  />
+                  <div className="flex justify-center items-center gap-4">
+                    <CustomizedInput
+                      placeholder="Email Address"
+                      onChange={(e) => setFormData({ ...formData, email: e })}
+                      type="text"
+                      value={formData.email}
+                    />
+                    <CustomizedInput
+                      onChange={(e) => setFormData({ ...formData, phone: e })}
+                      placeholder="phone"
+                      type="text"
+                      value={formData.phone}
+                    />
+                  </div>
+                </div>
+                <textarea
+                  placeholder="write here..."
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
+                  className="px-4 w-full h-20 bg-white border-2 border-gray-300"
+                  name=""
+                  id=""
+                ></textarea>
+                <button
+                  type="submit"
+                  className="W-1/4 h-12 bg-primary flex gap-2 font-semibold justify-center items-center text-white"
                 >
-                  <social.icon className="invert-25 w-8 h-8" size={16} />
-                </a>
-              ))}
+                  Send Message <ArrowRight className="invert-0" />
+                </button>
+              </form>
             </div>
           </div>
         </div>
-        <div className="h-250 pt-20 md:h-300 w-full flex flex-col justify-center items-center">
-          <form
-            onSubmit={handleSubmit}
-            className=" flex justify-around flex-col w-4/5 md:w-1/2 -top-50 right-[15%] md:right-[25%] md:h-200 border-t-primary border-4 border-l-white border-r-white border-b-white bg-gray-50 rounded-xl p-15 gap-8"
-          >
-            <p className="text-2xl w-2/3 text-center md:text-5xl font-semibold text-black">
-              Get in Touch
-            </p>
-            <p className=" font-semibold text-gray-300">
-              The point of using Lorem Ipsum is that it has more-or-less
-              packages normal make a type specimen book it has survived
-            </p>
-            <div className=" flex flex-col md:flex-row gap-4 justify-between">
-              <input
-                placeholder="Full Name"
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-                className="px-4 w-full md:w-1/3 h-12 bg-white border-2 border-gray-300"
-                type="text"
-              />
-              <input
-                placeholder="Email Address"
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-                className="px-4 w-full md:w-1/3 h-12 bg-white border-2 border-gray-300"
-                type="text"
-              />
-              <input
-                placeholder="phone"
-                className="px-4 w-full md:w-1/3 h-12 bg-white border-2 border-gray-300"
-                type="text"
-              />
-            </div>
-            <textarea
-              placeholder="write here..."
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
-              }
-              className="px-4 w-full h-30 bg-white border-2 border-gray-300"
-              name=""
-              id=""
-            ></textarea>
-            <button
-              type="submit"
-              className="W-1/4 h-12 bg-primary flex gap-2 font-semibold justify-center items-center text-white"
-            >
-              Send Message <ArrowRight className="invert-0" />
-            </button>
-          </form>
-        </div>
+
         {/* <div className="relative w-full h-100 bg-gray-300">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3971.0803258203696!2d10.3452030757382!3d5.5551109944253065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2scm!4v1762448386451!5m2!1sfr!2scm"
