@@ -1,18 +1,17 @@
 import Logo from "@/assets/image/takcooling.png";
+import { socialLinks } from "@/constant/icon";
 import { redirectToFacebook } from "@/services/redirectToFacebook";
 import { redirectToTikTok } from "@/services/redirectToTiktok";
 import { redirectToWhatsapp } from "@/services/redirectToWhatsapp";
 import { AnimatePresence, motion } from "framer-motion";
-import { Facebook, Instagram, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { FaWhatsapp } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const [ActiveSlide, setActiveSlide] = useState(false);
-  const [ActiveSearch, setActiveSearch] = useState(false);
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -20,12 +19,6 @@ const Header = () => {
     { name: "service", path: "/service" },
     { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
-  ];
-
-  const socialLinks = [
-    { icon: FaWhatsapp, href: "#", label: "whatsapp" },
-    { icon: Instagram, href: "#", label: "TikTok" },
-    { icon: Facebook, href: "#", label: "Facebook" },
   ];
 
   const handelIconClick = (icon: string) => {
