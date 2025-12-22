@@ -150,7 +150,7 @@ const serviceTabs: ServiceTab[] = [
   {
     id: 2,
     label: "Air conditioning Maintenance",
-    image: images.SERV2,
+    image: images.SERV6,
     title: "Air Conditioning Care & Maintenance",
     content:
       "Regular servicing to keep your AC running smoothly, reduce breakdowns, and improve cooling efficiency.",
@@ -159,7 +159,7 @@ const serviceTabs: ServiceTab[] = [
   {
     id: 3,
     label: "Refrigeration install",
-    image: images.SERV3,
+    image: images.SERV7,
     title: "Professional Refrigeration Installation",
     content:
       "Expert setup of cold rooms and refrigeration systems built for reliability and long-term performance.",
@@ -168,7 +168,7 @@ const serviceTabs: ServiceTab[] = [
   {
     id: 4,
     label: "Refrigeraition Maintenance",
-    image: images.SERV4,
+    image: images.SERV8,
     title: "Advanced Refrigeration Maintenance",
     content:
       "Skilled diagnostics and routine checks to keep your cooling units efficient, safe, and fully operational.",
