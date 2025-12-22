@@ -1,4 +1,5 @@
 import paysage from "@/assets/image/paysage2.jpg";
+import { CustomizedInput } from "@/components/common/Input";
 import PageTransition from "@/components/common/PagesTransition";
 import { email, phone } from "@/constant/generalInfo";
 import { socialLinks } from "@/constant/icon";
@@ -7,10 +8,9 @@ import { redirectToTikTok } from "@/services/redirectToTiktok";
 import { redirectToWhatsapp } from "@/services/redirectToWhatsapp";
 import emailjs from "emailjs-com";
 import { ArrowRight, Clock9, MapPin, Phone } from "lucide-react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const contact = () => {
-  // const center = {lat:,lng:}
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,10 +23,10 @@ const contact = () => {
     try {
       emailjs
         .send(
-          "service_takcooling",
-          "template_hd6xane",
+          "service_oy1yizj",
+          "template_7s3pj8j",
           formData,
-          "0VDxYnDZMBN5m5FC7"
+          "bU9_tX8uKkt4uhJUU"
         )
         .then((_) => {
           alert("Message sent!");
@@ -50,40 +50,17 @@ const contact = () => {
     }
   };
 
-  const CustomizedInput = ({
-    type,
-    placeholder,
-    onChange,
-    value,
-  }: {
-    type: React.HTMLInputTypeAttribute | undefined;
-    placeholder: string;
-    onChange: (e: string) => void;
-    value: string;
-  }) => {
-    return (
-      <input
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        className="w-full p-3 text-[16px] focus:outline-none border border-gray-400"
-        onChange={(e) => onChange(e.target.value)}
-        required
-      />
-    );
-  };
-
   return (
     <PageTransition>
-      <div className="w-screen mt-20 flex flex-col items-center bg-white ">
-        <div className="relative flex justify-center items-end w-full h-150">
+      <div className="w-screen mt-20 flex flex-col items-center bg-white">
+        <div className="relative flex justify-center items-end w-full md:h-150">
           <img
-            className="absolute w-full h-150 object-cover"
+            className="absolute w-full md:h-150 h-full object-cover"
             src={paysage}
             alt=""
           />
-          <div className="relative flex justify-center items-center w-[80%] h-full border">
-            <div className=" flex flex-col py-10 px-8 w-full md:w-100 h-120 gap-8 bg-black/80">
+          <div className="relative flex justify-center items-center w-[80%] max-[650px]:flex-col max-[850px]:w-full h-full border">
+            <div className=" flex flex-col py-10 px-8 w-full md:w-100 md:h-120 gap-8 bg-black/80">
               <p className="text-white font-bold text-4xl">Takcooling</p>
               <div className="">
                 <p className="text-white text-2xl font-semibold">Available</p>
@@ -117,7 +94,7 @@ const contact = () => {
                 </p>
               </div>
             </div>
-            <div className=" w-[75%] flex flex-col justify-center items-center">
+            <div className=" w-[75%] max-[850px]:w-full flex flex-col justify-center items-center">
               <form
                 onSubmit={handleSubmit}
                 className=" flex justify-around flex-col w-full border-t-primary bg-gray-50/80 p-12 gap-6"
@@ -150,7 +127,7 @@ const contact = () => {
                 <textarea
                   placeholder="write here..."
                   onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
+                    setFormData({ ...formData, message: e.target.value })
                   }
                   className="px-4 w-full h-20 bg-white border-2 border-gray-300"
                   name=""
