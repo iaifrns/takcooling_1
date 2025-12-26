@@ -30,6 +30,7 @@ const contact = () => {
         )
         .then((_) => {
           alert("Message sent!");
+          setFormData({ name: "", email: "", message: "", phone: "" });
         });
     } catch (e) {
       alert("Error sending message");

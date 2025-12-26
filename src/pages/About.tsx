@@ -93,11 +93,11 @@ const About = () => {
             <div className="flex gap-60 h-300 sm:h-250 md:gap-30 lg:gap-2 w-full flex-col justify-around px-10  lg:flex-row  md:h-200  xl:h-100 pt-10">
               <div className="w-full lg:w-1/2 h-full flex relative">
                 <img
-                  className="h-[80%] w-2/4 sm:w-[300px] object-cover"
+                  className="h-[80%] max-[600px]:hidden w-2/4 sm:w-[300px] object-cover"
                   src={images.MISSIONIMG}
                   alt=""
                 />
-                <div className="absolute w-4/5 sm:w-2/3 shadow-2xl  border-b-2 border-primary top-40 left-20 sm:left-35 bg-gray-50 p-10">
+                <div className="min-[600]:absolute w-4/5 max-[600px]:w-full sm:w-2/3 shadow-2xl  border-b-2 border-primary min-[600px]:top-40 min-[600px]:left-20 sm:left-35 bg-gray-50 p-10">
                   <p className="font-semibold text-[22px]">Our Mission</p>
                   <p className="text-gray-500 text-sm pt-5">
                     Provide perfectly executed air-conditioning and
@@ -107,19 +107,19 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <div className="w-full lg:w-1/2 h-full flex relative">
+              <div className="w-full lg:w-1/2 h-full max-[600px]:w-full flex relative">
                 <img
-                  className="h-[80%] w-2/4 sm:w-[350px] object-cover"
+                  className="h-[80%] w-2/4 sm:w-[350px] object-cover max-[600px]:hidden"
                   src={imageM16}
                   alt=""
                 />
-                <div className="h-2/3 w-20 sm:w-1/2 pl-4 flex justify-center">
+                {/* <div className="h-2/3 w-20 sm:w-1/2 pl-4 flex justify-center">
                   <img
                     src="https://industrie.rstheme.com/main/wp-content/uploads/2024/02/icon1.png"
                     alt=""
                   />
-                </div>
-                <div className="absolute w-4/5 sm:w-2/3 shadow-2xl  border-b-2 border-primary top-40 left-20 sm:left-35 bg-gray-50 p-10">
+                </div> */}
+                <div className="min-[600]:absolute w-4/5 sm:w-2/3 shadow-2xl max-[600px]:w-full border-b-2 border-primary top-40 left-20 sm:left-35 bg-gray-50 p-10">
                   <p className="font-semibold text-[22px] ">Our Vision</p>
                   <p className="text-gray-500 text-sm pt-5">
                     To be London’s most trusted cooling partner by delivering
@@ -230,7 +230,7 @@ const About = () => {
             </div>
             {/* chiffre sur l'entreprise---------------------------------------------- */}
             <ScrollAnimation>
-              <div className="w-full p-8  flex justify-between md:py-20 gap-4">
+              <div className="w-full p-8 max-[600px]:flex-col flex justify-between md:py-20 gap-4">
                 <div>
                   <Counter target={40} text={"+"} />
                   <p className="pt-4 text-gray-400 md:font-semibold">
@@ -258,7 +258,7 @@ const About = () => {
               </div>
             </ScrollAnimation>
           </div>
-          <div className="relative bg-black w-full h-150 md:h-120  flex items-center">
+          <div className="relative bg-black w-full h-150 md:h-120  flex items-center max-[600px]:hidden">
             <img className="w-1/2 h-full" src={climat} alt="" />
             <div className=" w-1/2 text-white p-20 flex flex-col gap-8">
               <div>
