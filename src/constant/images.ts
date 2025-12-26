@@ -11,6 +11,22 @@ import SERV6 from "@/assets/other/imgM25.jpg";
 import SERV7 from "@/assets/other/imgM27.jpg";
 import SERV8 from "@/assets/other/imgM3.jpg";
 
+import IMG1 from '@/assets/other/imgM1.jpg'
+import IMG2 from '@/assets/other/imgM20.jpg'
+import IMG3 from '@/assets/other/imgM3.jpg'
+import IMG4 from '@/assets/other/imgM14.jpg'
+import IMG5 from '@/assets/other/imgM15.jpg'
+import IMG6 from '@/assets/other/imgM16.jpg'
+import IMG7 from '@/assets/other/imgM17.jpg'
+import IMG8 from '@/assets/other/imgM8.jpg'
+import IMG9 from '@/assets/other/imgM9.jpg'
+import IMG10 from '@/assets/other/imgM10.jpg'
+import IMG11 from '@/assets/other/imgM11.jpg'
+import IMG12 from '@/assets/other/imgM12.jpg'
+import IMG13 from '@/assets/other/imgM13.jpg'
+import IMG14 from '@/assets/other/imgM24.jpg'
+import IMG15 from '@/assets/other/imgM25.jpg'
+
 const images = {
   LOGO,
   ABOUTIMG1,
@@ -26,4 +42,22 @@ const images = {
   SERV8
 };
 
-export { images };
+const img_scroll = [
+  IMG1,
+  IMG2,
+  IMG3,
+  IMG4,
+  IMG5,
+  IMG6,
+  IMG7,
+  IMG8,
+  IMG9,
+  IMG10,
+  IMG11,
+  IMG12,
+  IMG13,
+  IMG14,
+  IMG15,
+]
+
+export { images, img_scroll };
