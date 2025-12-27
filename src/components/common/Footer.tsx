@@ -1,10 +1,7 @@
-import React from 'react'
 import globe from '@/assets/image/globe.jpg'
-import city from '@/assets/image/images.jpg'
-import { Card } from '../ui/card'
 import { ArrowRight, AtSign, Hourglass, MapPinned, PhoneCall } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import { Card } from '../ui/card'
 
 const Footer = () => {
     const location = useLocation()
@@ -92,7 +89,7 @@ const Footer = () => {
                                     <Link to='/Home' className=' hover:text-primary'>Home</Link>
                                     <Link to='/About' className=' hover:text-primary'>About Us</Link>
                                     <Link to='/Service' className=' hover:text-primary'>Service</Link>
-                                    <Link to='/Blog' className=' hover:text-primary'>Blog</Link>
+                                    <Link to='/Blog' className=' hover:text-primary'>Gallery</Link>
                                     <Link to='/Contact' className=' hover:text-primary'>Contact</Link>
                                 </ul>
                             </div>
