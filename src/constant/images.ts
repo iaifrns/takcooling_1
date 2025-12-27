@@ -20,11 +20,10 @@ import IMG4 from '@/assets/other/imgM14.jpg'
 import IMG5 from '@/assets/other/imgM15.jpg'
 import IMG6 from '@/assets/other/imgM16.jpg'
 import IMG7 from '@/assets/other/imgM17.jpg'
-import IMG8 from '@/assets/other/imgM8.jpg'
-import IMG9 from '@/assets/other/imgM9.jpg'
-import IMG10 from '@/assets/other/imgM10.jpg'
-import IMG11 from '@/assets/other/imgM11.jpg'
-import IMG12 from '@/assets/other/imgM12.jpg'
+import IMG8 from '@/assets/other/img39.jpeg'
+import IMG9 from '@/assets/other/img36.jpeg'
+import IMG11 from '@/assets/other/img37.jpeg'
+import IMG12 from '@/assets/other/img38.jpeg'
 import IMG13 from '@/assets/other/imgM13.jpg'
 import IMG14 from '@/assets/other/imgM24.jpg'
 import IMG15 from '@/assets/other/imgM25.jpg'
@@ -57,7 +56,7 @@ const img_scroll = [
   IMG7,
   IMG8,
   IMG9,
-  IMG10,
+  SERV5,
   IMG11,
   IMG12,
   IMG13,
