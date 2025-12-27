@@ -140,7 +140,7 @@ const serviceTabs: ServiceTab[] = [
   {
     id: 1,
     label: "Air conditioning installation",
-    image: images.SERV7,
+    image: images.SERV11,
     title:
       "Professional Air Conditioning Installation for Perfect Home Comfort",
     content:

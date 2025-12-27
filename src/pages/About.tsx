@@ -1,6 +1,6 @@
 import climat from "@/assets/image/climatisateur2.jpeg";
 import headerImg from "@/assets/image/hearderImg.png";
-import imageM13 from "@/assets/other/imgM13.jpg";
+import imageM13 from "@/assets/other/imgM13.jpeg";
 import imageM16 from "@/assets/other/imgM16.jpg";
 import imageM21 from "@/assets/other/imgM21.jpg";
 import imageM3 from "@/assets/other/imgM3.jpg";

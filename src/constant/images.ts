@@ -12,6 +12,7 @@ import SERV7 from "@/assets/other/imgM27.jpg";
 import SERV8 from "@/assets/other/imgM3.jpg";
 import SERV9 from "@/assets/other/img34.jpeg";
 import SERV10 from "@/assets/other/img35.jpeg";
+import SERV11 from "@/assets/other/imgM12.jpg";
 
 import IMG1 from '@/assets/other/imgM1.jpg'
 import IMG2 from '@/assets/other/imgM20.jpg'
@@ -24,7 +25,7 @@ import IMG8 from '@/assets/other/img39.jpeg'
 import IMG9 from '@/assets/other/img36.jpeg'
 import IMG11 from '@/assets/other/img37.jpeg'
 import IMG12 from '@/assets/other/img38.jpeg'
-import IMG13 from '@/assets/other/imgM13.jpg'
+import IMG13 from '@/assets/other/imgM13.jpeg'
 import IMG14 from '@/assets/other/imgM24.jpg'
 import IMG15 from '@/assets/other/imgM25.jpg'
 import IMG16 from '@/assets/other/imgM30.jpg'
@@ -44,6 +45,7 @@ const images = {
   SERV8,
   SERV9,
   SERV10,
+  SERV11,
 };
 
 const img_scroll = [

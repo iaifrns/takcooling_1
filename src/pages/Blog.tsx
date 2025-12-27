@@ -9,7 +9,6 @@ const Blog = () => {
   return (
     <PageTransition>
       <div className='w-screen mt-20 flex flex-col items-center bg-white '>
-        <p className='text-2xl font-bold'>Images of the enterprise</p>
         <div className='relative flex w-full h-100' >
           <img className='w-full h-full' src={headerImg} alt="" />
         </div >
