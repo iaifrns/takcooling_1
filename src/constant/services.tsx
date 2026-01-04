@@ -20,11 +20,11 @@ const services: Service[] = [
         </svg>
       );
     },
-    title: "Air Conditioner & Cooling Room Installation",
+    title: "Air Conditioning & Cold Room Installation",
     desc: "We design and install reliable air conditioning and cold room systems for homes, offices, and industries — engineered for lasting performance and energy efficiency.",
   },
   {
-    title: "Maintenance of Air Conditioners & Cooling Rooms",
+    title: "Maintenance of Air Conditioning & Cold Rooms",
     desc: "Our team ensures your equipment runs smoothly through regular servicing, cleaning, and quick repairs to prevent breakdowns and extend system lifespan.",
     logo() {
       return (

@@ -9,7 +9,6 @@ import villeImg from "@/assets/image/villeHome.jpg";
 import imageM10 from "@/assets/other/imgM10.jpg";
 import imageM12 from "@/assets/other/imgM12.jpg";
 import imageM15 from "@/assets/other/imgM15.jpg";
-import imageM16 from "@/assets/other/imgM16.jpg";
 import imageM3 from "@/assets/other/imgM3.jpg";
 import { images } from "@/constant/images";
 import type { BackgroundHome } from "@/type/service";
@@ -54,7 +53,7 @@ export const backgroundHome: BackgroundHome[] = [
     id: 1,
     title: "Experience the Comfort of Perfect Cooling",
     content:
-      "We install high-efficiency air conditioners that keep your spaces cool, quiet, and energy-efficient — designed for your comfort all year round.",
+      "We install high-efficiency air conditioning that keep your spaces cool, quiet, and energy-efficient — designed for your comfort all year round.",
     image() {
       return (
         <AnimatePresence>
